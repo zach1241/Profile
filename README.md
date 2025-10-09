@@ -5,7 +5,7 @@
 </div>
 
 I’m **Zachary Clint Swanepoel**, a passionate **Full Stack Developer** based in **Cape Town, South Africa**.  
-I specialize in building scalable, elegant, and responsive digital solutions — from frontend interfaces to backend architecture and cloud deployment.  
+I specialize in building scalable, elegant, and responsive digital solutions, from frontend interfaces to backend architecture and cloud deployment.  
 
 ### Skilled in:  
 **Docker**, **Go (Golang)**, **JavaScript**, **Python**, **C#**, **C++**, **PostgreSQL**, **Express.js**, and **Node.js**  
