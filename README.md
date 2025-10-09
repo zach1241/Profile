@@ -89,6 +89,3 @@ Automated lead tracking and analytics dashboard with Dockerized deployment.
 </footer>
 
 ---
-
-## 📄 License  
-This profile and associated repositories are licensed under the **MIT License**.
