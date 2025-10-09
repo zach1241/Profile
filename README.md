@@ -53,7 +53,7 @@ I specialize in building scalable, elegant, and responsive digital solutions —
 ## ⚙️ Project Portfolio  
 
 Explore my projects showcasing practical experience in full stack and backend systems:  
-[![Portfolio](https://img.shields.io/badge/View_Portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://zach1241.github.io/Portfolio/)  
+[![Portfolio](https://img.shields.io/badge/View_Portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://zach1241.github.io/Profile/)  
 [![GitHub](https://img.shields.io/badge/GitHub_Profile-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/zach1241)  
 
 ---
