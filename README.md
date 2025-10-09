@@ -1,4 +1,4 @@
-# 👨‍💻 Zachary Clint Swanepoel — Full Stack Developer 🌍💻  
+# 👨‍💻 Zachary Clint Swanepoel - Full Stack Developer 🌍💻  
 
 <div align="left">
   <img height="250px" src="./zach profile.jpg" alt="zachary-clint-swanepoel-profile" style="border-radius:20px;">
@@ -33,8 +33,8 @@ I specialize in building scalable, elegant, and responsive digital solutions, fr
 
 ## 💼 Experience  
 
-**Full Stack Developer — Digital Revolutions**  
-📍 Cape Town, South Africa | *2024 – Present*  
+**Full Stack Developer - Digital Revolutions**  
+📍 Cape Town, South Africa | *2024 - Present*  
 - Designed and developed full-stack applications with Node.js, React, and PostgreSQL  
 - Built SEO-optimized websites and API-driven lead generation systems  
 - Automated workflows using Python scripts (e.g., SEO audits, data scraping, email sorting)  
@@ -44,15 +44,15 @@ I specialize in building scalable, elegant, and responsive digital solutions, fr
 
 ## 🎓 Education & Certifications  
 
-- **The Complete Full Stack Web Development Bootcamp** — *Angela Yu (Udemy)*  
-- **Coding for Beginners** — *HTML, CSS, JavaScript, Python, C#, Ruby (Udemy)*  
-- **Bro Code Developer Series** — *Python, Java, C, C++, C#, Data Structures, Web Dev (React, PHP, MySQL, MongoDB)*  
+- **The Complete Full Stack Web Development Bootcamp** - *Angela Yu (Udemy)*  
+- **Coding for Beginners** - *HTML, CSS, JavaScript, Python, C#, Ruby (Udemy)*  
+- **Bro Code Developer Series** - *Python, Java, C, C++, C#, Data Structures, Web Dev (React, PHP, MySQL, MongoDB)*  
 
 ---
 
 ## ⚙️ Project Portfolio  
 
-Explore my projects showcasing practical experience in full stack and backend systems:  
+Explore my projects showcasing practical experience in full-stack and backend systems:  
 [![Portfolio](https://img.shields.io/badge/View_Portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://zach1241.github.io/Profile/)  
 [![GitHub](https://img.shields.io/badge/GitHub_Profile-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/zach1241)  
 
@@ -84,7 +84,7 @@ Automated lead tracking and analytics dashboard with Dockerized deployment.
 
 <footer>
 <p align="center">
-  © 2025 Zachary Clint Swanepoel — All Rights Reserved
+  © 2025 Zachary Clint Swanepoel - All Rights Reserved
 </p>
 </footer>
 
