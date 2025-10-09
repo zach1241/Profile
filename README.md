@@ -64,7 +64,6 @@ Explore my projects showcasing practical experience in full stack and backend sy
 A PostgreSQL-based CRUD web app for tracking family trips.  
 Tech: PostgreSQL, Express.js, Node.js, EJS  
 <img height=30px src="https://skillicons.dev/icons?i=postgresql,express,nodejs,js" />  
-[🔗 View Repository](https://github.com/shanibider/CRUD-PostreSQL-Family-Travel-Tracker)
 
 ### ⚙️ Lead Generation System  
 Full-stack marketing funnel built with Node.js, React, and PostgreSQL.  
@@ -78,7 +77,7 @@ Automated lead tracking and analytics dashboard with Dockerized deployment.
 [![Portfolio](https://img.shields.io/badge/Portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://zach1241.github.io/Portfolio/)  
 [![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:zacharyswanepoel9@gmail.com)  
 
-📞 **Phone:** +27 69 340 6075  
+📞 **Phone:** +27 68 340 6075  
 🌍 **Location:** Cape Town, South Africa  
 
 ---
