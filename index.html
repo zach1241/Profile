@@ -569,6 +569,227 @@
 
     .project-link:hover { text-decoration: underline; }
 
+    /* WORK TABS */
+    .work-tabs {
+      display: inline-flex;
+      gap: 6px;
+      padding: 6px;
+      margin: 0 0 30px;
+      background: #e9e9e6;
+      border: 1px solid #dcdcd8;
+      border-radius: 16px;
+    }
+
+    .work-tab {
+      border: 0;
+      background: transparent;
+      color: #6d6d6d;
+      border-radius: 11px;
+      padding: 11px 16px;
+      font: inherit;
+      font-size: .88rem;
+      font-weight: 750;
+      cursor: pointer;
+      transition: .2s ease;
+    }
+
+    .work-tab:hover { color: #111; }
+    .work-tab.active {
+      background: #fff;
+      color: #111;
+      box-shadow: 0 5px 16px rgba(0,0,0,.08);
+    }
+
+    .work-panel[hidden] { display: none; }
+    .work-panel { animation: workPanelIn .28s ease; }
+
+    .project-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      margin-top: 17px;
+      color: #6d6d6d;
+      font-size: .82rem;
+      font-weight: 650;
+    }
+
+    .project-status::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #111;
+    }
+
+    @keyframes workPanelIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: none; }
+    }
+
+
+    /* AI WEBSITE SHOWCASE */
+    .ai-showcase-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .ai-site-card {
+      background: #0b0b0b;
+      color: #fff;
+      border: 1px solid #242424;
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+    }
+
+    .ai-site-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 22px 55px rgba(0,0,0,.14);
+      border-color: #3a3a3a;
+    }
+
+    .ai-video-wrap {
+      position: relative;
+      aspect-ratio: 16 / 10;
+      background: #050505;
+      overflow: hidden;
+      border-bottom: 1px solid #242424;
+    }
+
+    .ai-video-wrap video {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      background: #050505;
+    }
+
+    .ai-video-wrap::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,.04);
+    }
+
+    .ai-video-label {
+      position: absolute;
+      left: 18px;
+      top: 18px;
+      z-index: 2;
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: rgba(5,5,5,.72);
+      border: 1px solid rgba(255,255,255,.14);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      color: rgba(255,255,255,.9);
+      font-size: .68rem;
+      font-weight: 750;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    .ai-site-body { padding: 22px 22px 24px; }
+
+    .ai-site-meta {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+
+    .ai-site-card .tag {
+      color: #cfcfcf;
+      background: #191919;
+    }
+
+    .ai-site-card h3 {
+      font-size: 1.55rem;
+      letter-spacing: -.04em;
+      margin-bottom: 7px;
+    }
+
+    .ai-site-card p {
+      color: #9b9b9b;
+      font-size: .92rem;
+      max-width: 560px;
+    }
+
+    .ai-x-card {
+      grid-column: 1 / -1;
+      min-height: 240px;
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 35px;
+      align-items: end;
+      padding: 38px;
+      background: #0b0b0b;
+      color: #fff;
+      border: 1px solid #242424;
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+    }
+
+    .ai-x-card::before {
+      content: "X";
+      position: absolute;
+      right: 28px;
+      top: -45px;
+      font-size: 13rem;
+      line-height: 1;
+      font-weight: 800;
+      color: rgba(255,255,255,.035);
+      pointer-events: none;
+    }
+
+    .ai-x-card:hover {
+      transform: translateY(-5px);
+      border-color: #3a3a3a;
+      box-shadow: 0 22px 55px rgba(0,0,0,.14);
+    }
+
+    .ai-x-card small {
+      display: block;
+      color: #777;
+      font-weight: 750;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .ai-x-card h3 {
+      font-size: clamp(2rem, 4vw, 3.7rem);
+      line-height: .95;
+      letter-spacing: -.06em;
+      margin-bottom: 14px;
+    }
+
+    .ai-x-card p {
+      color: #999;
+      max-width: 650px;
+      font-size: .98rem;
+    }
+
+    .ai-x-action {
+      position: relative;
+      z-index: 2;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 155px;
+      padding: 13px 18px;
+      border-radius: 999px;
+      background: #fff;
+      color: #111;
+      font-weight: 750;
+      font-size: .88rem;
+      white-space: nowrap;
+    }
+
     /* FEATURED SYSTEM */
     .featured {
       background: #0b0b0b;
@@ -965,6 +1186,9 @@
       .image-modal-close { top:-10px; right:-6px; width:42px; height:42px; }
       .image-modal-hint { bottom:-34px; font-size:.68rem; }
       .preview-badge { opacity:1; transform:none; right:18px; bottom:18px; }
+      .ai-showcase-grid { grid-template-columns: 1fr; }
+      .ai-x-card { grid-column: auto; grid-template-columns: 1fr; min-height: 280px; padding: 28px; }
+      .ai-x-action { justify-self: start; }
     }
   </style>
 </head>
@@ -976,7 +1200,6 @@
 
       <ul class="nav-links">
         <li><a href="#work">Work</a></li>
-        <li><a href="#system">AgencyOS</a></li>
         <li><a href="#capabilities">Skills</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -1078,100 +1301,197 @@
         <div class="work-header reveal">
           <div>
             <div class="section-kicker">Selected work</div>
-            <h2 class="section-heading">I prefer showing the work over listing buzzwords.</h2>
+            <h2 class="section-heading">Professional work, AI websites and SaaS systems — organised in one place.</h2>
           </div>
           <p class="section-intro">
-            A few examples of the kind of development, redesign and technical work I do.
-            Each project below uses the actual thumbnail from the work, with the full walkthrough linked directly to Loom.
+            Switch between the client-facing work I deliver professionally, the AI websites I build and experiment with,
+            and the SaaS systems and tools I develop. Same portfolio, clearly organised by the type of work.
           </p>
         </div>
 
-        <div class="work-grid">
-          <article class="project reveal">
-            <a href="https://www.loom.com/share/1e208b9a951a41098be2c083e9af6e5f" target="_blank" rel="noopener">
-              <div class="project-visual project-image-visual">
-                <img src="./turning-your-vision-into-reality.png" alt="Turning Your Vision Into Reality website project" class="project-image">
-              </div>
-            </a>
-            <div class="project-body">
-              <div class="project-meta"><span class="tag">WordPress</span><span class="tag">Elementor</span><span class="tag">Build</span></div>
-              <h3>Turning a vision into reality</h3>
-              <p>Taking designs, Figma files, code or early concepts and turning them into a functional WordPress website.</p>
-              <a class="project-link" href="https://www.loom.com/share/1e208b9a951a41098be2c083e9af6e5f" target="_blank" rel="noopener">Watch the walkthrough ↗</a>
-            </div>
-          </article>
-
-          <article class="project reveal">
-            <a href="https://www.loom.com/share/f8d778fdf50c47ceb55d23ea2891ecbe" target="_blank" rel="noopener">
-              <div class="project-visual project-image-visual">
-                <img src="./website-redesign.png" alt="Procom website redesign project" class="project-image">
-              </div>
-            </a>
-            <div class="project-body">
-              <div class="project-meta"><span class="tag">Redesign</span><span class="tag">UI</span><span class="tag">WordPress</span></div>
-              <h3>Procom redesign</h3>
-              <p>A redesign focused on moving an existing dark interface toward a cleaner, brighter and more professional visual system.</p>
-              <a class="project-link" href="https://www.loom.com/share/f8d778fdf50c47ceb55d23ea2891ecbe" target="_blank" rel="noopener">Watch the walkthrough ↗</a>
-            </div>
-          </article>
-
-          <article class="project reveal">
-            <a href="https://www.loom.com/share/d92fa11717a44f1b98053845b39d01e6" target="_blank" rel="noopener">
-              <div class="project-visual project-image-visual">
-                <img src="./seo-audit-portfolio-showcase.png" alt="SEO audit walkthrough website project" class="project-image">
-              </div>
-            </a>
-            <div class="project-body">
-              <div class="project-meta"><span class="tag">SEO</span><span class="tag">Technical</span><span class="tag">Audit</span></div>
-              <h3>How I start an SEO audit</h3>
-              <p>An initial technical look at a website using the browser and Chrome DevTools before deeper analysis and dedicated SEO tooling.</p>
-              <a class="project-link" href="https://www.loom.com/share/d92fa11717a44f1b98053845b39d01e6" target="_blank" rel="noopener">Watch the walkthrough ↗</a>
-            </div>
-          </article>
-
-          <article class="project reveal">
-            <a href="https://www.loom.com/share/f0aa0b0831f045f88e5711ba16fb6bd3" target="_blank" rel="noopener">
-              <div class="project-visual project-image-visual">
-                <img src="./latest-public-website.png" alt="Latest public website project — LaMiLé Resourcing Services" class="project-image">
-              </div>
-            </a>
-            <div class="project-body">
-              <div class="project-meta"><span class="tag">Latest</span><span class="tag">Website</span><span class="tag">WordPress</span></div>
-              <h3>LaMiLé Resourcing Services</h3>
-              <p>The latest website I can publicly show — with a walkthrough demonstrating the implementation and finished result.</p>
-              <a class="project-link" href="https://www.loom.com/share/f0aa0b0831f045f88e5711ba16fb6bd3" target="_blank" rel="noopener">Watch the walkthrough ↗</a>
-            </div>
-          </article>
+        <div class="work-tabs reveal" role="tablist" aria-label="Portfolio categories">
+          <button class="work-tab active" id="professionalTab" type="button" role="tab" aria-selected="true" aria-controls="professionalWork" data-work-tab="professional">Professional Work</button>
+          <button class="work-tab" id="aiWebsitesTab" type="button" role="tab" aria-selected="false" aria-controls="aiWebsitesWork" data-work-tab="ai-websites">AI Websites</button>
+          <button class="work-tab" id="saasTab" type="button" role="tab" aria-selected="false" aria-controls="saasWork" data-work-tab="saas">SaaS</button>
         </div>
-      </div>
-    </section>
 
-    <section class="featured" id="system">
-      <div class="container">
-        <div class="system-grid">
-          <div class="reveal">
-            <div class="section-kicker">Featured build · AgencyOS</div>
-            <h2 class="system-title">Software built for agencies that are ready to scale.</h2>
-            <p class="system-copy">
-              I'm currently building an internal agency management system designed around a problem I have
-              experienced first-hand: keeping developers, account managers, clients, deliverables and SOPs aligned
-              as an agency grows.
-            </p>
+        <div class="work-panel" id="professionalWork" role="tabpanel" aria-labelledby="professionalTab" data-work-panel="professional">
+          <div class="work-grid">
+            <article class="project reveal">
+              <a href="https://www.loom.com/share/1e208b9a951a41098be2c083e9af6e5f" target="_blank" rel="noopener">
+                <div class="project-visual project-image-visual">
+                  <img src="./turning-your-vision-into-reality.png" alt="Turning Your Vision Into Reality website project" class="project-image">
+                </div>
+              </a>
+              <div class="project-body">
+                <div class="project-meta"><span class="tag">WordPress</span><span class="tag">Elementor</span><span class="tag">Build</span></div>
+                <h3>Turning a vision into reality</h3>
+                <p>Taking designs, Figma files, code or early concepts and turning them into a functional WordPress website.</p>
+                <a class="project-link" href="https://www.loom.com/share/1e208b9a951a41098be2c083e9af6e5f" target="_blank" rel="noopener">Watch the walkthrough ↗</a>
+              </div>
+            </article>
 
-            <ul class="system-points">
-              <li>Create packages and connect them to clients.</li>
-              <li>Choose which deliverables become active tasks.</li>
-              <li>Assign work to the right team member.</li>
-              <li>Track what needs to be delivered and what is complete.</li>
-              <li>Give new team members a central place for SOPs, clients and responsibilities.</li>
-              <li>Use a reliable database and controlled access instead of scattered communication.</li>
-            </ul>
+            <article class="project reveal">
+              <a href="https://www.loom.com/share/f8d778fdf50c47ceb55d23ea2891ecbe" target="_blank" rel="noopener">
+                <div class="project-visual project-image-visual">
+                  <img src="./website-redesign.png" alt="Procom website redesign project" class="project-image">
+                </div>
+              </a>
+              <div class="project-body">
+                <div class="project-meta"><span class="tag">Redesign</span><span class="tag">UI</span><span class="tag">WordPress</span></div>
+                <h3>Procom redesign</h3>
+                <p>A redesign focused on moving an existing dark interface toward a cleaner, brighter and more professional visual system.</p>
+                <a class="project-link" href="https://www.loom.com/share/f8d778fdf50c47ceb55d23ea2891ecbe" target="_blank" rel="noopener">Watch the walkthrough ↗</a>
+              </div>
+            </article>
+
+            <article class="project reveal">
+              <a href="https://www.loom.com/share/d92fa11717a44f1b98053845b39d01e6" target="_blank" rel="noopener">
+                <div class="project-visual project-image-visual">
+                  <img src="./seo-audit-portfolio-showcase.png" alt="SEO audit walkthrough website project" class="project-image">
+                </div>
+              </a>
+              <div class="project-body">
+                <div class="project-meta"><span class="tag">SEO</span><span class="tag">Technical</span><span class="tag">Audit</span></div>
+                <h3>How I start an SEO audit</h3>
+                <p>An initial technical look at a website using the browser and Chrome DevTools before deeper analysis and dedicated SEO tooling.</p>
+                <a class="project-link" href="https://www.loom.com/share/d92fa11717a44f1b98053845b39d01e6" target="_blank" rel="noopener">Watch the walkthrough ↗</a>
+              </div>
+            </article>
+
+            <article class="project reveal">
+              <a href="https://www.loom.com/share/f0aa0b0831f045f88e5711ba16fb6bd3" target="_blank" rel="noopener">
+                <div class="project-visual project-image-visual">
+                  <img src="./latest-public-website.png" alt="Latest public website project — LaMiLé Resourcing Services" class="project-image">
+                </div>
+              </a>
+              <div class="project-body">
+                <div class="project-meta"><span class="tag">Latest</span><span class="tag">Website</span><span class="tag">WordPress</span></div>
+                <h3>LaMiLé Resourcing Services</h3>
+                <p>The latest website I can publicly show, with a walkthrough demonstrating the implementation and finished result.</p>
+                <a class="project-link" href="https://www.loom.com/share/f0aa0b0831f045f88e5711ba16fb6bd3" target="_blank" rel="noopener">Watch the walkthrough ↗</a>
+              </div>
+            </article>
           </div>
+        </div>
 
-          <button class="app-window reveal agencyos-preview" id="agencyosPreview" type="button" aria-label="Open AgencyOS preview and zoom">
-            <img src="./agencyos-on-laptop-and-mobile.png" alt="AgencyOS internal agency operations dashboard shown on laptop and mobile" class="agencyos-image">
-            <span class="preview-badge">Click to enlarge ↗</span>
-          </button>
+        <div class="work-panel" id="aiWebsitesWork" role="tabpanel" aria-labelledby="aiWebsitesTab" data-work-panel="ai-websites" hidden>
+          <div class="ai-showcase-grid">
+            <article class="ai-site-card">
+              <div class="ai-video-wrap">
+                <span class="ai-video-label">Architecture · AI Website</span>
+                <video class="ai-showcase-video" muted loop playsinline preload="metadata" aria-label="FORM / FOUND architecture website preview">
+                  <source src="./form-found-new.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="ai-site-body">
+                <div class="ai-site-meta"><span class="tag">Architecture</span><span class="tag">AI Build</span><span class="tag">Editorial</span></div>
+                <h3>FORM / FOUND</h3>
+                <p>A professional architecture website concept focused on restrained typography, strong spatial composition and a premium editorial feel.</p>
+              </div>
+            </article>
+
+            <article class="ai-site-card">
+              <div class="ai-video-wrap">
+                <span class="ai-video-label">Architecture · Motion Hero</span>
+                <video class="ai-showcase-video" muted loop playsinline preload="metadata" aria-label="MONOLITH motion architecture website preview">
+                  <source src="./monolith.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="ai-site-body">
+                <div class="ai-site-meta"><span class="tag">Architecture</span><span class="tag">Motion</span><span class="tag">AI Build</span></div>
+                <h3>MONOLITH</h3>
+                <p>A motion-led architecture experience built around a cinematic hero, large-scale imagery and immersive transitions.</p>
+              </div>
+            </article>
+
+            <article class="ai-site-card">
+              <div class="ai-video-wrap">
+                <span class="ai-video-label">Automotive · Motion Website</span>
+                <video class="ai-showcase-video" muted loop playsinline preload="metadata" aria-label="VANTA MOTORS sports car website preview">
+                  <source src="./vanta-motors.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="ai-site-body">
+                <div class="ai-site-meta"><span class="tag">Automotive</span><span class="tag">Motion</span><span class="tag">AI Build</span></div>
+                <h3>VANTA MOTORS</h3>
+                <p>A cinematic sports-car website concept combining dark visual direction, motion and high-impact product presentation.</p>
+              </div>
+            </article>
+
+            <article class="ai-site-card">
+              <div class="ai-video-wrap">
+                <span class="ai-video-label">AUTOMOTIVE · 2.5D MOTION WEBSITE</span>
+                <video class="ai-showcase-video" muted loop playsinline preload="metadata" aria-label="VANTA MOTORS sports car website preview">
+                  <source src="./3d-vanta-motors.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="ai-site-body">
+                <div class="ai-site-meta"><span class="tag">Automotive</span><span class="tag">Motion</span><span class="tag">AI Build</span></div>
+                <h3>2.5D VANTA MOTORS</h3>
+                <p>An AI-built automotive experience combining 2.5D visuals, cinematic motion and immersive product storytelling.</p>
+              </div>
+            </article>
+
+            <a class="ai-x-card" href="https://x.com/itszach_oliver" target="_blank" rel="noopener" aria-label="View more than 50 AI websites on Zach Oliver's X profile">
+              <div>
+                <small>More experiments on X</small>
+                <h3>50+ AI Websites</h3>
+                <p>I share the wider collection of AI-built websites, motion concepts and one-prompt experiments on @itszach_oliver.</p>
+              </div>
+              <span class="ai-x-action">View my X profile ↗</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="work-panel" id="saasWork" role="tabpanel" aria-labelledby="saasTab" data-work-panel="saas" hidden>
+          <div class="work-grid">
+            <article class="project">
+              <div class="project-visual project-image-visual">
+                <img src="./agencyos-on-laptop-and-mobile.png" alt="AgencyOS internal agency operations dashboard" class="project-image">
+              </div>
+              <div class="project-body">
+                <div class="project-meta"><span class="tag">SaaS</span><span class="tag">React</span><span class="tag">Supabase</span></div>
+                <h3>AgencyOS</h3>
+                <p>An internal agency operations system for managing clients, packages, deliverables, tasks, SOPs and team responsibilities from one structured workspace.</p>
+                <span class="project-status">Active build</span>
+              </div>
+            </article>
+
+            <article class="project">
+              <div class="project-visual">
+                <div class="browser">
+                  <div class="browser-bar"><i></i><i></i><i></i></div>
+                  <div class="browser-content">
+                    <div class="mock-line dark"></div><div class="mock-line"></div><div class="mock-line short"></div><div class="mock-block"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="project-body">
+                <div class="project-meta"><span class="tag">Automation</span><span class="tag">Data</span><span class="tag">Scraping</span></div>
+                <h3>Scraping & data collection tool</h3>
+                <p>A tool I am developing to collect and structure useful web data so repetitive research and lead-data workflows can be handled more efficiently.</p>
+                <span class="project-status">In development</span>
+              </div>
+            </article>
+
+            <article class="project">
+              <div class="project-visual">
+                <div class="browser">
+                  <div class="browser-bar"><i></i><i></i><i></i></div>
+                  <div class="browser-content">
+                    <div class="mock-line dark"></div><div class="mock-line short"></div><div class="mock-line"></div><div class="mock-block"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="project-body">
+                <div class="project-meta"><span class="tag">SEO</span><span class="tag">SaaS</span><span class="tag">Analytics</span></div>
+                <h3>SEO reporting SaaS</h3>
+                <p>An SEO product concept focused on turning reporting data and repeatable agency workflows into a more consistent system for client analysis and reporting.</p>
+                <span class="project-status">Concept & planning</span>
+              </div>
+            </article>
+          </div>
         </div>
       </div>
     </section>
@@ -1202,15 +1522,15 @@
       <div class="container">
         <div class="reveal">
           <div class="section-kicker">Working together</div>
-          <h2 class="section-heading">Simple process. Clear deliverables.</h2>
-          <p class="section-intro">For an internal agency system, the typical build target is 7–14 days depending on scope and feedback.</p>
+          <h2 class="section-heading">From idea to working product.</h2>
+          <p class="section-intro">Whether it’s a professional website, an AI-driven experience or a custom software product, I keep the process focused, collaborative and clear from concept to launch.</p>
         </div>
 
         <div class="process-grid">
-          <div class="step reveal"><span class="step-number">01</span><h3>Discovery</h3><p>Understand the business, current workflow, problems and what the system actually needs to solve.</p></div>
-          <div class="step reveal"><span class="step-number">02</span><h3>Plan</h3><p>Turn the requirements into the structure, user flows, data model and development priorities.</p></div>
-          <div class="step reveal"><span class="step-number">03</span><h3>Build</h3><p>Develop the website or internal system, connect the database and build the functionality around the workflow.</p></div>
-          <div class="step reveal"><span class="step-number">04</span><h3>Launch</h3><p>Test, refine, deploy and hand over a system your team can actually use and maintain.</p></div>
+          <div class="step reveal"><span class="step-number">01</span><h3>Discovery</h3><p>Define the goal, audience, requirements and what the website or product actually needs to achieve.</p></div>
+          <div class="step reveal"><span class="step-number">02</span><h3>Plan</h3><p>Turn the idea into a clear structure, user experience, technical approach and development plan.</p></div>
+          <div class="step reveal"><span class="step-number">03</span><h3>Build</h3><p>Develop the experience, integrate the required functionality and refine the design, interactions and performance.</p></div>
+          <div class="step reveal"><span class="step-number">04</span><h3>Launch</h3><p>Test across devices, polish the final experience, deploy and make sure everything works as intended.</p></div>
         </div>
       </div>
     </section>
@@ -1263,6 +1583,7 @@
               <a class="button-outline" style="background:#111;color:#fff;border-color:#444" href="mailto:zacharyswanepoel9@gmail.com">Email me</a>
               <a class="button-outline" style="background:#111;color:#fff;border-color:#444" href="https://github.com/zach1241">GitHub</a>
               <a class="button-outline" style="background:#111;color:#fff;border-color:#444" href="https://www.linkedin.com/in/zachary-clint-swanepoel/">Linkedin</a>
+              <a class="button-outline" style="background:#111;color:#fff;border-color:#444" href="https://x.com/itszach_oliver" target="_blank" rel="noopener">X · @itszach_oliver</a>
             </div>
           </div>
 
@@ -1279,14 +1600,6 @@
       </div>
     </section>
   </main>
-
-  <div class="image-modal" id="imageModal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="AgencyOS image preview">
-    <div class="image-modal-content">
-      <button class="image-modal-close" id="imageModalClose" type="button" aria-label="Close image preview">×</button>
-      <img id="imageModalImage" src="./agencyos-on-laptop-and-mobile.png" alt="AgencyOS internal agency operations dashboard on laptop and mobile">
-      <span class="image-modal-hint">Click the image to zoom · Press Esc or × to close</span>
-    </div>
-  </div>
 
   <footer>
     <div class="container footer-inner">
@@ -1351,29 +1664,66 @@
     }, { threshold: 0.12 });
 
     document.querySelectorAll(".reveal").forEach(el => revealObserver.observe(el));
-    // AgencyOS image lightbox: click to open, click image to zoom, X/Esc to close.
-    const agencyosPreview = document.getElementById("agencyosPreview");
-    const imageModal = document.getElementById("imageModal");
-    const imageModalImage = document.getElementById("imageModalImage");
-    const imageModalClose = document.getElementById("imageModalClose");
 
-    function openAgencyOSModal() {
-      imageModal.classList.add("open");
-      imageModal.setAttribute("aria-hidden", "false");
-      document.body.classList.add("modal-open");
-      imageModalClose.focus();
+    // Portfolio tabs: switch between Professional Work, "AI Websites" and "SaaS" without leaving the page.
+    const workTabs = [...document.querySelectorAll("[data-work-tab]")];
+    const workPanels = [...document.querySelectorAll("[data-work-panel]")];
+
+    function setWorkTab(name) {
+      workTabs.forEach(tab => {
+        const active = tab.dataset.workTab === name;
+        tab.classList.toggle("active", active);
+        tab.setAttribute("aria-selected", String(active));
+      });
+
+      workPanels.forEach(panel => {
+        panel.hidden = panel.dataset.workPanel !== name;
+      });
     }
-    function closeAgencyOSModal() {
-      imageModal.classList.remove("open");
-      imageModal.setAttribute("aria-hidden", "true");
-      imageModalImage.classList.remove("zoomed");
-      document.body.classList.remove("modal-open");
+
+    workTabs.forEach(tab => tab.addEventListener("click", () => setWorkTab(tab.dataset.workTab)));
+
+    document.querySelectorAll("[data-work-target]").forEach(link => {
+      link.addEventListener("click", () => setWorkTab(link.dataset.workTarget));
+    });
+
+    // X-style AI showcase: play visible previews and pause them when they leave the viewport.
+    const aiVideos = [...document.querySelectorAll(".ai-showcase-video")];
+
+    function syncAiVideos() {
+      aiVideos.forEach(video => {
+        const panel = video.closest("[data-work-panel]");
+        if (panel?.hidden) video.pause();
+      });
     }
-    agencyosPreview.addEventListener("click", openAgencyOSModal);
-    imageModalClose.addEventListener("click", closeAgencyOSModal);
-    imageModal.addEventListener("click", event => { if (event.target === imageModal) closeAgencyOSModal(); });
-    imageModalImage.addEventListener("click", event => { event.stopPropagation(); imageModalImage.classList.toggle("zoomed"); });
-    document.addEventListener("keydown", event => { if (event.key === "Escape" && imageModal.classList.contains("open")) closeAgencyOSModal(); });
+
+    const aiVideoObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        const video = entry.target;
+        const panel = video.closest("[data-work-panel]");
+        const canPlay = entry.isIntersecting && !panel?.hidden;
+
+        if (canPlay) {
+          video.play().catch(() => {});
+        } else {
+          video.pause();
+        }
+      });
+    }, { threshold: 0.45 });
+
+    aiVideos.forEach(video => aiVideoObserver.observe(video));
+    workTabs.forEach(tab => tab.addEventListener("click", () => {
+      requestAnimationFrame(() => {
+        syncAiVideos();
+        if (tab.dataset.workTab === "ai-websites") {
+          aiVideos.forEach(video => {
+            const rect = video.getBoundingClientRect();
+            const visible = rect.bottom > 0 && rect.top < window.innerHeight;
+            if (visible) video.play().catch(() => {});
+          });
+        }
+      });
+    }));
   </script>
 </body>
 </html>
