@@ -1190,7 +1190,15 @@
       .ai-x-card { grid-column: auto; grid-template-columns: 1fr; min-height: 280px; padding: 28px; }
       .ai-x-action { justify-self: start; }
     }
-  </style>
+  
+/* Keep the original navigation comfortably usable on tablet widths. */
+@media (min-width:701px) and (max-width:1050px){
+  .nav-links,.nav-cta{display:none}
+  .menu-button{display:block}
+  .nav.open .nav-links{display:flex;position:absolute;top:75px;left:20px;right:20px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px;flex-direction:column;gap:5px;box-shadow:0 18px 40px rgba(0,0,0,.1)}
+  .nav.open .nav-links a{display:block;padding:10px}
+}
+</style>
 </head>
 
 <body>
