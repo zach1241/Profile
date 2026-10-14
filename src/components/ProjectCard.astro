@@ -1,4 +1,0 @@
----
-const {project}=Astro.props;
----
-<a class="card" href={'/projects/'+project.slug+'/'}><div class="visual">{project.cover?<img src={project.cover} alt={'Preview of '+project.title} loading="lazy" decoding="async"/>:<div class="visualtext">{project.title}</div>}</div><div class="card-body"><span class="tag">{project.sector} / {project.year}</span><h3>{project.title} ↗</h3><p>{project.desc}</p><div class="chips">{project.stack.slice(0,4).map(s=><span class="chip">{s}</span>)}</div></div></a>

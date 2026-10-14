@@ -1,4 +1,0 @@
----
-const {article}=Astro.props;
----
-<a class="card article-card" href={'/insights/'+article.slug+'/'} data-category={article.category.toLowerCase()} data-search={(article.title+' '+article.excerpt+' '+article.category).toLowerCase()}><div class="card-body"><span class="tag">{article.category}</span><h3>{article.title} ↗</h3><p>{article.excerpt}</p><div class="article-meta"><span>{article.date}</span><span>{article.minutes} min read</span></div></div></a>

@@ -1,6 +1,0 @@
----
-import Base from '../../layouts/Base.astro';import {articles} from '../../data/site.js';
-export function getStaticPaths(){return articles.map(article=>({params:{slug:article.slug},props:{article}}));}
-const {article}=Astro.props;
----
-<Base title={article.title+' | Local Presence 360'} description={article.excerpt}><section class="pagehead"><div class="wrap"><div class="breadcrumbs"><a href="/insights/">Insights</a> / {article.category}</div><div class="eyebrow">{article.category} • {article.minutes} MIN READ</div><h1 class="page-title" style="max-width:920px">{article.title}</h1><p class="lead">{article.excerpt}</p><div class="article-meta"><span>By Zachary Swanepoel</span><time datetime={article.date}>{article.date}</time></div></div></section><article class="prose wrap"><p class="intro">{article.excerpt}</p>{article.body.map(([heading,body])=><section><h2>{heading}</h2><p>{body}</p></section>)}<a class="back" href="/insights/">← Back to all insights</a></article></Base>
