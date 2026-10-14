@@ -1,0 +1,8 @@
+{
+  "version": 2,
+  "framework": null,
+  "buildCommand": "node build.mjs",
+  "outputDirectory": "dist",
+  "installCommand": "echo Static HTML site - no dependencies",
+  "trailingSlash": true
+}
