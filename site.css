@@ -1276,3 +1276,27 @@
 .writing-home-item .arrow{grid-column:4;grid-row:1}
 @media(max-width:1000px){.journal-row{grid-template-columns:190px minmax(0,1fr) auto;gap:14px}.journal-thumb{width:190px}.journal-row .journal-topic{grid-column:2;align-self:end}.journal-row>div{grid-column:2;grid-row:2}.journal-row .journal-date{grid-column:3;grid-row:2}.journal-thumb{grid-row:1 / 3}.writing-home-item{grid-template-columns:145px minmax(0,1fr) auto}.writing-home-thumb{grid-column:1;grid-row:1/3;width:145px}.writing-home-item>.writing-home-category{grid-column:2;grid-row:1}.writing-home-item>div{grid-column:2;grid-row:2}.writing-home-item .arrow{grid-column:3;grid-row:2}}
 @media(max-width:700px){.journal-row{grid-template-columns:1fr auto;gap:8px;padding:25px 0}.journal-thumb{grid-column:1/-1;grid-row:1;width:100%;border-radius:12px}.journal-row .journal-topic{grid-column:1;grid-row:2;margin-top:8px}.journal-row>div{grid-column:1;grid-row:3}.journal-row .journal-date{grid-column:2;grid-row:2;align-self:center}.writing-home-item{grid-template-columns:1fr auto}.writing-home-thumb{grid-column:1/-1;grid-row:1;width:100%}.writing-home-item>.writing-home-category{grid-column:1/-1;grid-row:2}.writing-home-item>div{grid-column:1;grid-row:3}.writing-home-item .arrow{grid-column:2;grid-row:3}.article-cover{margin:22px auto 0;width:calc(100% - 36px)}.article-cover img{border-radius:12px}}
+
+
+/* Mobile blog and article image safeguards. Images must never stretch or widen the page. */
+.journal-row, .journal-row > div, .writing-home-item, .writing-home-item > div { min-width: 0; }
+.journal-thumb, .article-cover img, .writing-home-thumb {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+@media(max-width:700px) {
+  .journal-list, .journal-row { min-width: 0; width: 100%; }
+  .journal-row { grid-template-columns: minmax(0, 1fr) auto; }
+  .journal-thumb { grid-column: 1 / -1; width: 100%; grid-row: 1; }
+  .journal-row .journal-topic { grid-column: 1; grid-row: 2; }
+  .journal-row .journal-date { grid-column: 2; grid-row: 2; }
+  .journal-row > div { grid-column: 1 / -1; grid-row: 3; min-width: 0; }
+  .article-cover { width: calc(100% - 28px); margin: 18px auto 0; }
+  .article-cover img { width: 100%; height: auto; border-radius: 10px; }
+  .subhero h1, .journal-title { overflow-wrap: anywhere; }
+  .subhero h1 { font-size: clamp(2.45rem, 10vw, 3.8rem); }
+  .article-prose { min-width: 0; }
+}
