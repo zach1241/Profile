@@ -4,5 +4,37 @@
   "buildCommand": "node build.mjs",
   "outputDirectory": "dist",
   "installCommand": "echo Static HTML site - no dependencies",
-  "trailingSlash": true
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/projects/peak-leads-blueprint/",
+      "destination": "/projects/",
+      "permanent": false
+    },
+    {
+      "source": "/projects/aura-check/",
+      "destination": "/projects/",
+      "permanent": false
+    },
+    {
+      "source": "/projects/rc-premium-detailing/",
+      "destination": "/projects/",
+      "permanent": false
+    },
+    {
+      "source": "/projects/logic-lc/",
+      "destination": "/projects/",
+      "permanent": false
+    },
+    {
+      "source": "/projects/search-conversion-measurement/",
+      "destination": "/projects/",
+      "permanent": false
+    },
+    {
+      "source": "/projects/nexa-architects/",
+      "destination": "/projects/",
+      "permanent": false
+    }
+  ]
 }

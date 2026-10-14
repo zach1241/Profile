@@ -1300,3 +1300,36 @@
   .subhero h1 { font-size: clamp(2.45rem, 10vw, 3.8rem); }
   .article-prose { min-width: 0; }
 }
+
+
+/* Professional Work case studies: match original homepage media and editorial layout. */
+.professional-case-image{display:block;overflow:hidden}
+.workitem .project-visual.project-image-visual{height:auto;min-height:0;aspect-ratio:16 / 10;padding:0;background:#e8e8e6}
+.workitem .project-visual.project-image-visual:after{display:none}
+.workitem .project-image{display:block;width:100%;height:100%;object-fit:cover}
+.workitem h3 a{color:inherit}
+.workitem h3 a:hover{text-decoration:underline;text-underline-offset:4px}
+.case-secondary-link{display:inline-block;font-size:.83rem;font-weight:650;color:#656565;margin-top:12px;text-decoration:underline;text-underline-offset:4px}
+.case-intro .section-intro{max-width:800px}
+.case-intro-actions,.case-footer-actions{display:flex;align-items:center;flex-wrap:wrap;gap:18px;margin-top:30px}
+.case-intro-actions .button-black,.case-footer-actions .button-black{display:inline-flex;align-items:center;justify-content:center}
+.case-image-wrap{padding:45px 0 10px;background:#fff}
+.case-image{margin:0}
+.case-image img{display:block;width:100%;height:auto;max-height:680px;object-fit:contain;border-radius:16px;border:1px solid #dedede;background:#f3f3f2}
+.case-image figcaption{font-size:.84rem;color:#777;margin-top:12px}
+.case-image figcaption a{text-decoration:underline;text-underline-offset:4px}
+.case-note{font-size:.81rem;line-height:1.65;color:#777;margin-top:28px}
+.aside-info dd a{overflow-wrap:anywhere}
+.project-bottom{flex-wrap:wrap}
+@media(max-width:700px){
+ .page-grid{grid-template-columns:minmax(0,1fr)}
+ .workitem .project-visual.project-image-visual{aspect-ratio:16/10}
+ .workitem .project-body{padding:23px 21px 27px}
+ .workitem .project-meta{flex-wrap:wrap}
+ .case-intro-actions,.case-footer-actions{align-items:stretch;flex-direction:column;gap:15px}
+ .case-intro-actions .button-black,.case-footer-actions .button-black{text-align:center}
+ .case-image-wrap{padding:19px 0 6px}
+ .case-image img{border-radius:10px}
+ .case-image figcaption{font-size:.76rem}
+ .case-content{padding:53px 0 75px}
+}

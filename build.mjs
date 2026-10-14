@@ -25,9 +25,10 @@ const required = [
  'assets/blog/wordpress-is-more-than-a-mockup.webp',
  'assets/blog/aura-check-daily-game-development.webp',
 
- 'projects/peak-leads-blueprint/index.html','projects/aura-check/index.html',
- 'projects/rc-premium-detailing/index.html','projects/logic-lc/index.html',
- 'projects/search-conversion-measurement/index.html','projects/nexa-architects/index.html',
+ 'projects/turning-a-vision-into-reality/index.html',
+ 'projects/procom-redesign/index.html',
+ 'projects/how-i-start-an-seo-audit/index.html',
+ 'projects/lamile-resourcing-services/index.html',
  'blog/what-search-console-can-and-cannot-tell-you/index.html',
  'blog/algorithm-updates-vs-seo-fundamentals/index.html',
  'blog/organic-leads-start-with-the-page/index.html',
@@ -40,5 +41,9 @@ const required = [
  'Zachary-Clint-Swanepoel-CV-2026.pdf', 'zach profile.jpg',
 ];
 for (const file of required) if (!existsSync(join(output,file))) throw new Error('Missing required public file: '+file);
+const permittedProjects = new Set(["turning-a-vision-into-reality","procom-redesign","how-i-start-an-seo-audit","lamile-resourcing-services"]);
+const projectDirectories = readdirSync(join(output, 'projects')).filter(name => statSync(join(output, 'projects', name)).isDirectory());
+const unexpected = projectDirectories.filter(name => !permittedProjects.has(name));
+if (unexpected.length) throw new Error('Unexpected case-study directories in static output: ' + unexpected.join(', '));
 console.log('Verified '+required.length+' critical public files, including homepage, CV, projects and articles.');
 console.log('Static output ready: '+output);
