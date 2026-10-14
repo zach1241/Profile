@@ -3,6 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- The legacy GitHub Pages portfolio remains a bridge for links in older CVs.
+       On Vercel this script does nothing, preserving the live website. -->
+  <script>
+    (function () {
+      if (window.location.hostname !== "zach1241.github.io") return;
+      var oldPath = window.location.pathname;
+      if (!/^\/Profile(?:\/|$)/i.test(oldPath)) return;
+      var nextPath = oldPath.replace(/^\/Profile(?=\/|$)/i, "") || "/";
+      window.location.replace(
+        "https://www.localpresence360.com" +
+        nextPath + window.location.search + window.location.hash
+      );
+    }());
+  </script>
   <meta name="description" content="Zachary Swanepoel — WordPress and full-stack developer building modern websites, SEO systems and internal software for growing businesses and agencies.">
   <meta name="author" content="Zachary Clint Swanepoel">
   <title>Zachary Swanepoel — Developer, WordPress & Digital Systems</title>
