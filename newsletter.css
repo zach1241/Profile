@@ -1,0 +1,23 @@
+/* Local Presence 360 - Kit newsletter, isolated to this section */
+.lp-newsletter{width:100%;padding:75px 0;margin:0;background:#f6f6f5;color:#111}
+.lp-newsletter--home{margin:62px 0 0;padding:48px 40px;background:#f8f8f7;border:1px solid #e6e6e5;border-radius:16px}
+.lp-newsletter-inner{width:min(100%,1050px);margin:auto}
+.lp-newsletter--article .lp-newsletter-inner{width:min(calc(100% - 40px),770px)}
+.lp-newsletter--index .lp-newsletter-inner{width:min(calc(100% - 40px),1100px)}
+.lp-newsletter-eyebrow{font-size:.73rem;letter-spacing:.15em;text-transform:uppercase;color:#777;font-weight:700;margin-bottom:14px}
+.lp-newsletter h2{font-size:clamp(2rem,4vw,3rem);font-weight:800;letter-spacing:-.06em;line-height:1.08;margin:0 0 14px;color:#111}
+.lp-newsletter-inner>p:not(.lp-newsletter-privacy){font-size:1rem;line-height:1.7;color:#666;max-width:620px;margin:0 0 27px}
+.lp-newsletter-form{width:100%;min-height:60px}
+.lp-newsletter-privacy{font-size:.76rem;line-height:1.5;color:#888;margin:12px 0 0}
+.lp-newsletter .formkit-form{max-width:100%!important;width:100%!important;background:transparent!important;border:0!important;box-shadow:none!important;padding:0!important;margin:0!important}
+.lp-newsletter .formkit-fields{display:flex!important;align-items:stretch!important;gap:12px!important;flex-wrap:wrap!important;max-width:100%!important;width:100%!important}
+.lp-newsletter .formkit-field{flex:1 1 195px!important;min-width:0!important;margin:0!important;max-width:none!important}
+.lp-newsletter .formkit-input{width:100%!important;height:48px!important;min-height:48px!important;padding:11px 16px!important;background:#fff!important;color:#111!important;border:1px solid #dedede!important;border-radius:10px!important;box-shadow:none!important;font:inherit!important;font-size:.91rem!important;line-height:1.4!important}
+.lp-newsletter .formkit-input:focus{outline:2px solid #e4e4e4!important;outline-offset:1px!important;border-color:#111!important}
+.lp-newsletter .formkit-submit{flex:0 0 auto!important;align-self:stretch!important;width:auto!important;min-width:135px!important;height:48px!important;min-height:48px!important;padding:0 23px!important;margin:0!important;border-radius:999px!important;border:1px solid #111!important;background:#111!important;color:#fff!important;font-family:inherit!important;font-size:.86rem!important;font-weight:700!important;line-height:1!important;box-shadow:none!important;cursor:pointer!important;transition:background-color .2s ease!important}
+.lp-newsletter .formkit-submit:hover{background:#333!important}
+.lp-newsletter .formkit-submit span{color:inherit!important;font:inherit!important}
+.lp-newsletter .formkit-powered-by-container{margin-top:14px}
+.lp-newsletter .formkit-alert{font-size:.86rem!important}
+@media(max-width:720px){.lp-newsletter{padding:50px 0}.lp-newsletter--home{padding:30px 20px;margin-top:46px}.lp-newsletter--article .lp-newsletter-inner,.lp-newsletter--index .lp-newsletter-inner{width:calc(100% - 36px)}.lp-newsletter h2{font-size:clamp(1.85rem,7vw,2.45rem)}.lp-newsletter .formkit-fields{flex-direction:column!important}.lp-newsletter .formkit-field{width:100%!important;flex:0 0 auto!important}.lp-newsletter .formkit-submit{width:100%!important;flex:0 0 auto!important}}
+@media(prefers-reduced-motion:reduce){.lp-newsletter .formkit-submit{transition:none!important}}
