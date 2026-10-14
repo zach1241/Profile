@@ -374,27 +374,6 @@
 
     .skill-node:hover .skill-label { opacity: 1; }
 
-    /* OS Reduce Motion is the default; user may explicitly opt back in. */
-    @media (prefers-reduced-motion: reduce) {
-      .skills-orbit:not(.motion-enabled) .skill-node,
-      .skills-orbit:not(.motion-enabled) .orbit-ring,
-      .skills-orbit:not(.motion-enabled)::before,
-      .skills-orbit:not(.motion-enabled)::after { animation: none !important; }
-    }
-    .skills-orbit.is-paused .skill-node,
-    .skills-orbit.is-paused .orbit-ring,
-    .skills-orbit.is-paused::before,
-    .skills-orbit.is-paused::after { animation-play-state: paused !important; }
-    .orbit-motion-toggle {
-      position: absolute; left: 50%; bottom: -15px; transform: translateX(-50%);
-      border: 1px solid #e4e4e4; background: rgba(255,255,255,.97);
-      border-radius: 999px; color: #555; padding: 8px 15px; z-index: 8;
-      font: inherit; font-size: .76rem; font-weight: 650; white-space: nowrap;
-      cursor: pointer; box-shadow: 0 5px 20px rgba(0,0,0,.035);
-    }
-    .orbit-motion-toggle:hover { border-color: #999; background: #f8f8f8; }
-    .orbit-motion-toggle:focus-visible { outline: 2px solid #111; outline-offset: 3px; }
-    @media(max-width:700px){.orbit-motion-toggle{bottom:-12px;font-size:.74rem}}
     @keyframes orbitRingRotate {
       from { transform: rotate(0deg); }
       to { transform: rotate(360deg); }
@@ -1446,7 +1425,6 @@
                 <button aria-label="Git"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21.4 11.1 12.9 2.6a2.1 2.1 0 0 0-2.9 0L8.3 4.3l2.2 2.2c.5-.2 1.1-.1 1.5.3.4.4.5 1 .3 1.5l2.1 2.1c.5-.2 1.1-.1 1.5.3.6.6.6 1.6 0 2.2-.6.6-1.6.6-2.2 0-.4-.4-.5-1-.3-1.5l-2-2v5.2c.2.1.4.2.5.4.6.6.6 1.6 0 2.2-.6.6-1.6.6-2.2 0-.6-.6-.6-1.6 0-2.2.2-.2.3-.3.5-.4V9.4c-.2-.1-.4-.2-.5-.4-.6-.6-.6-1.6 0-2.2L7.9 5.2l-1.7 1.7a2.1 2.1 0 0 0 0 2.9l8.5 8.5a2.1 2.1 0 0 0 2.9 0l3.8-3.8a2.1 2.1 0 0 0 0-2.9Z"/></svg></button><span class="skill-label">Git</span>
               </div>
             </div>
-            <button id="orbitMotionToggle" class="orbit-motion-toggle" type="button" aria-pressed="true" aria-label="Pause animated skills orbit">Pause animation Ⅱ</button>
           </div>
         </div>
       </div>
@@ -1786,30 +1764,6 @@
   </footer>
 
   <script>
-    // Orbit runs automatically unless OS Reduce Motion is enabled.
-    // The toggle gives the visitor explicit control in both cases.
-    const orbit = document.querySelector(".skills-orbit");
-    const orbitToggle = document.getElementById("orbitMotionToggle");
-    if (orbit && orbitToggle) {
-      const motionPreference = window.matchMedia?.("(prefers-reduced-motion: reduce)");
-      let userOverrodeMotion = false;
-      function setOrbitMotion(enabled) {
-        orbit.classList.toggle("motion-enabled", enabled);
-        orbit.classList.toggle("is-paused", !enabled);
-        orbitToggle.setAttribute("aria-pressed", String(enabled));
-        orbitToggle.setAttribute("aria-label", enabled ? "Pause animated skills orbit" : "Play animated skills orbit");
-        orbitToggle.textContent = enabled ? "Pause animation Ⅱ" : "Play animation ▶";
-      }
-      setOrbitMotion(!motionPreference?.matches);
-      orbitToggle.addEventListener("click", () => {
-        userOverrodeMotion = true;
-        setOrbitMotion(orbit.classList.contains("is-paused"));
-      });
-      motionPreference?.addEventListener?.("change", event => {
-        if (!userOverrodeMotion) setOrbitMotion(!event.matches);
-      });
-    }
-
     const nav = document.getElementById("navbar");
     const menu = document.getElementById("menuButton");
     const navLinks = [...document.querySelectorAll(".nav-links a")];
