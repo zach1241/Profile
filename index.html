@@ -1200,7 +1200,35 @@
 }
 
 /* Failsafe: preserve all content if animation JavaScript is unavailable. */
-.reveal{opacity:1!important;transform:none!important}
+
+    /* JS-independent content visibility; animations only activate after setup. */
+    .reveal { opacity: 1; transform: none; }
+    body.js-animated .reveal:not(.visible) { opacity: 0; transform: translateY(20px); }
+    body.js-animated .reveal.visible { opacity: 1; transform: none; }
+    .mobile-writing-link { display: none; }
+    .writing-home { background: white; border-top: 1px solid var(--line); }
+    .writing-home-header { display: flex; justify-content: space-between; align-items: end; gap: 25px; margin-bottom: 36px; }
+    .writing-home-header .section-heading { margin-bottom: 0; }
+    .writing-home-list { border-top: 1px solid var(--line); }
+    .writing-home-item { display: grid; grid-template-columns: 175px minmax(0, 1fr) auto; gap: 20px; padding: 26px 0; border-bottom: 1px solid var(--line); align-items: start; }
+    .writing-home-item:hover h3 { text-decoration: underline; text-underline-offset: 5px; }
+    .writing-home-category { text-transform: uppercase; letter-spacing: .12em; font-size: .74rem; font-weight: 750; color: #777; margin-top: 7px; }
+    .writing-home-item h3 { font-size: clamp(1.4rem, 2.65vw, 2.1rem); letter-spacing: -.055em; line-height: 1.17; margin: 0 0 8px; }
+    .writing-home-item p { font-size: .93rem; color: #777; margin: 0; }
+    .writing-home-item .arrow { font-size: 1.4rem; }
+    @media(max-width: 700px) {
+      .mobile-writing-link { display: inline-flex; align-items: center; margin-left: auto; padding: 7px 9px; border: 1px solid #ddd; border-radius: 999px; font-size: .75rem; font-weight: 750; white-space: nowrap; background: white; }
+      .nav-inner { gap: 8px; }
+      .nav-inner .brand { white-space: nowrap; }
+      .writing-home-header { display: block; }
+      .writing-home-header .button-outline { margin-top: 25px; }
+      .writing-home-item { grid-template-columns: 1fr auto; gap: 8px; }
+      .writing-home-category { grid-column: 1 / -1; }
+      .writing-home-item .arrow { grid-row: 2; grid-column: 2; }
+    }
+    @media(max-width:380px) { .mobile-writing-link { font-size: .7rem; padding: 5px 7px; } .nav-inner .brand { font-size: .96rem; } }
+    @media(prefers-reduced-motion:reduce) { body.js-animated .reveal:not(.visible) { opacity: 1; transform: none; } }
+
 </style>
 </head>
 
@@ -1219,7 +1247,8 @@
       </ul>
 
       <a class="nav-cta" href="./Zachary-Clint-Swanepoel-CV-2026.pdf" download="Zachary-Clint-Swanepoel-CV-2026.pdf">Download CV ↓</a>
-      <button class="menu-button" id="menuButton" aria-label="Open menu">☰</button>
+      <a class="mobile-writing-link" href="/blog/" aria-label="Read my writing and articles">Writing ↗</a>
+      <button class="menu-button" id="menuButton" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
     </div>
   </nav>
 
@@ -1393,7 +1422,7 @@
             <article class="ai-site-card">
               <div class="ai-video-wrap">
                 <span class="ai-video-label">Architecture · AI Website</span>
-                <video class="ai-showcase-video" autoplay muted loop playsinline webkit-playsinline preload="auto" aria-label="FORM / FOUND architecture website preview">
+                <video class="ai-showcase-video" autoplay muted loop playsinline webkit-playsinline preload="metadata" controls aria-label="FORM / FOUND architecture website preview">
                   <source src="./form-found-new.mp4" type="video/mp4">
                 </video>
               </div>
@@ -1407,7 +1436,7 @@
             <article class="ai-site-card">
               <div class="ai-video-wrap">
                 <span class="ai-video-label">Architecture · Motion Hero</span>
-                <video class="ai-showcase-video" autoplay muted loop playsinline webkit-playsinline preload="auto" aria-label="MONOLITH motion architecture website preview">
+                <video class="ai-showcase-video" autoplay muted loop playsinline webkit-playsinline preload="metadata" controls aria-label="MONOLITH motion architecture website preview">
                   <source src="./monolith.mp4" type="video/mp4">
                 </video>
               </div>
@@ -1421,7 +1450,7 @@
             <article class="ai-site-card">
               <div class="ai-video-wrap">
                 <span class="ai-video-label">Automotive · Motion Website</span>
-                <video class="ai-showcase-video" autoplay muted loop playsinline webkit-playsinline preload="auto" aria-label="VANTA MOTORS sports car website preview">
+                <video class="ai-showcase-video" autoplay muted loop playsinline webkit-playsinline preload="metadata" controls aria-label="VANTA MOTORS sports car website preview">
                   <source src="./vanta-motors.mp4" type="video/mp4">
                 </video>
               </div>
@@ -1435,7 +1464,7 @@
             <article class="ai-site-card">
               <div class="ai-video-wrap">
                 <span class="ai-video-label">AUTOMOTIVE · 2.5D MOTION WEBSITE</span>
-                <video class="ai-showcase-video" autoplay muted loop playsinline webkit-playsinline preload="auto" aria-label="VANTA MOTORS sports car website preview">
+                <video class="ai-showcase-video" autoplay muted loop playsinline webkit-playsinline preload="metadata" controls aria-label="VANTA MOTORS sports car website preview">
                   <source src="./3d-vanta-motors.mp4" type="video/mp4">
                 </video>
               </div>
@@ -1506,6 +1535,26 @@
             </article>
           </div>
         </div>
+      </div>
+    </section>
+
+
+    <section id="writing" class="writing-home">
+      <div class="container">
+        <div class="writing-home-header reveal">
+          <div>
+            <div class="section-kicker">Writing / Field notes</div>
+            <h2 class="section-heading">What I'm learning, building and questioning.</h2>
+            <p class="section-intro">Real work, lessons and my perspective on SEO, analytics, advertising and software.</p>
+          </div>
+          <a class="button-outline" href="/blog/">All articles ↗</a>
+        </div>
+        <div class="writing-home-list">
+          <a class="writing-home-item reveal" href="/blog/what-search-console-can-and-cannot-tell-you/"><span class="writing-home-category">SEO / Search Console</span><div><h3>What Search Console can and cannot tell you about leads</h3><p>Why search visibility and actual enquiries need different measurements.</p></div><span class="arrow" aria-hidden="true">↗</span></a>
+          <a class="writing-home-item reveal" href="/blog/ga4-event-is-not-always-a-lead/"><span class="writing-home-category">Google Analytics</span><div><h3>A GA4 event is not always a lead</h3><p>How I check tracking before making a claim about conversions.</p></div><span class="arrow" aria-hidden="true">↗</span></a>
+          <a class="writing-home-item reveal" href="/blog/aura-check-daily-game-development/"><span class="writing-home-category">Game development</span><div><h3>Building Aura Check: the challenge of a daily game</h3><p>Short sessions, fair scores and designing something worth returning to.</p></div><span class="arrow" aria-hidden="true">↗</span></a>
+        </div>
+        <div style="margin-top:28px"><a class="button-black" href="/blog/">Read all writing ↗</a></div>
       </div>
     </section>
 
@@ -1633,6 +1682,7 @@
     menu.addEventListener("click", () => {
       nav.classList.toggle("open");
       menu.textContent = nav.classList.contains("open") ? "×" : "☰";
+      menu.setAttribute("aria-expanded", String(nav.classList.contains("open")));
     });
 
     // Explicit smooth navigation so every header item works reliably.
@@ -1645,6 +1695,7 @@
         event.preventDefault();
         nav.classList.remove("open");
         menu.textContent = "☰";
+        menu.setAttribute("aria-expanded", "false");
         target.scrollIntoView({ behavior: "smooth", block: "start" });
         history.replaceState(null, "", href);
       });
@@ -1652,7 +1703,7 @@
 
     // Highlight the section currently in view.
     const trackedSections = navLinks
-      .map(link => document.querySelector(link.getAttribute("href")))
+      .map(link => { const href = link.getAttribute("href"); return href && href.startsWith("#") ? document.querySelector(href) : null; })
       .filter(Boolean);
 
     const sectionObserver = new IntersectionObserver(entries => {
@@ -1676,7 +1727,10 @@
       });
     }, { threshold: 0.12 });
 
-    document.querySelectorAll(".reveal").forEach(el => revealObserver.observe(el));
+    const revealElements = [...document.querySelectorAll(".reveal")];
+    revealElements.forEach(el => { if (el.getBoundingClientRect().top < window.innerHeight * 0.95) el.classList.add("visible"); });
+    document.body.classList.add("js-animated");
+    revealElements.forEach(el => { if (!el.classList.contains("visible")) revealObserver.observe(el); });
 
     // Portfolio tabs: switch between Professional Work, "AI Websites" and "SaaS" without leaving the page.
     const workTabs = [...document.querySelectorAll("[data-work-tab]")];
@@ -1692,6 +1746,15 @@
       workPanels.forEach(panel => {
         panel.hidden = panel.dataset.workPanel !== name;
       });
+      // Trigger video playback synchronously with the user tap on iOS Safari.
+      if (name === "ai-websites") {
+        document.querySelectorAll(".ai-showcase-video").forEach(video => {
+          video.muted = true;
+          video.playsInline = true;
+          const rect = video.getBoundingClientRect();
+          if (rect.top < window.innerHeight && rect.bottom > 0) video.play().catch(() => { video.controls = true; });
+        });
+      }
     }
 
     workTabs.forEach(tab => tab.addEventListener("click", () => setWorkTab(tab.dataset.workTab)));
@@ -1717,14 +1780,19 @@
         const canPlay = entry.isIntersecting && !panel?.hidden;
 
         if (canPlay) {
-          video.play().catch(() => {});
+          video.play().catch(() => { video.controls = true; });
         } else {
           video.pause();
         }
       });
     }, { threshold: 0.45 });
 
-    aiVideos.forEach(video => aiVideoObserver.observe(video));
+    aiVideos.forEach(video => {
+      video.muted = true;
+      video.playsInline = true;
+      video.addEventListener("error", () => { video.controls = true; });
+      aiVideoObserver.observe(video);
+    });
     workTabs.forEach(tab => tab.addEventListener("click", () => {
       requestAnimationFrame(() => {
         syncAiVideos();
