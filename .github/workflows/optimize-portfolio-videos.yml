@@ -1,0 +1,89 @@
+name: Optimize portfolio videos for iPhone
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/optimize-portfolio-videos.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  optimize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Convert video previews to streamable Safari-friendly MP4
+        run: |
+          set -euo pipefail
+          if ! command -v ffmpeg >/dev/null 2>&1; then
+            sudo apt-get update -qq
+            sudo DEBIAN_FRONTEND=noninteractive apt-get install -y -qq ffmpeg
+          fi
+          for name in form-found-new monolith vanta-motors 3d-vanta-motors; do
+            ffmpeg -hide_banner -loglevel error -y -i "${name}.mp4" \
+              -map 0:v:0 -vf 'scale=if(gt(iw\,1280)\,1280\,iw):-2,format=yuv420p' \
+              -r 24 -c:v libx264 -preset veryfast -crf 26 \
+              -profile:v main -level:v 4.0 -pix_fmt yuv420p -color_range tv \
+              -an -movflags +faststart "${name}-mobile.mp4"
+            ffmpeg -hide_banner -loglevel error -y -ss 0.5 -i "${name}-mobile.mp4" \
+              -frames:v 1 -q:v 3 "${name}-poster.jpg"
+            VIDEO="${name}-mobile.mp4" python3 - <<'PY'
+          import json,os,subprocess,struct
+          name=os.environ['VIDEO']
+          result=json.loads(subprocess.check_output(['ffprobe','-v','error','-show_streams','-of','json',name],text=True))
+          stream=next(s for s in result['streams'] if s['codec_type']=='video')
+          assert stream['codec_name']=='h264' and stream['profile']=='Main'
+          assert stream['level']<=40 and stream['pix_fmt']=='yuv420p',stream
+          with open(name,'rb') as f:
+              f.seek(0,2);total=f.tell();f.seek(0);offset=0;top=[]
+              while offset<total:
+                  f.seek(offset);header=f.read(8)
+                  if len(header)<8:break
+                  size,atom=struct.unpack('>I4s',header)
+                  if size==1:size=struct.unpack('>Q',f.read(8))[0]
+                  if size<8:break
+                  top.append((atom.decode('ascii','replace'),offset))
+                  offset+=size
+          assert next(i for i,x in enumerate(top) if x[0]=='moov') < next(i for i,x in enumerate(top) if x[0]=='mdat'),top
+          print(name,'PASS',stream['profile'],stream['level'],stream['pix_fmt'],'faststart')
+          PY
+          done
+      - name: Switch homepage previews to optimized files and posters
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+          path=Path('index.html')
+          html=path.read_text(encoding='utf-8')
+          names=['form-found-new','monolith','vanta-motors','3d-vanta-motors']
+          for name in names:
+              pattern=r'(<video\b[^>]*?)>(\s*<source src="\./'+re.escape(name)+r'\.mp4" type="video/mp4">)'
+              def replace(m):
+                  attrs=re.sub(r'\scontrols(?=\s|$)','',m.group(1))
+                  attrs=re.sub(r'preload="[^"]+"','preload="auto"',attrs)
+                  attrs+=' poster="./'+name+'-poster.jpg"'
+                  return attrs+'>'+m.group(2).replace(name+'.mp4',name+'-mobile.mp4')
+              html,count=re.subn(pattern,replace,html,count=1)
+              if count!=1:raise SystemExit('Expected one video element for '+name+', found '+str(count))
+          path.write_text(html,encoding='utf-8')
+          print('Updated all four video source paths and posters')
+          PY
+      - name: Publish verified videos
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html *-mobile.mp4 *-poster.jpg
+          git diff --cached --check
+          if git diff --cached --quiet; then
+            echo 'Already optimized'
+          else
+            git commit -m 'fix: deliver Safari-compatible video previews with poster images'
+            git push origin HEAD:main
+          fi
