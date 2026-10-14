@@ -1,0 +1,4 @@
+---
+import Base from '../../layouts/Base.astro';import ProjectCard from '../../components/ProjectCard.astro';import {projects} from '../../data/site.js';
+---
+<Base title="Projects | Local Presence 360" description="Detailed project case studies from Zachary Swanepoel, covering web apps, SEO, WordPress and game development."><section class="pagehead"><div class="wrap"><div class="eyebrow">PORTFOLIO / CASE STUDIES</div><h1 class="page-title">The work behind the work.</h1><p class="lead">A collection of systems, websites and experiments, including the problem, the approach and what I learned.</p></div></section><section class="section"><div class="wrap grid">{projects.map(project=><ProjectCard project={project}/>)}</div></section></Base>
