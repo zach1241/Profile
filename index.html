@@ -1322,6 +1322,15 @@
     .case-card-links{display:flex;gap:18px;align-items:center;justify-content:space-between;flex-wrap:wrap}
     .case-card-links .project-link{font-size:.88rem}
     @media(max-width:700px){.case-card-links{gap:14px}.case-card-links .project-link{font-size:.85rem}}
+
+/* Featured 2026 project cases */
+.project-feature-visual{position:relative;min-height:300px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:18px;padding:28px 30px;overflow:hidden;border:1px solid rgba(255,255,255,.12)}
+.project-feature-visual .feature-mark{font-size:25px;font-weight:800;letter-spacing:-.07em}
+.project-feature-visual .feature-title{font-size:clamp(27px,3vw,42px);font-weight:800;line-height:1.04;letter-spacing:-.055em;max-width:95%}
+.project-feature-visual .feature-caption{font-size:12px;letter-spacing:.08em;text-transform:uppercase;opacity:.78}
+.visual-logic{background:radial-gradient(circle at 85% 50%,#173251 0%,transparent 52%),linear-gradient(140deg,#080b12,#101820);color:white}.visual-logic .feature-mark{color:#ffce00}
+.visual-rc{background:radial-gradient(circle at 90% 85%,#5b0715,transparent 60%),#09090b;color:white}.visual-rc em{font-style:normal;color:#ed203f}.visual-rc .feature-mark{font-family:Georgia,serif;font-size:36px;font-weight:400}
+.visual-trade{background:linear-gradient(125deg,#fafafa,#e5e5e7);color:#161616}.visual-trade .feature-caption{color:#777}
 </style>
 <link rel="stylesheet" href="/newsletter.css"><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://www.localpresence360.com/#website","name":"Zachary Swanepoel","alternateName":"Local Presence 360","url":"https://www.localpresence360.com/","inLanguage":"en","creator":{"@id":"https://www.localpresence360.com/#person"}},{"@type":"Person","@id":"https://www.localpresence360.com/#person","name":"Zachary Clint Swanepoel","url":"https://www.localpresence360.com/","image":"https://www.localpresence360.com/zach%20profile.jpg","jobTitle":"Software Developer","sameAs":["https://github.com/zach1241","https://www.linkedin.com/in/zachary-clint-swanepoel/","https://x.com/itszach_oliver"]},{"@type":"ProfilePage","@id":"https://www.localpresence360.com/#webpage","url":"https://www.localpresence360.com/","name":"Zachary Swanepoel — Developer, WordPress & Digital Systems","description":"Zachary Swanepoel — WordPress and full-stack developer building modern websites, SEO systems and internal software for growing businesses and agencies.","isPartOf":{"@id":"https://www.localpresence360.com/#website"},"inLanguage":"en","mainEntity":{"@id":"https://www.localpresence360.com/#person"}}]}</script></head>
 
@@ -1452,6 +1461,9 @@
 
         <div class="work-panel" id="professionalWork" role="tabpanel" aria-labelledby="professionalTab" data-work-panel="professional">
           <div class="work-grid">
+<article class="project reveal">
+<a href="/projects/logic-lc/" aria-label="Read Logic LC case study"><div class="project-visual project-feature-visual visual-logic"><span class="feature-mark">logic.</span><span class="feature-title">Commercial Security &amp;<br>IT Solutions</span><span class="feature-caption">Commercial security · Managed IT</span></div></a><div class="project-body"><div class="project-meta"><span class="tag">WordPress</span><span class="tag">Elementor</span><span class="tag">SEO</span></div><h3>Logic LC</h3><p>End-to-end WordPress design, sitemap planning, on-page SEO, full development, publishing and an Elementor handoff organized for easy client edits.</p><div class="case-card-links"><a class="project-link" href="/projects/logic-lc/">View case study ↗</a><a class="project-link" href="https://logiclc.com/" target="_blank" rel="noopener noreferrer">Visit website ↗</a></div></div></article><article class="project reveal">
+<a href="/projects/rc-premium-detailing/" aria-label="Read RC Premium Detailing case study"><div class="project-visual project-feature-visual visual-rc"><span class="feature-mark">R / C</span><span class="feature-title">Build Your <em>Detail.</em></span><span class="feature-caption">Custom WooCommerce detailing experience</span></div></a><div class="project-body"><div class="project-meta"><span class="tag">WordPress</span><span class="tag">Plugin</span><span class="tag">WooCommerce</span></div><h3>RC Premium Detailing</h3><p>Built a custom WooCommerce-compatible WordPress plugin for vehicle-specific detailing, selectable services and add-ons.</p><div class="case-card-links"><a class="project-link" href="/projects/rc-premium-detailing/">View case study ↗</a><a class="project-link" href="https://www.rcdetailing.co.za/" target="_blank" rel="noopener noreferrer">Visit website ↗</a></div></div></article>
             <article class="project reveal">
               <a href="/projects/turning-a-vision-into-reality/" aria-label="Read Turning a vision into reality case study">
                 <div class="project-visual project-image-visual">
@@ -1581,6 +1593,8 @@
 
         <div class="work-panel" id="saasWork" role="tabpanel" aria-labelledby="saasTab" data-work-panel="saas" hidden>
           <div class="work-grid">
+<article class="project reveal">
+<a href="/projects/in-trade-crm/" aria-label="Read In Trade CRM case study"><div class="project-visual project-feature-visual visual-trade"><span class="feature-mark">in trade crm</span><span class="feature-title">Your services.<br>Your bookings.</span><span class="feature-caption">All in one place.</span></div></a><div class="project-body"><div class="project-meta"><span class="tag">SaaS</span><span class="tag">Booking</span><span class="tag">Active build</span></div><h3>In Trade CRM</h3><p>An independently developed booking SaaS for trade businesses, with service setup, onboarding and customer booking journeys currently in development.</p><div class="case-card-links"><a class="project-link" href="/projects/in-trade-crm/">View case study ↗</a></div></div></article>
             <article class="project">
               <div class="project-visual project-image-visual">
                 <img src="./agencyos-on-laptop-and-mobile.png" alt="AgencyOS internal agency operations dashboard" class="project-image">
