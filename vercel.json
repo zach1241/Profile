@@ -17,16 +17,6 @@
       "permanent": false
     },
     {
-      "source": "/projects/rc-premium-detailing/",
-      "destination": "/projects/",
-      "permanent": false
-    },
-    {
-      "source": "/projects/logic-lc/",
-      "destination": "/projects/",
-      "permanent": false
-    },
-    {
       "source": "/projects/search-conversion-measurement/",
       "destination": "/projects/",
       "permanent": false
