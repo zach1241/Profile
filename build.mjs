@@ -8,13 +8,14 @@ const isPublic = name => /\.(html|css|js|png|jpe?g|webp|svg|gif|mp4|webm|pdf|xml
 for (const name of readdirSync('.')) {
   if (name === 'dist' || name === 'node_modules' || name === '.git' || name === '.vercel') continue;
   if (statSync(name).isDirectory()) {
-    if (name === 'projects' || name === 'blog' || name === 'assets') cpSync(name, join(output, name), { recursive: true });
+    if (name === 'projects' || name === 'blog' || name === 'assets' || name === 'portfolio') cpSync(name, join(output, name), { recursive: true });
   } else if (isPublic(name)) {
     cpSync(name, join(output, name));
   }
 }
 const required = [
  'index.html', 'site.css', 'projects/index.html', 'blog/index.html',
+ 'portfolio/index.html', 'portfolio/portfolio.css', 'portfolio/portfolio.js',
  'assets/blog/what-search-console-can-and-cannot-tell-you.webp',
  'assets/blog/algorithm-updates-vs-seo-fundamentals.webp',
  'assets/blog/organic-leads-start-with-the-page.webp',
