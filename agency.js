@@ -5,7 +5,7 @@
   const panels = new Map(ids.map(id => [id, document.getElementById('panel-'+id)]));
   const service = document.getElementById('inquiry-service');
   const plan = document.getElementById('inquiry-plan');
-  const serviceName = {seo:'SEO',ads:'Marketing (Paid Ads)',web:'Web Design'};
+  const serviceName = {seo:'SEO',ads:'Paid Advertising',web:'Web Design'};
   const getPlans = category => [...(panels.get(category)?.querySelectorAll('[data-inquiry-plan]') || [])].map(a => a.dataset.inquiryPlan);
   const fillPlanOptions = (preferred) => {
     const category = Object.keys(serviceName).find(id => serviceName[id] === service.value);
@@ -27,6 +27,7 @@
       url.searchParams.set('service', id);
       history.replaceState(null,'',url.pathname+url.search+url.hash);
     }
+    window.ScrollTrigger?.refresh();
   }
   tabs.forEach((tab,index) => {
     tab.addEventListener('click',() => selectCategory(tab.dataset.priceTab,true));
@@ -48,10 +49,10 @@
   fillPlanOptions();
   const nav = document.getElementById('nav-links');
   const toggle = document.getElementById('menu-toggle');
-  const closeMenu = () => {nav.classList.remove('is-open');toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-label','Open navigation');};
-  toggle?.addEventListener('click',()=>{const open=nav.classList.toggle('is-open');toggle.setAttribute('aria-expanded',String(open));toggle.setAttribute('aria-label',open?'Close navigation':'Open navigation');});
-  nav?.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
-  document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu();});
+  const closeMenu = (returnFocus=false) => {nav.classList.remove('is-open');toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-label','Open navigation');if(returnFocus)toggle.focus();};
+  toggle?.addEventListener('click',()=>{const open=nav.classList.toggle('is-open');toggle.setAttribute('aria-expanded',String(open));toggle.setAttribute('aria-label',open?'Close navigation':'Open navigation');if(open)nav.querySelector('a')?.focus();});
+  nav?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>closeMenu()));
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&nav.classList.contains('is-open'))closeMenu(true);});
   document.getElementById('proposal-form')?.addEventListener('submit',event=>{
     event.preventDefault();
     const form=event.currentTarget;
@@ -87,4 +88,25 @@
     } catch { /* Unconfigured or invalid URL: do not display a broken link. */ }
   }
   document.getElementById('year').textContent=String(new Date().getFullYear());
+  // About tabs share the same keyboard pattern as pricing.
+  const aboutTabs=[...document.querySelectorAll('[data-about-tab]')];
+  function setAbout(index,focus=false){aboutTabs.forEach((tab,i)=>{const active=i===index;tab.setAttribute('aria-selected',String(active));tab.tabIndex=active?0:-1;document.getElementById(tab.getAttribute('aria-controls')).hidden=!active;if(active&&focus)tab.focus();});window.ScrollTrigger?.refresh();}
+  aboutTabs.forEach((tab,index)=>{tab.addEventListener('click',()=>setAbout(index));tab.addEventListener('keydown',event=>{if(!['ArrowLeft','ArrowRight','Home','End'].includes(event.key))return;event.preventDefault();setAbout(event.key==='Home'?0:event.key==='End'?aboutTabs.length-1:(index+(event.key==='ArrowRight'?1:-1)+aboutTabs.length)%aboutTabs.length,true);});});
+  const track=document.getElementById('services-track');
+  const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function moveServices(direction){const amount=track.querySelector('.service-card').getBoundingClientRect().width;track.scrollBy({left:direction*amount,behavior:reduced?'instant':'smooth'});}
+  document.querySelector('[data-service-prev]')?.addEventListener('click',()=>moveServices(-1));
+  document.querySelector('[data-service-next]')?.addEventListener('click',()=>moveServices(1));
+  const topLink=document.querySelector('.back-top');
+  window.addEventListener('scroll',()=>topLink?.classList.toggle('visible',window.scrollY>700),{passive:true});
+  if(window.gsap&&window.ScrollTrigger&&!reduced){
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.from('.hero h1',{y:35,opacity:0,duration:1.1,ease:'power3.out'});
+    gsap.from('.hero-preview',{y:25,opacity:0,duration:1.2,delay:.15,ease:'power3.out'});
+    gsap.from('.hero-type h2',{yPercent:110,duration:1.35,delay:.2,ease:'power4.out'});
+    document.querySelectorAll('.reveal').forEach(el=>gsap.from(el,{y:40,opacity:0,duration:.85,ease:'power2.out',scrollTrigger:{trigger:el,start:'top 94%',once:true}}));
+    gsap.to('.marquee',{xPercent:-28,ease:'none',scrollTrigger:{trigger:'.work',start:'top bottom',end:'bottom top',scrub:1.5}});
+    window.addEventListener('load',()=>ScrollTrigger.refresh(),{once:true});
+    document.querySelectorAll('details').forEach(el=>el.addEventListener('toggle',()=>ScrollTrigger.refresh()));
+  }
 })();

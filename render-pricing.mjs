@@ -2,7 +2,7 @@
 const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export function renderPricing(data) {
   if (!Array.isArray(data.categories) || data.categories.length !== 3) throw new Error('Expected exactly three pricing categories');
-  return data.categories.map((category, categoryIndex) => {
+  const panels = data.categories.map((category, categoryIndex) => {
     if (category.tiers.length !== 3 || !category.features.every(row => row[1].length === 3)) throw new Error('Pricing data shape mismatch');
     const cards = category.tiers.map((tier, index) => {
       const highlights = category.features.slice(0,4).map(([label,values]) => `<li><span>${esc(label)}</span><strong>${esc(values[index])}</strong></li>`).join('');
@@ -21,4 +21,6 @@ export function renderPricing(data) {
       <p class="pricing-scope">${esc(category.terms)}</p>
     </div>`;
   }).join('');
+  const terms = `<details class="shared-terms"><summary>Pricing notes &amp; shared terms <span aria-hidden="true">+</span></summary><ul>${data.sharedTerms.map(term=>`<li><strong>${esc(term.title)}</strong><p>${esc(term.description)}</p></li>`).join('')}</ul><p>${esc(data.customProposal)}</p></details>`;
+  return panels + terms;
 }
