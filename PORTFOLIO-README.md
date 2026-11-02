@@ -9,7 +9,8 @@ This is an independently implemented static page based on the visual layout and 
 - `portfolio/index.html`: content, project links, walkthroughs, contact details and metadata.
 - `portfolio/portfolio.css`: layout, typography, responsive rules and surface styles.
 - `portfolio/portfolio.js`: scrolling, reveals, menu, carousel and hover behavior.
-- `portfolio/assets/photos/`: three transparent reaction portraits.
+- `portfolio/assets/photos/zach-profile.webp`: the supplied Downloads headshot, used in the hero, About section and contact avatar. Earlier reaction assets remain in source history.
+- `portfolio/assets/branding/`: the supplied badge edited to an opaque black location pin, plus favicon and Apple touch icon sizes.
 - `portfolio/assets/fonts/`: Google Fonts Phudu and Instrument Sans with OFL license files.
 - `portfolio/assets/vendor/`: GSAP 3.15.0 and its ScrollTrigger, ScrollSmoother and ScrollToPlugin, from the official npm package. License: https://gsap.com/standard-license/.
 
@@ -24,3 +25,11 @@ Run `node build.mjs`, then `node scripts/verify-portfolio.mjs`. The latter compa
 For local preview run `node scripts/serve.mjs` after building, then open `http://127.0.0.1:4173/portfolio/`. Stop it with Ctrl+C.
 
 The existing Vercel project is `local-presense-360`, linked to `zach1241/Profile`. The entire existing site's output remains part of every deployment.
+
+## Portrait and branding update — 2 November 2026
+
+Replaced both distinct reaction portraits at all three placements with the exact `zach-profile.png` supplied in Downloads, converted to WebP at quality 90 with pixel-identical alpha. Adjusted the About crop, hero width and contact avatar for its square headshot composition. The nine-patch reveal reads the image's actual fit and position so it matches the static layout.
+
+The built-in image-generation editing tool changed `White Location Pin Badge.png` to a fully opaque black pin, retained the white circular badge and center hole, and preserved transparency outside the badge. The selected result is saved as `portfolio/assets/branding/location-pin-badge.png`; header WebP and favicon sizes are format conversions of that result. The editable SVG fallback also uses a black pin on a white badge.
+
+Edit prompt: “Preserve the white circular badge and white center hole; replace all mottled or partly transparent texture inside the map-pin silhouette with uniform fully opaque pure black (#000000). Keep the surrounding area transparent. Add no text, graphics, shadows, borders, gradients or textures.”
