@@ -86,7 +86,7 @@ for (const category of pricing.categories) {
 assert.ok(html.includes('does not submit data to a website server'), 'Email draft behavior needs its user-facing explanation');
 assert.ok(elements.some(element => element.name === 'input' && element.attrs.name === 'email' && element.attrs.type === 'email' && 'required' in element.attrs), 'Inquiry email field must validate email syntax');
 
-const allowedChanges = new Set(['index.html', 'agency-pricing.json', 'agency.js', 'render-pricing.mjs', 'agency-home.css']);
+const allowedChanges = new Set(['index.html', 'agency-pricing.json', 'agency.js', 'render-pricing.mjs', 'agency-home.css', 'agency-motion.css', 'agency-motion.js']);
 for (const path of git('diff', '--name-only', baseline, '--').split('\n').filter(Boolean)) {
   assert.ok(allowedChanges.has(path) || path.startsWith('assets/home/') || path.startsWith('scripts/') || /(?:^|\/)(?:HOME[^/]*|README)\.md$/i.test(path), `Existing unrelated file changed: ${path}`);
 }

@@ -28,6 +28,7 @@
       history.replaceState(null,'',url.pathname+url.search+url.hash);
     }
     window.ScrollTrigger?.refresh();
+    document.dispatchEvent(new CustomEvent('agency:pricing-change',{detail:{category:id}}));
   }
   tabs.forEach((tab,index) => {
     tab.addEventListener('click',() => selectCategory(tab.dataset.priceTab,true));
@@ -94,19 +95,7 @@
   aboutTabs.forEach((tab,index)=>{tab.addEventListener('click',()=>setAbout(index));tab.addEventListener('keydown',event=>{if(!['ArrowLeft','ArrowRight','Home','End'].includes(event.key))return;event.preventDefault();setAbout(event.key==='Home'?0:event.key==='End'?aboutTabs.length-1:(index+(event.key==='ArrowRight'?1:-1)+aboutTabs.length)%aboutTabs.length,true);});});
   const track=document.getElementById('services-track');
   const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  function moveServices(direction){const amount=track.querySelector('.service-card').getBoundingClientRect().width;track.scrollBy({left:direction*amount,behavior:reduced?'instant':'smooth'});}
+  function moveServices(direction){if(window.AgencyMotion?.moveServices?.(direction))return;const amount=track.querySelector('.service-card').getBoundingClientRect().width;track.scrollBy({left:direction*amount,behavior:reduced?'instant':'smooth'});}
   document.querySelector('[data-service-prev]')?.addEventListener('click',()=>moveServices(-1));
   document.querySelector('[data-service-next]')?.addEventListener('click',()=>moveServices(1));
-  const topLink=document.querySelector('.back-top');
-  window.addEventListener('scroll',()=>topLink?.classList.toggle('visible',window.scrollY>700),{passive:true});
-  if(window.gsap&&window.ScrollTrigger&&!reduced){
-    gsap.registerPlugin(ScrollTrigger);
-    gsap.from('.hero h1',{y:35,opacity:0,duration:1.1,ease:'power3.out'});
-    gsap.from('.hero-preview',{y:25,opacity:0,duration:1.2,delay:.15,ease:'power3.out'});
-    gsap.from('.hero-type h2',{yPercent:110,duration:1.35,delay:.2,ease:'power4.out'});
-    document.querySelectorAll('.reveal').forEach(el=>gsap.from(el,{y:40,opacity:0,duration:.85,ease:'power2.out',scrollTrigger:{trigger:el,start:'top 94%',once:true}}));
-    gsap.to('.marquee',{xPercent:-28,ease:'none',scrollTrigger:{trigger:'.work',start:'top bottom',end:'bottom top',scrub:1.5}});
-    window.addEventListener('load',()=>ScrollTrigger.refresh(),{once:true});
-    document.querySelectorAll('details').forEach(el=>el.addEventListener('toggle',()=>ScrollTrigger.refresh()));
-  }
 })();
