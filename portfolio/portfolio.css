@@ -35,4 +35,7 @@ body.menu-open{overflow:hidden}.site-header.is-sticky{background:#fffffff5;box-s
 @media(min-width:768px) and (max-width:991px){.hero{padding-top:200px}.hero-portrait{height:500px}}
 @media(min-width:576px) and (max-width:767px){.hero-portrait{height:400px}}
 @media(max-width:575px){.hero-portrait{height:345px}}
+.brand-mark{width:40px;height:40px;object-fit:contain;flex-shrink:0}.about-photo{align-items:stretch}.about-photo img{width:100%;height:100%;min-height:inherit;object-fit:cover;object-position:50% 0}.person-portrait img{width:100%;height:100%;object-fit:cover;object-position:50% 0}
+@media(min-width:1200px){.hero-portrait{width:min(55vw,880px)}}
+@media(max-width:767px){.brand-mark{width:32px;height:32px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}.preloader{display:none!important}.reveal{opacity:1!important;transform:none!important}.reveal-char{opacity:1!important}.service-preview,#cursor{display:none!important}.work-backdrop{position:absolute!important;transform:none!important}}

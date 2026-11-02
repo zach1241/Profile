@@ -325,7 +325,7 @@
             const right = Math.max(0, 100 - (column + 1) * 100 / 3 - 0.15);
             const bottom = Math.max(0, 100 - (row + 1) * 100 / 3 - 0.15);
             Object.assign(patch.style, { position: 'absolute', inset: '0', backgroundImage: `url("${image.currentSrc || image.src}")`,
-              backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center bottom',
+              backgroundSize: getComputedStyle(image).objectFit || 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: getComputedStyle(image).objectPosition || 'center bottom',
               clipPath: `inset(${top}% ${100 - left}% ${100 - top}% ${left}%)` });
             grid.append(patch);
             const diagonal = row + column;
