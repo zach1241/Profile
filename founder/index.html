@@ -1,0 +1,1924 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- The legacy GitHub Pages portfolio remains a bridge for links in older CVs.
+       On Vercel this script does nothing, preserving the live website. -->
+  <script>
+    (function () {
+      if (window.location.hostname !== "zach1241.github.io") return;
+      var oldPath = window.location.pathname;
+      if (!/^\/Profile(?:\/|$)/i.test(oldPath)) return;
+      var nextPath = oldPath.replace(/^\/Profile(?=\/|$)/i, "") || "/";
+      window.location.replace(
+        "https://www.localpresence360.com" +
+        nextPath + window.location.search + window.location.hash
+      );
+    }());
+  </script>
+  <meta name="description" content="Zachary Swanepoel — WordPress and full-stack developer building modern websites, SEO systems and internal software for growing businesses and agencies.">
+  <meta name="author" content="Zachary Clint Swanepoel">
+<link rel="canonical" href="https://www.localpresence360.com/founder/">
+  <title>Zachary Swanepoel — Developer & Founder | Local Presence 360</title>
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Zachary Swanepoel — Developer & Founder">
+  <meta property="og:description" content="Web development, WordPress, SEO systems and projects by Zachary Swanepoel, founder of Local Presence 360.">
+  <meta property="og:url" content="https://www.localpresence360.com/founder/">
+
+  <style>
+    :root {
+      --black: #0a0a0a;
+      --ink: #111111;
+      --muted: #6d6d6d;
+      --line: #e7e7e7;
+      --soft: #f6f6f4;
+      --white: #ffffff;
+      --radius: 22px;
+      --max: 1440px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      overflow-x: hidden;
+      font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--white);
+      color: var(--ink);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+
+    .container {
+      width: min(var(--max), calc(100% - 40px));
+      margin-inline: auto;
+    }
+
+    /* NAV */
+    .nav {
+      position: fixed;
+      inset: 0 0 auto;
+      z-index: 1000;
+      height: 76px;
+      background: rgba(255,255,255,.82);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid transparent;
+      transition: .25s ease;
+    }
+
+    .nav.scrolled {
+      border-color: var(--line);
+      box-shadow: 0 8px 30px rgba(0,0,0,.05);
+    }
+
+    .nav-inner {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      font-weight: 800;
+      letter-spacing: -.05em;
+      font-size: 1.05rem;
+    }
+
+    .brand span { color: #777; font-weight: 500; }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+      color: #666;
+      font-size: .92rem;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover, .nav-links a.active { color: var(--black); }
+    .nav-links a.active { font-weight: 750; }
+
+    .nav-cta,
+    .button-black {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      background: var(--black);
+      color: white;
+      border: 1px solid var(--black);
+      border-radius: 999px;
+      padding: 12px 19px;
+      font-weight: 650;
+      font-size: .9rem;
+      transition: .2s ease;
+    }
+
+    .nav-cta:hover,
+    .button-black:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(0,0,0,.14);
+    }
+
+    .menu-button {
+      display: none;
+      border: 0;
+      background: transparent;
+      font-size: 1.35rem;
+      cursor: pointer;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
+      padding: 150px 0 90px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero:before {
+      content: "";
+      position: absolute;
+      width: 560px;
+      height: 560px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #f0f0ee 0%, transparent 68%);
+      right: -220px;
+      top: 50px;
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      border: 1px solid var(--line);
+      background: #fafafa;
+      border-radius: 999px;
+      padding: 7px 12px;
+      color: #555;
+      font-size: .78rem;
+      font-weight: 650;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      margin-bottom: 25px;
+    }
+
+    .eyebrow-dot {
+      width: 7px;
+      height: 7px;
+      background: #111;
+      border-radius: 50%;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 70px;
+      align-items: end;
+    }
+
+    h1 {
+      font-size: clamp(3.4rem, 7vw, 6.8rem);
+      line-height: .92;
+      letter-spacing: -.075em;
+      max-width: 850px;
+      margin-bottom: 30px;
+    }
+
+    .hero-copy {
+      max-width: 660px;
+      font-size: clamp(1.05rem, 2vw, 1.25rem);
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 34px;
+    }
+
+    .button-outline {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #d8d8d8;
+      border-radius: 999px;
+      padding: 12px 19px;
+      font-weight: 650;
+      font-size: .9rem;
+      background: white;
+      transition: .2s ease;
+    }
+
+    .button-outline:hover {
+      border-color: #111;
+      transform: translateY(-2px);
+    }
+
+    .hero-note {
+      border-left: 1px solid #cfcfcf;
+      padding-left: 25px;
+      color: #666;
+      max-width: 360px;
+      justify-self: end;
+    }
+
+    .hero-note strong {
+      display: block;
+      color: #111;
+      font-size: 1rem;
+      margin-bottom: 8px;
+    }
+
+    /* HERO SKILL ORBIT */
+    .hero-visual {
+      position: relative;
+      min-height: 500px;
+      display: grid;
+      place-items: center;
+      isolation: isolate;
+    }
+
+    .skills-orbit {
+      position: relative;
+      width: min(470px, 42vw);
+      aspect-ratio: 1;
+      display: grid;
+      place-items: center;
+    }
+
+    .skills-orbit::before,
+    .skills-orbit::after {
+      content: "";
+      position: absolute;
+      border: 1px solid #dcdcd8;
+      border-radius: 50%;
+      inset: 12%;
+      animation: orbitPulse 5s ease-in-out infinite;
+    }
+
+    .skills-orbit::after {
+      inset: 29%;
+      border-color: #e8e8e5;
+      animation-delay: -2.5s;
+    }
+
+    .orbit-ring {
+      position: absolute;
+      border: 1px dashed #d7d7d3;
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .orbit-ring.outer { inset: 4%; animation: orbitRingRotate 25s linear infinite; }
+    .orbit-ring.inner { inset: 21%; animation: orbitRingRotate 18s linear infinite reverse; }
+
+    .orbit-center {
+      position: relative;
+      width: 142px;
+      height: 142px;
+      border-radius: 50%;
+      background: #0b0b0b;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      box-shadow: 0 24px 60px rgba(0,0,0,.20);
+      z-index: 5;
+      border: 7px solid #fff;
+      outline: 1px solid #d7d7d3;
+    }
+
+    .orbit-center::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(0,0,0,.16));
+      pointer-events: none;
+    }
+
+    .orbit-center img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: contain;
+      object-position: center top;
+      border-radius: 50%;
+    }
+
+    .skill-node {
+      --angle: 0deg;
+      --radius: 180px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 58px;
+      height: 58px;
+      margin: -29px;
+      transform: rotate(var(--angle)) translateX(var(--radius)) rotate(calc(var(--angle) * -1));
+      animation: skillOrbit 12s linear infinite;
+      will-change: transform;
+      z-index: 4;
+    }
+
+    .skill-node.inner-node { --radius: 112px; animation-duration: 15s; animation-direction: reverse; }
+
+    .skill-node button {
+      width: 100%;
+      height: 100%;
+      border: 1px solid #d7d7d3;
+      background: rgba(255,255,255,.94);
+      border-radius: 18px;
+      display: grid;
+      place-items: center;
+      color: #222;
+      box-shadow: 0 12px 30px rgba(0,0,0,.08);
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+      cursor: default;
+    }
+
+    .skill-node button:hover {
+      transform: translateY(-5px) scale(1.08);
+      border-color: #111;
+      box-shadow: 0 18px 36px rgba(0,0,0,.14);
+    }
+
+    .skill-node svg { width: 31px; height: 31px; }
+    .skill-node.inner-node { width: 50px; height: 50px; margin: -25px; }
+    .skill-node.inner-node svg { width: 26px; height: 26px; }
+
+    .skill-label {
+      position: absolute;
+      left: 50%;
+      top: calc(100% + 8px);
+      transform: translateX(-50%);
+      white-space: nowrap;
+      background: #111;
+      color: #fff;
+      border-radius: 999px;
+      padding: 4px 8px;
+      font-size: .62rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .2s ease;
+    }
+
+    .skill-node:hover .skill-label { opacity: 1; }
+
+    @keyframes orbitRingRotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    @keyframes skillOrbit {
+      0% {
+        transform: rotate(var(--angle)) translateX(var(--radius)) rotate(calc(var(--angle) * -1));
+      }
+      100% {
+        transform: rotate(calc(var(--angle) + 360deg)) translateX(var(--radius)) rotate(calc((var(--angle) + 360deg) * -1));
+      }
+    }
+
+    @keyframes orbitPulse {
+      0%,100% { opacity: .55; transform: scale(.98); }
+      50% { opacity: 1; transform: scale(1.02); }
+    }
+
+    /* SHARED */
+    section { padding: 110px 0; }
+
+    .section-kicker {
+      color: #777;
+      font-size: .75rem;
+      text-transform: uppercase;
+      letter-spacing: .13em;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .section-heading {
+      font-size: clamp(2.4rem, 5vw, 4.4rem);
+      line-height: .98;
+      letter-spacing: -.065em;
+      max-width: 760px;
+      margin-bottom: 22px;
+    }
+
+    .section-intro {
+      color: var(--muted);
+      max-width: 650px;
+      font-size: 1.05rem;
+    }
+
+    /* WORK */
+    .work {
+      background: var(--soft);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .work-header {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 30px;
+      margin-bottom: 45px;
+    }
+
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .project {
+      background: white;
+      border: 1px solid #dedede;
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: .25s ease;
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 22px 55px rgba(0,0,0,.09);
+      border-color: #cfcfcf;
+    }
+
+    .project-visual {
+      min-height: 330px;
+      background:
+        linear-gradient(135deg, rgba(0,0,0,.04), rgba(0,0,0,.0)),
+        #ededeb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project-visual:after {
+      content: "";
+      position: absolute;
+      inset: 24px;
+      border: 1px solid rgba(0,0,0,.1);
+      border-radius: 14px;
+    }
+
+    .project-image-visual {
+      min-height: 330px;
+      padding: 0;
+      background: #111;
+    }
+
+    .project-image {
+      width: 100%;
+      height: 100%;
+      min-height: 330px;
+      object-fit: cover;
+      object-position: center;
+      transition: transform .45s ease;
+    }
+
+    .project:hover .project-image {
+      transform: scale(1.025);
+    }
+
+    .project-image-visual:after {
+      inset: 0;
+      border: 0;
+      border-radius: 0;
+      box-shadow: inset 0 0 0 1px rgba(0,0,0,.08);
+    }
+
+    .browser {
+      width: 76%;
+      border: 1px solid #d4d4d4;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 20px 45px rgba(0,0,0,.13);
+      overflow: hidden;
+      z-index: 1;
+      transform: rotate(-1.2deg);
+    }
+
+    .browser-bar {
+      height: 28px;
+      border-bottom: 1px solid #e5e5e5;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      padding-left: 10px;
+    }
+
+    .browser-bar i {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: #c7c7c7;
+    }
+
+    .browser-content { padding: 24px; }
+
+    .mock-line {
+      height: 8px;
+      background: #e5e5e5;
+      border-radius: 5px;
+      margin-bottom: 9px;
+    }
+
+    .mock-line.dark { background: #111; width: 62%; height: 15px; }
+    .mock-line.short { width: 42%; }
+    .mock-block {
+      height: 80px;
+      margin-top: 22px;
+      background: #f1f1ef;
+      border-radius: 8px;
+    }
+
+    .project-body { padding: 25px 25px 27px; }
+
+    .project-meta {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 13px;
+    }
+
+    .tag {
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: #555;
+      background: #f3f3f2;
+      padding: 6px 9px;
+      border-radius: 999px;
+    }
+
+    .project h3 {
+      font-size: 1.5rem;
+      letter-spacing: -.035em;
+      margin-bottom: 8px;
+    }
+
+    .project p { color: var(--muted); font-size: .94rem; }
+
+    .project-link {
+      display: inline-flex;
+      margin-top: 18px;
+      font-size: .88rem;
+      font-weight: 700;
+    }
+
+    .project-link:hover { text-decoration: underline; }
+
+    /* WORK TABS */
+    .work-tabs {
+      display: inline-flex;
+      gap: 6px;
+      padding: 6px;
+      margin: 0 0 30px;
+      background: #e9e9e6;
+      border: 1px solid #dcdcd8;
+      border-radius: 16px;
+    }
+
+    .work-tab {
+      border: 0;
+      background: transparent;
+      color: #6d6d6d;
+      border-radius: 11px;
+      padding: 11px 16px;
+      font: inherit;
+      font-size: .88rem;
+      font-weight: 750;
+      cursor: pointer;
+      transition: .2s ease;
+    }
+
+    .work-tab:hover { color: #111; }
+    .work-tab.active {
+      background: #fff;
+      color: #111;
+      box-shadow: 0 5px 16px rgba(0,0,0,.08);
+    }
+
+    .work-panel[hidden] { display: none; }
+    .work-panel { animation: workPanelIn .28s ease; }
+
+    .project-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      margin-top: 17px;
+      color: #6d6d6d;
+      font-size: .82rem;
+      font-weight: 650;
+    }
+
+    .project-status::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #111;
+    }
+
+    @keyframes workPanelIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: none; }
+    }
+
+
+    /* AI WEBSITE SHOWCASE */
+    .ai-showcase-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .ai-site-card {
+      background: #0b0b0b;
+      color: #fff;
+      border: 1px solid #242424;
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+    }
+
+    .ai-site-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 22px 55px rgba(0,0,0,.14);
+      border-color: #3a3a3a;
+    }
+
+    .ai-video-wrap {
+      position: relative;
+      aspect-ratio: 16 / 10;
+      background: #050505;
+      overflow: hidden;
+      border-bottom: 1px solid #242424;
+    }
+
+    .ai-video-wrap video {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      background: #050505;
+    }
+
+    .ai-video-wrap::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,.04);
+    }
+
+    .ai-video-label {
+      position: absolute;
+      left: 18px;
+      top: 18px;
+      z-index: 2;
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: rgba(5,5,5,.72);
+      border: 1px solid rgba(255,255,255,.14);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      color: rgba(255,255,255,.9);
+      font-size: .68rem;
+      font-weight: 750;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    .ai-site-body { padding: 22px 22px 24px; }
+
+    .ai-site-meta {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+
+    .ai-site-card .tag {
+      color: #cfcfcf;
+      background: #191919;
+    }
+
+    .ai-site-card h3 {
+      font-size: 1.55rem;
+      letter-spacing: -.04em;
+      margin-bottom: 7px;
+    }
+
+    .ai-site-card p {
+      color: #9b9b9b;
+      font-size: .92rem;
+      max-width: 560px;
+    }
+
+    .ai-x-card {
+      grid-column: 1 / -1;
+      min-height: 240px;
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 35px;
+      align-items: end;
+      padding: 38px;
+      background: #0b0b0b;
+      color: #fff;
+      border: 1px solid #242424;
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+    }
+
+    .ai-x-card::before {
+      content: "X";
+      position: absolute;
+      right: 28px;
+      top: -45px;
+      font-size: 13rem;
+      line-height: 1;
+      font-weight: 800;
+      color: rgba(255,255,255,.035);
+      pointer-events: none;
+    }
+
+    .ai-x-card:hover {
+      transform: translateY(-5px);
+      border-color: #3a3a3a;
+      box-shadow: 0 22px 55px rgba(0,0,0,.14);
+    }
+
+    .ai-x-card small {
+      display: block;
+      color: #777;
+      font-weight: 750;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .ai-x-card h3 {
+      font-size: clamp(2rem, 4vw, 3.7rem);
+      line-height: .95;
+      letter-spacing: -.06em;
+      margin-bottom: 14px;
+    }
+
+    .ai-x-card p {
+      color: #999;
+      max-width: 650px;
+      font-size: .98rem;
+    }
+
+    .ai-x-action {
+      position: relative;
+      z-index: 2;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 155px;
+      padding: 13px 18px;
+      border-radius: 999px;
+      background: #fff;
+      color: #111;
+      font-weight: 750;
+      font-size: .88rem;
+      white-space: nowrap;
+    }
+
+    /* FEATURED SYSTEM */
+    .featured {
+      background: #0b0b0b;
+      color: white;
+      overflow: hidden;
+    }
+
+    .featured .section-kicker { color: #999; }
+    .featured .section-intro { color: #aaa; }
+
+    .system-grid {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .system-title {
+      font-size: clamp(2.8rem, 5vw, 5rem);
+      line-height: .95;
+      letter-spacing: -.065em;
+      margin-bottom: 24px;
+    }
+
+    .system-copy {
+      color: #aaa;
+      font-size: 1.03rem;
+      line-height: 1.75;
+    }
+
+    .system-points {
+      list-style: none;
+      margin-top: 30px;
+      display: grid;
+      gap: 13px;
+    }
+
+    .system-points li {
+      display: flex;
+      gap: 12px;
+      color: #ddd;
+      font-size: .92rem;
+    }
+
+    .system-points li:before {
+      content: "→";
+      color: #fff;
+      font-weight: 800;
+    }
+
+    .app-window {
+
+      background: #151515;
+      border: 1px solid #303030;
+      border-radius: 20px;
+      padding: 15px;
+      box-shadow: 0 35px 90px rgba(0,0,0,.45);
+    }
+
+    .app-top {
+      height: 34px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 0 7px;
+    }
+
+    .app-top i {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #555;
+    }
+
+    .app-body {
+      background: #f7f7f5;
+      color: #111;
+      min-height: 360px;
+      border-radius: 13px;
+      padding: 18px;
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      gap: 15px;
+    }
+
+    .app-sidebar {
+      background: #111;
+      border-radius: 10px;
+      padding: 12px 8px;
+    }
+
+    .app-sidebar div {
+      height: 7px;
+      border-radius: 4px;
+      background: #444;
+      margin: 9px 5px;
+    }
+
+    .app-main h4 { font-size: 1.15rem; margin: 2px 0 15px; }
+    .task-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 10px; }
+
+    .task {
+      background: white;
+      border: 1px solid #e5e5e5;
+      border-radius: 9px;
+      padding: 12px;
+      min-height: 90px;
+    }
+
+    .task small { color: #888; font-size: .65rem; }
+    .task strong { display: block; font-size: .75rem; margin-top: 8px; }
+
+    /* CAPABILITIES */
+    .cap-grid {
+      margin-top: 55px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid var(--line);
+    }
+
+    .cap {
+      padding: 32px 28px 32px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .cap:not(:nth-child(3n+1)) {
+      padding-left: 28px;
+      border-left: 1px solid var(--line);
+    }
+
+    .cap-number {
+      color: #aaa;
+      font-size: .75rem;
+      font-weight: 800;
+      margin-bottom: 45px;
+    }
+
+    .cap h3 { font-size: 1.25rem; letter-spacing: -.03em; margin-bottom: 9px; }
+    .cap p { color: var(--muted); font-size: .9rem; }
+
+    /* PROCESS */
+    .process {
+      background: var(--soft);
+      border-block: 1px solid var(--line);
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      margin-top: 50px;
+      border-top: 1px solid #d9d9d7;
+    }
+
+    .step {
+      padding: 25px 25px 0 0;
+      min-height: 200px;
+    }
+
+    .step + .step { padding-left: 25px; border-left: 1px solid #d9d9d7; }
+    .step-number { font-size: .72rem; font-weight: 800; color: #999; }
+    .step h3 { margin: 45px 0 8px; font-size: 1.15rem; }
+    .step p { color: var(--muted); font-size: .88rem; }
+
+    /* ABOUT */
+    .about-grid {
+      display: grid;
+      grid-template-columns: .65fr 1.35fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .profile-frame {
+      border-radius: 20px;
+      background: #ededeb;
+      padding: 12px;
+      max-width: 330px;
+    }
+
+    .profile-frame img {
+      aspect-ratio: 1;
+      object-fit: cover;
+      border-radius: 13px;
+      background: #ddd;
+    }
+
+    .about-copy p {
+      color: var(--muted);
+      font-size: 1.04rem;
+      line-height: 1.85;
+      margin-bottom: 20px;
+      max-width: 720px;
+    }
+
+    .about-stats {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 10px;
+      margin-top: 35px;
+    }
+
+    .stat {
+      border-top: 1px solid #ccc;
+      padding-top: 13px;
+    }
+
+    .stat strong { display: block; font-size: 1.4rem; letter-spacing: -.04em; }
+    .stat span { color: #777; font-size: .78rem; }
+
+    /* CONTACT */
+    .contact {
+      background: #0b0b0b;
+      color: white;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 70px;
+      align-items: end;
+    }
+
+    .contact .section-kicker { color: #999; }
+    .contact .section-heading { max-width: 780px; }
+    .contact-copy { color: #aaa; max-width: 590px; }
+
+    .contact-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .button-white {
+      background: white;
+      color: #111;
+      border: 1px solid white;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      padding: 13px 20px;
+      font-weight: 700;
+      font-size: .9rem;
+      transition: .2s ease;
+    }
+
+    .button-white:hover { transform: translateY(-2px); box-shadow: 0 15px 35px rgba(255,255,255,.12); }
+
+    .contact-card {
+      border: 1px solid #333;
+      border-radius: 18px;
+      padding: 25px;
+      background: #111;
+    }
+
+    .contact-card small {
+      display: block;
+      color: #888;
+      margin-bottom: 8px;
+    }
+
+    .contact-card strong { font-size: 1.1rem; }
+
+    /* FOOTER */
+    footer {
+      background: #0b0b0b;
+      color: #777;
+      border-top: 1px solid #252525;
+      padding: 25px 0;
+      font-size: .78rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+
+    .agencyos-image {
+      width: 100%;
+      height: auto;
+      min-height: 420px;
+      object-fit: contain;
+      object-position: center;
+      display: block;
+      border-radius: 18px;
+    }
+
+    /* AGENCYOS IMAGE LIGHTBOX */
+    .agencyos-preview { position:relative; width:100%; border:0; color:inherit; text-align:left; cursor:zoom-in; }
+    .agencyos-preview:focus-visible { outline:2px solid white; outline-offset:4px; }
+    .preview-badge { position:absolute; right:28px; bottom:28px; z-index:3; padding:8px 12px; border-radius:999px; background:rgba(0,0,0,.76); color:#fff; border:1px solid rgba(255,255,255,.18); font-size:.72rem; font-weight:700; opacity:0; transform:translateY(5px); transition:.2s ease; pointer-events:none; }
+    .agencyos-preview:hover .preview-badge,.agencyos-preview:focus-visible .preview-badge { opacity:1; transform:none; }
+    .image-modal { position:fixed; inset:0; z-index:2000; display:none; align-items:center; justify-content:center; padding:28px; background:rgba(0,0,0,.82); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); }
+    .image-modal.open { display:flex; }
+    .image-modal-content { position:relative; width:min(1280px,96vw); max-height:92vh; display:flex; align-items:center; justify-content:center; }
+    .image-modal img { max-width:100%; max-height:88vh; width:auto; height:auto; object-fit:contain; border-radius:18px; box-shadow:0 35px 100px rgba(0,0,0,.55); cursor:zoom-in; transition:transform .25s ease; }
+    .image-modal img.zoomed { max-width:none; max-height:none; width:min(1800px,150vw); transform:scale(1.35); cursor:zoom-out; }
+    .image-modal-close { position:absolute; top:-18px; right:-18px; width:46px; height:46px; border:1px solid rgba(255,255,255,.25); border-radius:50%; background:rgba(15,15,15,.92); color:#fff; display:grid; place-items:center; font-size:1.45rem; line-height:1; cursor:pointer; z-index:2; }
+    .image-modal-close:hover { background:#fff; color:#111; }
+    .image-modal-hint { position:absolute; left:50%; bottom:-42px; transform:translateX(-50%); color:rgba(255,255,255,.72); font-size:.78rem; white-space:nowrap; }
+    body.modal-open { overflow:hidden; }
+
+    /* REVEAL */
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity .65s ease, transform .65s ease;
+    }
+
+    .reveal.visible { opacity: 1; transform: none; }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .hero-grid,
+      .system-grid,
+      .about-grid,
+      .contact-grid { grid-template-columns: 1fr; }
+
+      .hero-note { justify-self: start; }
+      .work-grid { grid-template-columns: 1fr; }
+      .cap-grid { grid-template-columns: repeat(2,1fr); }
+      .cap:not(:nth-child(3n+1)) { padding-left: 0; border-left: 0; }
+      .cap:nth-child(even) { padding-left: 25px; border-left: 1px solid var(--line); }
+      .process-grid { grid-template-columns: repeat(2,1fr); }
+      .step:nth-child(3) { border-left: 0; padding-left: 0; }
+      .step:nth-child(n+3) { border-top: 1px solid #d9d9d7; padding-top: 25px; }
+      .system-grid { gap: 45px; }
+    }
+
+    @media (max-width: 1100px) and (min-width: 701px) {
+      .container { width: min(var(--max), calc(100% - 40px)); }
+      .hero-grid { grid-template-columns: 1fr 1fr; gap: 35px; }
+      h1 { font-size: clamp(3.4rem, 6vw, 5.4rem); }
+      .skills-orbit { width: min(430px, 43vw); }
+      .skill-node { --radius: 165px; }
+      .skill-node.inner-node { --radius: 100px; }
+    }
+
+    @media (max-width: 700px) {
+      .container { width: min(var(--max), calc(100% - 28px)); }
+      .hero-grid { gap: 28px; }
+      .hero-visual { width: 100%; overflow: visible; }
+      .skills-orbit { width: min(430px, 94vw); }
+      .nav-links, .nav-cta { display: none; }
+      .menu-button { display: block; }
+      .nav.open .nav-links {
+        display: flex;
+        position: absolute;
+        top: 75px;
+        left: 14px;
+        right: 14px;
+        background: white;
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 16px;
+        flex-direction: column;
+        gap: 5px;
+        box-shadow: 0 18px 40px rgba(0,0,0,.1);
+      }
+      .nav.open .nav-links a { display: block; padding: 10px; }
+      section { padding: 78px 0; }
+      .hero { padding-top: 125px; min-height: auto; }
+      .hero-visual { min-height: 390px; margin-top: 10px; }
+      .skills-orbit { width: min(380px, 92vw); }
+      .skill-node { --radius: 142px; width: 52px; height: 52px; margin: -26px; }
+      .skill-node.inner-node { --radius: 88px; width: 46px; height: 46px; margin: -23px; }
+      .orbit-center { width: 124px; height: 124px; }
+      .skill-node svg { width: 28px; height: 28px; }
+      .skill-node.inner-node svg { width: 23px; height: 23px; }
+      .agencyos-image { min-height: 0; }
+      h1 { font-size: clamp(3rem, 16vw, 5rem); }
+      .work-header { display: block; }
+      .work-header .section-intro { margin-top: 18px; }
+      .project-visual { min-height: 220px; }
+      .project-image { min-height: 220px; }
+      .cap-grid,
+      .process-grid,
+      .about-stats { grid-template-columns: 1fr; }
+      .cap, .cap:nth-child(even) { padding: 25px 0; border-left: 0; }
+      .cap-number { margin-bottom: 30px; }
+      .step, .step + .step { border-left: 0; padding: 24px 0; min-height: auto; }
+      .step + .step { border-top: 1px solid #d9d9d7; }
+      .app-body { grid-template-columns: 65px 1fr; }
+      .task-grid { grid-template-columns: 1fr; }
+      .about-grid { gap: 35px; }
+      .profile-frame { max-width: 220px; }
+      .footer-inner { flex-direction: column; }
+      .image-modal { padding:16px; }
+      .image-modal-content { width:100%; max-height:88vh; }
+      .image-modal img { max-width:100%; max-height:78vh; border-radius:12px; }
+      .image-modal img.zoomed { width:160vw; transform:scale(1.2); }
+      .image-modal-close { top:-10px; right:-6px; width:42px; height:42px; }
+      .image-modal-hint { bottom:-34px; font-size:.68rem; }
+      .preview-badge { opacity:1; transform:none; right:18px; bottom:18px; }
+      .ai-showcase-grid { grid-template-columns: 1fr; }
+      .ai-x-card { grid-column: auto; grid-template-columns: 1fr; min-height: 280px; padding: 28px; }
+      .ai-x-action { justify-self: start; }
+    }
+  
+/* Keep the original navigation comfortably usable on tablet widths. */
+@media (min-width:701px) and (max-width:1050px){
+  .nav-links,.nav-cta{display:none}
+  .menu-button{display:block}
+  .nav.open .nav-links{display:flex;position:absolute;top:75px;left:20px;right:20px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px;flex-direction:column;gap:5px;box-shadow:0 18px 40px rgba(0,0,0,.1)}
+  .nav.open .nav-links a{display:block;padding:10px}
+}
+
+/* Failsafe: preserve all content if animation JavaScript is unavailable. */
+
+    /* JS-independent content visibility; animations only activate after setup. */
+    .reveal { opacity: 1; transform: none; }
+    body.js-animated .reveal:not(.visible) { opacity: 0; transform: translateY(20px); }
+    body.js-animated .reveal.visible { opacity: 1; transform: none; }
+    .mobile-writing-link { display: none; }
+    .writing-home { background: white; border-top: 1px solid var(--line); }
+    .writing-home-header { display: flex; justify-content: space-between; align-items: end; gap: 25px; margin-bottom: 36px; }
+    .writing-home-header .section-heading { margin-bottom: 0; }
+    .writing-home-list { border-top: 1px solid var(--line); }
+    .writing-home-item { display: grid; grid-template-columns: 175px minmax(0, 1fr) auto; gap: 20px; padding: 26px 0; border-bottom: 1px solid var(--line); align-items: start; }
+    .writing-home-item:hover h3 { text-decoration: underline; text-underline-offset: 5px; }
+    .writing-home-category { text-transform: uppercase; letter-spacing: .12em; font-size: .74rem; font-weight: 750; color: #777; margin-top: 7px; }
+    .writing-home-item h3 { font-size: clamp(1.4rem, 2.65vw, 2.1rem); letter-spacing: -.055em; line-height: 1.17; margin: 0 0 8px; }
+    .writing-home-item p { font-size: .93rem; color: #777; margin: 0; }
+    .writing-home-item .arrow { font-size: 1.4rem; }
+    @media(max-width: 700px) {
+      .mobile-writing-link { display: inline-flex; align-items: center; margin-left: auto; padding: 7px 9px; border: 1px solid #ddd; border-radius: 999px; font-size: .75rem; font-weight: 750; white-space: nowrap; background: white; }
+      .nav-inner { gap: 8px; }
+      .nav-inner .brand { white-space: nowrap; }
+      .writing-home-header { display: block; }
+      .writing-home-header .button-outline { margin-top: 25px; }
+      .writing-home-item { grid-template-columns: 1fr auto; gap: 8px; }
+      .writing-home-category { grid-column: 1 / -1; }
+      .writing-home-item .arrow { grid-row: 2; grid-column: 2; }
+    }
+    @media(max-width:380px) { .mobile-writing-link { font-size: .7rem; padding: 5px 7px; } .nav-inner .brand { font-size: .96rem; } }
+
+    /* Editorial thumbnails: maintain a consistent 16:9 image without stretching
+       when the fixed intrinsic HTML width/height is scaled down on phones. */
+    .writing-home-item {
+      grid-template-columns: minmax(180px, 260px) minmax(0, 1fr) 28px;
+      grid-template-rows: auto auto;
+      align-items: center;
+      column-gap: 24px;
+      row-gap: 6px;
+      min-width: 0;
+    }
+    .writing-home-thumb {
+      display: block;
+      grid-column: 1;
+      grid-row: 1 / 3;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      align-self: center;
+      border-radius: 12px;
+      background: #f7f7f7;
+    }
+    .writing-home-item > .writing-home-category {
+      grid-column: 2;
+      grid-row: 1;
+      align-self: end;
+    }
+    .writing-home-item > div {
+      grid-column: 2;
+      grid-row: 2;
+      min-width: 0;
+      align-self: start;
+    }
+    .writing-home-item .arrow {
+      grid-column: 3;
+      grid-row: 1 / 3;
+    }
+    @media (max-width: 700px) {
+      .writing-home-item {
+        grid-template-columns: minmax(0, 1fr) 26px;
+        grid-template-rows: auto auto auto;
+        column-gap: 10px;
+        row-gap: 12px;
+        padding: 22px 0 28px;
+        align-items: start;
+      }
+      .writing-home-thumb {
+        grid-column: 1 / -1;
+        grid-row: 1;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        border-radius: 12px;
+      }
+      .writing-home-item > .writing-home-category {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        align-self: start;
+        margin-top: 4px;
+      }
+      .writing-home-item > div {
+        grid-column: 1;
+        grid-row: 3;
+      }
+      .writing-home-item .arrow {
+        grid-column: 2;
+        grid-row: 3;
+        align-self: start;
+        margin-top: 4px;
+      }
+      .writing-home-title, .writing-home-item h3 { overflow-wrap: break-word; }
+    }
+
+    @media(prefers-reduced-motion:reduce) { body.js-animated .reveal:not(.visible) { opacity: 1; transform: none; } }
+
+    .case-card-links{display:flex;gap:18px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+    .case-card-links .project-link{font-size:.88rem}
+    @media(max-width:700px){.case-card-links{gap:14px}.case-card-links .project-link{font-size:.85rem}}
+
+/* Featured 2026 project cases */
+.project-feature-visual{position:relative;min-height:300px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:18px;padding:28px 30px;overflow:hidden;border:1px solid rgba(255,255,255,.12)}
+.project-feature-visual .feature-mark{font-size:25px;font-weight:800;letter-spacing:-.07em}
+.project-feature-visual .feature-title{font-size:clamp(27px,3vw,42px);font-weight:800;line-height:1.04;letter-spacing:-.055em;max-width:95%}
+.project-feature-visual .feature-caption{font-size:12px;letter-spacing:.08em;text-transform:uppercase;opacity:.78}
+.visual-logic{background:radial-gradient(circle at 85% 50%,#173251 0%,transparent 52%),linear-gradient(140deg,#080b12,#101820);color:white}.visual-logic .feature-mark{color:#ffce00}
+.visual-rc{background:radial-gradient(circle at 90% 85%,#5b0715,transparent 60%),#09090b;color:white}.visual-rc em{font-style:normal;color:#ed203f}.visual-rc .feature-mark{font-family:Georgia,serif;font-size:36px;font-weight:400}
+.visual-trade{background:linear-gradient(125deg,#fafafa,#e5e5e7);color:#161616}.visual-trade .feature-caption{color:#777}
+</style>
+<link rel="stylesheet" href="/newsletter.css"><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://www.localpresence360.com/#website","name":"Zachary Swanepoel","alternateName":"Local Presence 360","url":"https://www.localpresence360.com/","inLanguage":"en","creator":{"@id":"https://www.localpresence360.com/#person"}},{"@type":"Person","@id":"https://www.localpresence360.com/#person","name":"Zachary Clint Swanepoel","url":"https://www.localpresence360.com/","image":"https://www.localpresence360.com/zach%20profile.jpg","jobTitle":"Software Developer","sameAs":["https://github.com/zach1241","https://www.linkedin.com/in/zachary-clint-swanepoel/","https://x.com/itszach_oliver"]},{"@type":"ProfilePage","@id":"https://www.localpresence360.com/#webpage","url":"https://www.localpresence360.com/","name":"Zachary Swanepoel — Developer, WordPress & Digital Systems","description":"Zachary Swanepoel — WordPress and full-stack developer building modern websites, SEO systems and internal software for growing businesses and agencies.","isPartOf":{"@id":"https://www.localpresence360.com/#website"},"inLanguage":"en","mainEntity":{"@id":"https://www.localpresence360.com/#person"}}]}</script></head>
+
+<body>
+  <nav class="nav" id="navbar">
+    <div class="container nav-inner">
+      <a class="brand" href="#top">Zachary<span> Swanepoel</span></a>
+
+      <ul class="nav-links">
+        <li><a href="#work">Work</a></li>
+        <li><a href="#capabilities">Skills</a></li>
+        <li><a href="/projects/">Projects</a></li>
+        <li><a href="/portfolio/">Portfolio</a></li>
+        <li><a href="/blog/">Writing</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <a class="nav-cta" href="/Zachary-Clint-Swanepoel-CV-2026.pdf?v=20261026-fixed" download="Zachary-Clint-Swanepoel-CV-2026.pdf">Download CV ↓</a>
+      <a class="mobile-writing-link" href="/blog/" aria-label="Read my writing and articles">Writing ↗</a>
+      <button class="menu-button" id="menuButton" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+  </nav>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="reveal">
+            <div class="eyebrow"><span class="eyebrow-dot"></span> Developer · WordPress · Digital Systems</div>
+            <h1>I turn ideas into working digital products.</h1>
+            <p class="hero-copy">
+              I build modern WordPress websites, improve technical SEO, and develop custom internal software
+              that helps businesses and agencies work more efficiently.
+            </p>
+
+            <div class="hero-actions">
+              <a class="button-black" href="#work">See my work ↓</a>
+              <a class="button-outline" href="/">Local Presence 360 agency ↗</a>
+              <a class="button-outline" href="https://calendly.com/zacharyswanepoel9/walk-through" target="_blank" rel="noopener noreferrer">Book a free consultation ↗</a>
+              <a class="button-outline" href="/Zachary-Clint-Swanepoel-CV-2026.pdf?v=20261026-fixed" download="Zachary-Clint-Swanepoel-CV-2026.pdf">Latest CV ↓</a>
+            </div>
+          </div>
+
+          <div class="hero-visual reveal" aria-label="Technologies and skills">
+            <div class="skills-orbit">
+              <div class="orbit-ring outer"></div>
+              <div class="orbit-ring inner"></div>
+
+              <div class="orbit-center" aria-label="Zachary Swanepoel">
+                <img src="/zach profile.jpg" alt="Zachary Swanepoel">
+              </div>
+
+              <!-- Outer skills -->
+              <div class="skill-node" style="--angle: 0deg" title="HTML5">
+                <button aria-label="HTML5">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M1.5 0h21l-1.91 21.56L12 24l-8.59-2.44L1.5 0Zm17.1 6.2.23-2.6H5.2l.7 8h9.13l-.33 3.43-2.91.8-2.95-.81-.19-2.11H6.04l.33 4.17L12 19.35l5.38-1.44.74-8.16H8.53L8.3 7.03l10.3.01Z"/></svg>
+                </button><span class="skill-label">HTML5</span>
+              </div>
+              <div class="skill-node" style="--angle: 45deg" title="CSS3">
+                <button aria-label="CSS3">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M1.5 0h21l-1.91 21.56L12 24l-8.59-2.44L1.5 0Zm17.09 4.41L5.41 4.41l.21 2.62h10.13l-.26 2.72H8.85l.24 2.57h6.18l-.37 3.52-2.9.8-2.96-.81-.19-2.11H6.25l.29 3.75L12 19.35l5.38-1.44.74-8.16H8.53l-.23-2.72h10.06l.23-2.62Z"/></svg>
+                </button><span class="skill-label">CSS3</span>
+              </div>
+              <div class="skill-node" style="--angle: 90deg" title="JavaScript">
+                <button aria-label="JavaScript">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M2 2h20v20H2V2Zm10.5 15.6c.6 1 1.4 1.5 2.6 1.5 1.1 0 1.8-.55 1.8-1.3 0-.82-.7-1.12-1.9-1.65l-.66-.28c-1.9-.8-3.15-1.8-3.15-3.9 0-1.94 1.48-3.42 3.8-3.42 1.65 0 2.83.57 3.68 2.06l-2.02 1.3c-.44-.8-.91-1.12-1.58-1.12-.72 0-1.18.46-1.18 1.06 0 .74.46 1.04 1.53 1.5l.66.28c2.24.96 3.5 1.92 3.5 4.07 0 2.33-1.83 3.6-4.29 3.6-2.4 0-3.95-1.14-4.72-2.64l1.92-1.08ZM8.3 7.7v6.65c0 1.08-.43 1.62-1.3 1.62-.64 0-1.1-.42-1.45-.94l-1.9 1.15c.7 1.25 1.8 2.06 3.43 2.06 2.25 0 3.58-1.2 3.58-3.78V7.7H8.3Z"/></svg>
+                </button><span class="skill-label">JavaScript</span>
+              </div>
+              <div class="skill-node" style="--angle: 135deg" title="React">
+                <button aria-label="React">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="12" rx="10" ry="4.2" fill="none" stroke="currentColor" stroke-width="1.7"/><ellipse cx="12" cy="12" rx="10" ry="4.2" transform="rotate(60 12 12)" fill="none" stroke="currentColor" stroke-width="1.7"/><ellipse cx="12" cy="12" rx="10" ry="4.2" transform="rotate(120 12 12)" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="1.8" fill="currentColor"/></svg>
+                </button><span class="skill-label">React</span>
+              </div>
+              <div class="skill-node" style="--angle: 180deg" title="Node.js">
+                <button aria-label="Node.js">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 1.6 8.7 5v10.8l-8.7 5-8.7-5V6.6l8.7-5Zm0 2.3L5.6 7.6v8.8l6.4 3.7 6.4-3.7V7.6L12 3.9Z"/><path fill="currentColor" d="M10.1 8.5c0-.8.6-1.3 1.5-1.3h1.4c.9 0 1.5.5 1.5 1.3v.8h-1.6V8.8c0-.2-.1-.3-.3-.3h-.7c-.2 0-.3.1-.3.3v.5c0 .2.1.3.3.4l1.7.7c.6.3.9.7.9 1.4v1.3c0 .8-.6 1.3-1.5 1.3h-1.5c-.9 0-1.5-.5-1.5-1.3v-.8h1.6v.5c0 .2.1.3.3.3h.8c.2 0 .3-.1.3-.3v-.5c0-.2-.1-.3-.3-.4l-1.7-.7c-.6-.3-.9-.8-.9-1.4v-1Z"/></svg>
+                </button><span class="skill-label">Node.js</span>
+              </div>
+              <div class="skill-node" style="--angle: 225deg" title="WordPress">
+                <button aria-label="WordPress">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.8"/><path fill="currentColor" d="M5.1 8.2c.4 0 .7.2.9.6l2.9 7.7 1.7-5-1-2.7c-.2-.4-.4-.6-.9-.6V7.1h3.9v1.1c-.6 0-.9.2-.9.6 0 .2.1.5.2.8l1.7 4.7 1.9-5.1c.1-.4.2-.7.2-.9 0-.4-.3-.6-.8-.6V7.1h2.8v1.1c-.5.1-.8.4-1 1l-3.2 8.5h-1.2l-2-5.6-2 5.6H7.1L4.1 9.2c-.2-.5-.4-.8-.8-1V7.1h1.8v1.1Z"/></svg>
+                </button><span class="skill-label">WordPress</span>
+              </div>
+              <div class="skill-node" style="--angle: 270deg" title="PHP">
+                <button aria-label="PHP">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="12" rx="10" ry="5.2" fill="none" stroke="currentColor" stroke-width="1.7"/><text x="12" y="14.4" text-anchor="middle" font-size="6.8" font-weight="800" fill="currentColor">PHP</text></svg>
+                </button><span class="skill-label">PHP</span>
+              </div>
+              <div class="skill-node" style="--angle: 315deg" title="Python">
+                <button aria-label="Python">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M11.8 2c-3.1 0-3 1.35-3 1.35v2.1h3.05v.63H7.58C4.37 6.08 4 8.95 4 12s.38 5.92 3.58 5.92h2.1v-2.46c0-1.35 1.18-2.48 2.56-2.48h4.22c2.98 0 3.54-2.67 3.54-4.9 0-2.22-.65-6.08-3.54-6.08H11.8Zm-1.76 1.02c.5 0 .9.4.9.9s-.4.9-.9.9-.9-.4-.9-.9.4-.9.9-.9Z"/><path fill="currentColor" d="M12.2 22c3.1 0 3-1.35 3-1.35v-2.1h-3.05v-.63h4.27c3.21 0 3.58-2.87 3.58-5.92s-.38-5.92-3.58-5.92h-2.1v2.46c0 1.35-1.18 2.48-2.56 2.48H7.54C4.56 11.02 4 13.69 4 15.92 4 18.14 4.65 22 7.54 22h4.66Zm1.76-1.02c-.5 0-.9-.4-.9-.9s.4-.9.9-.9.9.4.9.9-.4.9-.9.9Z"/></svg>
+                </button><span class="skill-label">Python</span>
+              </div>
+
+              <!-- Inner skills -->
+              <div class="skill-node inner-node" style="--angle: 22deg" title="Elementor">
+                <button aria-label="Elementor"><span style="font-weight:900;font-size:18px;letter-spacing:-.08em">E</span></button><span class="skill-label">Elementor</span>
+              </div>
+              <div class="skill-node inner-node" style="--angle: 142deg" title="SQL">
+                <button aria-label="SQL"><span style="font-weight:900;font-size:14px;letter-spacing:-.04em">SQL</span></button><span class="skill-label">SQL</span>
+              </div>
+              <div class="skill-node inner-node" style="--angle: 262deg" title="Git">
+                <button aria-label="Git"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21.4 11.1 12.9 2.6a2.1 2.1 0 0 0-2.9 0L8.3 4.3l2.2 2.2c.5-.2 1.1-.1 1.5.3.4.4.5 1 .3 1.5l2.1 2.1c.5-.2 1.1-.1 1.5.3.6.6.6 1.6 0 2.2-.6.6-1.6.6-2.2 0-.4-.4-.5-1-.3-1.5l-2-2v5.2c.2.1.4.2.5.4.6.6.6 1.6 0 2.2-.6.6-1.6.6-2.2 0-.6-.6-.6-1.6 0-2.2.2-.2.3-.3.5-.4V9.4c-.2-.1-.4-.2-.5-.4-.6-.6-.6-1.6 0-2.2L7.9 5.2l-1.7 1.7a2.1 2.1 0 0 0 0 2.9l8.5 8.5a2.1 2.1 0 0 0 2.9 0l3.8-3.8a2.1 2.1 0 0 0 0-2.9Z"/></svg></button><span class="skill-label">Git</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="work" id="work">
+      <div class="container">
+        <div class="work-header reveal">
+          <div>
+            <div class="section-kicker">Selected work</div>
+            <h2 class="section-heading">Professional work, AI websites and SaaS systems — organised in one place.</h2>
+          </div>
+          <p class="section-intro">
+            Switch between the client-facing work I deliver professionally, the AI websites I build and experiment with,
+            and the SaaS systems and tools I develop. Same portfolio, clearly organised by the type of work.
+          </p>
+        </div>
+
+        <div class="work-tabs reveal" role="tablist" aria-label="Portfolio categories">
+          <button class="work-tab active" id="professionalTab" type="button" role="tab" aria-selected="true" aria-controls="professionalWork" data-work-tab="professional">Professional Work</button>
+          <button class="work-tab" id="aiWebsitesTab" type="button" role="tab" aria-selected="false" aria-controls="aiWebsitesWork" data-work-tab="ai-websites">AI Websites</button>
+          <button class="work-tab" id="saasTab" type="button" role="tab" aria-selected="false" aria-controls="saasWork" data-work-tab="saas">SaaS</button>
+        </div>
+
+        <div class="work-panel" id="professionalWork" role="tabpanel" aria-labelledby="professionalTab" data-work-panel="professional">
+          <div class="work-grid">
+            <article class="project reveal">
+              <a href="/projects/turning-a-vision-into-reality/" aria-label="Read Turning a vision into reality case study">
+                <div class="project-visual project-image-visual">
+                  <img src="/turning-your-vision-into-reality.png" alt="Turning Your Vision Into Reality website project" class="project-image">
+                </div>
+              </a>
+              <div class="project-body">
+                <div class="project-meta"><span class="tag">WordPress</span><span class="tag">Elementor</span><span class="tag">Build</span></div>
+                <h3>Turning a vision into reality</h3>
+                <p>Taking designs, Figma files, code or early concepts and turning them into a functional WordPress website.</p>
+                <div class="case-card-links"><a class="project-link" href="/projects/turning-a-vision-into-reality/">View case study ↗</a><a class="project-link" href="https://www.loom.com/share/1e208b9a951a41098be2c083e9af6e5f" target="_blank" rel="noopener noreferrer">Watch the walkthrough ↗</a></div>
+              </div>
+            </article>
+
+            <article class="project reveal">
+              <a href="/projects/procom-redesign/" aria-label="Read Procom redesign case study">
+                <div class="project-visual project-image-visual">
+                  <img src="/website-redesign.png" alt="Procom website redesign project" class="project-image">
+                </div>
+              </a>
+              <div class="project-body">
+                <div class="project-meta"><span class="tag">Redesign</span><span class="tag">UI</span><span class="tag">WordPress</span></div>
+                <h3>Procom redesign</h3>
+                <p>A redesign focused on moving an existing dark interface toward a cleaner, brighter and more professional visual system.</p>
+                <div class="case-card-links"><a class="project-link" href="/projects/procom-redesign/">View case study ↗</a><a class="project-link" href="https://www.loom.com/share/f8d778fdf50c47ceb55d23ea2891ecbe" target="_blank" rel="noopener noreferrer">Watch the walkthrough ↗</a></div>
+              </div>
+            </article>
+
+            <article class="project reveal">
+              <a href="/projects/how-i-start-an-seo-audit/" aria-label="Read How I start an SEO audit case study">
+                <div class="project-visual project-image-visual">
+                  <img src="/seo-audit-portfolio-showcase.png" alt="SEO audit walkthrough website project" class="project-image">
+                </div>
+              </a>
+              <div class="project-body">
+                <div class="project-meta"><span class="tag">SEO</span><span class="tag">Technical</span><span class="tag">Audit</span></div>
+                <h3>How I start an SEO audit</h3>
+                <p>An initial technical look at a website using the browser and Chrome DevTools before deeper analysis and dedicated SEO tooling.</p>
+                <div class="case-card-links"><a class="project-link" href="/projects/how-i-start-an-seo-audit/">View case study ↗</a><a class="project-link" href="https://www.loom.com/share/d92fa11717a44f1b98053845b39d01e6" target="_blank" rel="noopener noreferrer">Watch the walkthrough ↗</a></div>
+              </div>
+            </article>
+
+            <article class="project reveal">
+              <a href="/projects/lamile-resourcing-services/" aria-label="Read LaMiLé Resourcing Services case study">
+                <div class="project-visual project-image-visual">
+                  <img src="/latest-public-website.png" alt="Latest public website project — LaMiLé Resourcing Services" class="project-image">
+                </div>
+              </a>
+              <div class="project-body">
+                <div class="project-meta"><span class="tag">Latest</span><span class="tag">Website</span><span class="tag">WordPress</span></div>
+                <h3>LaMiLé Resourcing Services</h3>
+                <p>The latest website I can publicly show, with a walkthrough demonstrating the implementation and finished result.</p>
+                <div class="case-card-links"><a class="project-link" href="/projects/lamile-resourcing-services/">View case study ↗</a><a class="project-link" href="https://www.loom.com/share/f0aa0b0831f045f88e5711ba16fb6bd3" target="_blank" rel="noopener noreferrer">Watch the walkthrough ↗</a></div>
+              </div>
+            </article>
+          <div class="latest-cases-action" style="display:flex;justify-content:flex-start;margin:32px 0 14px"><a href="/projects/#latest-case-studies" class="project-link" style="display:inline-flex;align-items:center;justify-content:center;gap:12px;text-decoration:none;border:1px solid currentColor;border-radius:999px;padding:15px 28px;font-weight:700">View Latest Case Studies <span aria-hidden="true">↗</span></a></div>
+
+          </div>
+        </div>
+
+        <div class="work-panel" id="aiWebsitesWork" role="tabpanel" aria-labelledby="aiWebsitesTab" data-work-panel="ai-websites" hidden>
+          <div class="ai-showcase-grid">
+            <article class="ai-site-card">
+              <div class="ai-video-wrap">
+                <span class="ai-video-label">Architecture · AI Website</span>
+                <video class="ai-showcase-video" autoplay muted loop playsinline webkit-playsinline preload="auto" aria-label="FORM / FOUND architecture website preview" poster="./form-found-new-poster.jpg">
+                  <source src="/form-found-new-mobile.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="ai-site-body">
+                <div class="ai-site-meta"><span class="tag">Architecture</span><span class="tag">AI Build</span><span class="tag">Editorial</span></div>
+                <h3>FORM / FOUND</h3>
+                <p>A professional architecture website concept focused on restrained typography, strong spatial composition and a premium editorial feel.</p>
+              </div>
+            </article>
+
+            <article class="ai-site-card">
+              <div class="ai-video-wrap">
+                <span class="ai-video-label">Architecture · Motion Hero</span>
+                <video class="ai-showcase-video" autoplay muted loop playsinline webkit-playsinline preload="auto" aria-label="MONOLITH motion architecture website preview" poster="./monolith-poster.jpg">
+                  <source src="/monolith-mobile.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="ai-site-body">
+                <div class="ai-site-meta"><span class="tag">Architecture</span><span class="tag">Motion</span><span class="tag">AI Build</span></div>
+                <h3>MONOLITH</h3>
+                <p>A motion-led architecture experience built around a cinematic hero, large-scale imagery and immersive transitions.</p>
+              </div>
+            </article>
+
+            <article class="ai-site-card">
+              <div class="ai-video-wrap">
+                <span class="ai-video-label">Automotive · Motion Website</span>
+                <video class="ai-showcase-video" autoplay muted loop playsinline webkit-playsinline preload="auto" aria-label="VANTA MOTORS sports car website preview" poster="./vanta-motors-poster.jpg">
+                  <source src="/vanta-motors-mobile.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="ai-site-body">
+                <div class="ai-site-meta"><span class="tag">Automotive</span><span class="tag">Motion</span><span class="tag">AI Build</span></div>
+                <h3>VANTA MOTORS</h3>
+                <p>A cinematic sports-car website concept combining dark visual direction, motion and high-impact product presentation.</p>
+              </div>
+            </article>
+
+            <article class="ai-site-card">
+              <div class="ai-video-wrap">
+                <span class="ai-video-label">AUTOMOTIVE · 2.5D MOTION WEBSITE</span>
+                <video class="ai-showcase-video" autoplay muted loop playsinline webkit-playsinline preload="auto" aria-label="VANTA MOTORS sports car website preview" poster="./3d-vanta-motors-poster.jpg">
+                  <source src="/3d-vanta-motors-mobile.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="ai-site-body">
+                <div class="ai-site-meta"><span class="tag">Automotive</span><span class="tag">Motion</span><span class="tag">AI Build</span></div>
+                <h3>2.5D VANTA MOTORS</h3>
+                <p>An AI-built automotive experience combining 2.5D visuals, cinematic motion and immersive product storytelling.</p>
+              </div>
+            </article>
+
+            <a class="ai-x-card" href="https://x.com/itszach_oliver" target="_blank" rel="noopener" aria-label="View more than 50 AI websites on Zach Oliver's X profile">
+              <div>
+                <small>More experiments on X</small>
+                <h3>50+ AI Websites</h3>
+                <p>I share the wider collection of AI-built websites, motion concepts and one-prompt experiments on @itszach_oliver.</p>
+              </div>
+              <span class="ai-x-action">View my X profile ↗</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="work-panel" id="saasWork" role="tabpanel" aria-labelledby="saasTab" data-work-panel="saas" hidden>
+          <div class="work-grid">
+<article class="project reveal">
+<a href="/projects/in-trade-crm/" aria-label="Read In Trade CRM case study"><div class="project-visual project-image-visual"><img src="/assets/blog/In%20Trade%20CRM%20Product%20Showcase.png" alt="In Trade CRM SaaS booking application showcase" loading="lazy" class="project-image"></div></a><div class="project-body"><div class="project-meta"><span class="tag">SaaS</span><span class="tag">Booking</span><span class="tag">Active build</span></div><h3>In Trade CRM</h3><p>An independently developed booking SaaS for trade businesses, with service setup, onboarding and customer booking journeys currently in development.</p><div class="case-card-links"><a class="project-link" href="/projects/in-trade-crm/">View case study ↗</a></div></div></article>
+            <article class="project">
+              <div class="project-visual project-image-visual">
+                <img src="/agencyos-on-laptop-and-mobile.png" alt="AgencyOS internal agency operations dashboard" class="project-image">
+              </div>
+              <div class="project-body">
+                <div class="project-meta"><span class="tag">SaaS</span><span class="tag">React</span><span class="tag">Supabase</span></div>
+                <h3>AgencyOS</h3>
+                <p>An internal agency operations system for managing clients, packages, deliverables, tasks, SOPs and team responsibilities from one structured workspace.</p>
+                <span class="project-status">Active build</span>
+              </div>
+            </article>
+
+            <article class="project">
+              <div class="project-visual">
+                <div class="browser">
+                  <div class="browser-bar"><i></i><i></i><i></i></div>
+                  <div class="browser-content">
+                    <div class="mock-line dark"></div><div class="mock-line"></div><div class="mock-line short"></div><div class="mock-block"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="project-body">
+                <div class="project-meta"><span class="tag">Automation</span><span class="tag">Data</span><span class="tag">Scraping</span></div>
+                <h3>Scraping & data collection tool</h3>
+                <p>A tool I am developing to collect and structure useful web data so repetitive research and lead-data workflows can be handled more efficiently.</p>
+                <span class="project-status">In development</span>
+              </div>
+            </article>
+
+            <article class="project">
+              <div class="project-visual">
+                <div class="browser">
+                  <div class="browser-bar"><i></i><i></i><i></i></div>
+                  <div class="browser-content">
+                    <div class="mock-line dark"></div><div class="mock-line short"></div><div class="mock-line"></div><div class="mock-block"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="project-body">
+                <div class="project-meta"><span class="tag">SEO</span><span class="tag">SaaS</span><span class="tag">Analytics</span></div>
+                <h3>SEO reporting SaaS</h3>
+                <p>An SEO product concept focused on turning reporting data and repeatable agency workflows into a more consistent system for client analysis and reporting.</p>
+                <span class="project-status">Concept & planning</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="writing" class="writing-home">
+      <div class="container">
+        <div class="writing-home-header reveal">
+          <div>
+            <div class="section-kicker">Writing / Field notes</div>
+            <h2 class="section-heading">What I'm learning, building and questioning.</h2>
+            <p class="section-intro">Real work, lessons and my perspective on SEO, analytics, advertising and software.</p>
+          </div>
+          <a class="button-outline" href="/blog/">All articles ↗</a>
+        </div>
+        <div class="writing-home-list">
+          <a class="writing-home-item reveal" href="/blog/what-search-console-can-and-cannot-tell-you/"><img src="/assets/blog/what-search-console-can-and-cannot-tell-you.webp" alt="" class="writing-home-thumb" loading="lazy" width="1280" height="720"/><span class="writing-home-category">SEO / Search Console</span><div><h3>What Search Console can and cannot tell you about leads</h3><p>Why search visibility and actual enquiries need different measurements.</p></div><span class="arrow" aria-hidden="true">↗</span></a>
+          <a class="writing-home-item reveal" href="/blog/ga4-event-is-not-always-a-lead/"><img src="/assets/blog/ga4-event-is-not-always-a-lead.webp" alt="" class="writing-home-thumb" loading="lazy" width="1280" height="720"/><span class="writing-home-category">Google Analytics</span><div><h3>A GA4 event is not always a lead</h3><p>How I check tracking before making a claim about conversions.</p></div><span class="arrow" aria-hidden="true">↗</span></a>
+          <a class="writing-home-item reveal" href="/blog/wordpress-is-more-than-a-mockup/"><img src="/assets/blog/wordpress-is-more-than-a-mockup.webp" alt="" class="writing-home-thumb" loading="lazy" decoding="async" width="1280" height="720"/><span class="writing-home-category">WordPress + Elementor / Web design</span><div><h3>A WordPress website is more than a screenshot</h3><p>Why good Elementor websites need responsive layouts, editable content and functionality beyond the mockup.</p></div><span class="arrow" aria-hidden="true">↗</span></a>
+        </div>
+        <div style="margin-top:28px"><a class="button-black" href="/blog/">Read all writing ↗</a></div>
+        <section class="lp-newsletter lp-newsletter--home" aria-labelledby="lp-newsletter-heading"><div class="lp-newsletter-inner"><div class="lp-newsletter-eyebrow">STAY IN THE LOOP</div><h2 id="lp-newsletter-heading">Follow what I'm building.</h2><p>Get updates on upcoming SaaS products, game development, and AI automation systems.</p><div class="lp-newsletter-form"><script async data-uid="e4176b7415" src="https://zachary-swanepoel.kit.com/e4176b7415/index.js"></script></div><p class="lp-newsletter-privacy">Occasional project updates. Unsubscribe anytime.</p></div></section>
+      </div>
+    </section>
+
+    <section id="capabilities">
+      <div class="container">
+        <div class="reveal">
+          <div class="section-kicker">What I do</div>
+          <h2 class="section-heading">A developer who can work across the website, code and growth side.</h2>
+          <p class="section-intro">
+            I don't want to position myself as someone who only writes code. My work sits between development,
+            WordPress, technical SEO and the systems that make digital work easier to deliver.
+          </p>
+        </div>
+
+        <div class="cap-grid">
+          <article class="cap reveal"><div class="cap-number">01</div><h3>WordPress Development</h3><p>Custom WordPress websites with Elementor, responsive layouts, reusable structures and practical content management.</p></article>
+          <article class="cap reveal"><div class="cap-number">02</div><h3>Website Redesigns</h3><p>Turn an outdated website or existing design into a cleaner, faster and more conversion-focused experience.</p></article>
+          <article class="cap reveal"><div class="cap-number">03</div><h3>Technical SEO</h3><p>Start with the fundamentals: crawling, indexing, performance, structure, metadata, links and technical issues.</p></article>
+          <article class="cap reveal"><div class="cap-number">04</div><h3>Full-Stack Development</h3><p>Build applications where the frontend, backend, database and business logic need to work together.</p></article>
+          <article class="cap reveal"><div class="cap-number">05</div><h3>Internal Tools</h3><p>Purpose-built software for agencies and businesses that have outgrown spreadsheets, scattered messages and manual workflows.</p></article>
+          <article class="cap reveal"><div class="cap-number">06</div><h3>Systems & Integrations</h3><p>Connect the tools a business already uses and create structured workflows around how the team actually works.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="process">
+      <div class="container">
+        <div class="reveal">
+          <div class="section-kicker">Working together</div>
+          <h2 class="section-heading">From idea to working product.</h2>
+          <p class="section-intro">Whether it’s a professional website, an AI-driven experience or a custom software product, I keep the process focused, collaborative and clear from concept to launch.</p>
+          <div style="margin-top:26px"><a class="button-black" href="https://calendly.com/zacharyswanepoel9/walk-through" target="_blank" rel="noopener noreferrer">Book a consultation ↗</a></div>
+        </div>
+
+        <div class="process-grid">
+          <div class="step reveal"><span class="step-number">01</span><h3>Discovery</h3><p>Define the goal, audience, requirements and what the website or product actually needs to achieve.</p></div>
+          <div class="step reveal"><span class="step-number">02</span><h3>Plan</h3><p>Turn the idea into a clear structure, user experience, technical approach and development plan.</p></div>
+          <div class="step reveal"><span class="step-number">03</span><h3>Build</h3><p>Develop the experience, integrate the required functionality and refine the design, interactions and performance.</p></div>
+          <div class="step reveal"><span class="step-number">04</span><h3>Launch</h3><p>Test across devices, polish the final experience, deploy and make sure everything works as intended.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="profile-frame reveal">
+            <img src="/zach profile.jpg" alt="Zachary Swanepoel">
+          </div>
+
+          <div class="about-copy reveal">
+            <div class="section-kicker">A little about me</div>
+            <h2 class="section-heading">I like building things that solve real problems.</h2>
+            <p>
+              I'm Zachary, a developer based in Cape Town, South Africa. My work has grown from WordPress and
+              website development into full-stack development, technical SEO and custom internal systems.
+            </p>
+            <p>
+              I enjoy taking something that is unclear, inefficient or difficult to manage and turning it into
+              something structured — whether that's a website, a technical workflow or software used by an entire team.
+            </p>
+            <p>
+              The goal isn't to use the biggest technology stack. It's to build the right thing, make it reliable,
+              and make sure the people using it understand how it works.
+            </p>
+
+            <div class="about-stats">
+              <div class="stat"><strong>WordPress</strong><span>Development & Elementor</span></div>
+              <div class="stat"><strong>SEO</strong><span>Technical & local foundations</span></div>
+              <div class="stat"><strong>Full-stack</strong><span>Apps, APIs & databases</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="reveal">
+            <div class="section-kicker">Start a conversation</div>
+            <h2 class="section-heading">Have a website, workflow or system that needs to be built?</h2>
+            <p class="contact-copy">
+              Book a free discovery conversation. We'll look at where your business is now, what is slowing the
+              team down, and whether I can build something that fixes it.
+            </p>
+            <div class="contact-actions">
+              <a class="button-white" href="https://calendly.com/zacharyswanepoel9/walk-through" target="_blank" rel="noopener noreferrer">Schedule a walkthrough ↗</a>
+              <a class="button-outline" style="background:#111;color:#fff;border-color:#444" href="mailto:zacharyswanepoel9@gmail.com">Email me</a>
+              <a class="button-outline" style="background:#111;color:#fff;border-color:#444" href="https://github.com/zach1241">GitHub</a>
+              <a class="button-outline" style="background:#111;color:#fff;border-color:#444" href="https://www.linkedin.com/in/zachary-clint-swanepoel/">Linkedin</a>
+              <a class="button-outline" style="background:#111;color:#fff;border-color:#444" href="https://x.com/itszach_oliver" target="_blank" rel="noopener">X · @itszach_oliver</a>
+            </div>
+          </div>
+
+          <div class="contact-card reveal">
+            <small>Email</small>
+            <strong>zacharyswanepoel9@gmail.com</strong>
+            <br><br>
+            <small>Typical internal system build</small>
+            <strong>7–14 days*</strong>
+            <br><br>
+            <small>*Depending on scope and feedback.</small>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <span>© 2026 Zachary Clint Swanepoel</span>
+      <span>Developer · WordPress · Digital Systems</span>
+    </div>
+  </footer>
+
+  <script>
+    const nav = document.getElementById("navbar");
+    const menu = document.getElementById("menuButton");
+    const navLinks = [...document.querySelectorAll(".nav-links a")];
+
+    window.addEventListener("scroll", () => {
+      nav.classList.toggle("scrolled", window.scrollY > 20);
+    }, { passive: true });
+
+    menu.addEventListener("click", () => {
+      nav.classList.toggle("open");
+      menu.textContent = nav.classList.contains("open") ? "×" : "☰";
+      menu.setAttribute("aria-expanded", String(nav.classList.contains("open")));
+    });
+
+    // Explicit smooth navigation so every header item works reliably.
+    navLinks.forEach(link => {
+      link.addEventListener("click", event => {
+        const href = link.getAttribute("href");
+        if (!href || !href.startsWith("#")) return;
+        const target = document.querySelector(href);
+        if (!target) return;
+        event.preventDefault();
+        nav.classList.remove("open");
+        menu.textContent = "☰";
+        menu.setAttribute("aria-expanded", "false");
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+        history.replaceState(null, "", href);
+      });
+    });
+
+    // Highlight the section currently in view.
+    const trackedSections = navLinks
+      .map(link => { const href = link.getAttribute("href"); return href && href.startsWith("#") ? document.querySelector(href) : null; })
+      .filter(Boolean);
+
+    const sectionObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        navLinks.forEach(link => link.classList.toggle(
+          "active",
+          link.getAttribute("href") === `#${entry.target.id}`
+        ));
+      });
+    }, { rootMargin: "-35% 0px -55% 0px", threshold: 0 });
+
+    trackedSections.forEach(section => sectionObserver.observe(section));
+
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    const revealElements = [...document.querySelectorAll(".reveal")];
+    revealElements.forEach(el => { if (el.getBoundingClientRect().top < window.innerHeight * 0.95) el.classList.add("visible"); });
+    document.body.classList.add("js-animated");
+    revealElements.forEach(el => { if (!el.classList.contains("visible")) revealObserver.observe(el); });
+
+    // Portfolio tabs: switch between Professional Work, "AI Websites" and "SaaS" without leaving the page.
+    const workTabs = [...document.querySelectorAll("[data-work-tab]")];
+    const workPanels = [...document.querySelectorAll("[data-work-panel]")];
+
+    function setWorkTab(name) {
+      workTabs.forEach(tab => {
+        const active = tab.dataset.workTab === name;
+        tab.classList.toggle("active", active);
+        tab.setAttribute("aria-selected", String(active));
+      });
+
+      workPanels.forEach(panel => {
+        panel.hidden = panel.dataset.workPanel !== name;
+      });
+      // Trigger video playback synchronously with the user tap on iOS Safari.
+      if (name === "ai-websites") {
+        document.querySelectorAll(".ai-showcase-video").forEach(video => {
+          video.muted = true;
+          video.playsInline = true;
+          const rect = video.getBoundingClientRect();
+          if (rect.top < window.innerHeight && rect.bottom > 0) video.play().catch(() => { video.controls = true; });
+        });
+      }
+    }
+
+    workTabs.forEach(tab => tab.addEventListener("click", () => setWorkTab(tab.dataset.workTab)));
+
+    document.querySelectorAll("[data-work-target]").forEach(link => {
+      link.addEventListener("click", () => setWorkTab(link.dataset.workTarget));
+    });
+
+    // X-style AI showcase: play visible previews and pause them when they leave the viewport.
+    const aiVideos = [...document.querySelectorAll(".ai-showcase-video")];
+
+    function syncAiVideos() {
+      aiVideos.forEach(video => {
+        const panel = video.closest("[data-work-panel]");
+        if (panel?.hidden) video.pause();
+      });
+    }
+
+    const aiVideoObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        const video = entry.target;
+        const panel = video.closest("[data-work-panel]");
+        const canPlay = entry.isIntersecting && !panel?.hidden;
+
+        if (canPlay) {
+          video.play().catch(() => { video.controls = true; });
+        } else {
+          video.pause();
+        }
+      });
+    }, { threshold: 0.45 });
+
+    aiVideos.forEach(video => {
+      video.muted = true;
+      video.playsInline = true;
+      video.addEventListener("error", () => { video.controls = true; });
+      aiVideoObserver.observe(video);
+    });
+    workTabs.forEach(tab => tab.addEventListener("click", () => {
+      requestAnimationFrame(() => {
+        syncAiVideos();
+        if (tab.dataset.workTab === "ai-websites") {
+          aiVideos.forEach(video => {
+            const rect = video.getBoundingClientRect();
+            const visible = rect.bottom > 0 && rect.top < window.innerHeight;
+            if (visible) video.play().catch(() => {});
+          });
+        }
+      });
+    }));
+  </script>
+</body>
+</html>
