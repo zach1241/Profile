@@ -74,5 +74,17 @@
     document.getElementById('form-note').textContent='Your email app should open with your inquiry prepared. Review it and click Send there. If it does not open, use the email address on the left or book a consultation.';
     window.location.href=mailto;
   });
+  // The Upwork profile is optional until the real, verified URL is configured.
+  const upworkLink = document.getElementById('upwork-profile-link');
+  const upworkValue = window.LocalPresence360Config?.upworkProfileUrl?.trim();
+  if (upworkValue && upworkLink) {
+    try {
+      const url = new URL(upworkValue);
+      if (url.protocol === 'https:' && (url.hostname === 'upwork.com' || url.hostname.endsWith('.upwork.com'))) {
+        upworkLink.href = url.href;
+        upworkLink.hidden = false;
+      }
+    } catch { /* Unconfigured or invalid URL: do not display a broken link. */ }
+  }
   document.getElementById('year').textContent=String(new Date().getFullYear());
 })();
