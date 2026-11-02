@@ -20,14 +20,21 @@
   <link rel="preload" href="/assets/home/fonts/anton.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="preload" href="/portfolio/assets/fonts/instrument-600.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="stylesheet" href="/agency-home.css">
+  <link rel="stylesheet" href="/agency-motion.css">
   <script defer src="/agency-config.js"></script>
   <script defer src="/portfolio/assets/vendor/gsap.min.js"></script>
   <script defer src="/portfolio/assets/vendor/ScrollTrigger.min.js"></script>
+  <script defer src="/portfolio/assets/vendor/ScrollSmoother.min.js"></script>
+  <script defer src="/portfolio/assets/vendor/ScrollToPlugin.min.js"></script>
   <script defer src="/agency.js"></script>
+  <script defer src="/agency-motion.js"></script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Local Presence 360","url":"https://www.localpresence360.com/","description":"Web design, search engine optimization and paid advertising for small and growing businesses.","email":"zacharyswanepoel9@gmail.com","areaServed":"Worldwide","founder":{"@type":"Person","name":"Zachary Swanepoel","url":"https://www.localpresence360.com/founder/"},"hasOfferCatalog":{"@type":"OfferCatalog","name":"Digital services","itemListElement":[{"@type":"OfferCatalog","name":"SEO"},{"@type":"OfferCatalog","name":"Paid advertising"},{"@type":"OfferCatalog","name":"Web design"}]}}</script>
 </head>
 <body>
+<div class="motion-loader" aria-hidden="true"><svg viewBox="0 0 1000 1000" preserveAspectRatio="none"><path class="loader-curtain" d="M0 1000 Q500 1000 1000 1000 V0 H0 Z"></path></svg><div class="loader-word"><span>L</span><span>O</span><span>A</span><span>D</span><span>I</span><span>N</span><span>G</span></div></div>
+<div class="motion-cursor" aria-hidden="true"></div>
 <a class="skip" href="#main">Skip to main content</a>
+<div id="smooth-wrapper"><div id="smooth-content">
 <header class="site-nav" id="top">
   <a class="brand" href="/" aria-label="Local Presence 360 home"><img src="/portfolio/assets/branding/location-pin-badge.webp" width="50" height="50" alt=""><span>LOCAL PRESENCE<b>360</b></span></a>
   <nav class="nav-links" id="nav-links" aria-label="Main navigation"><a class="active" href="#top">Home</a><a href="#about">About Us</a><a href="#services">Services</a><a href="#work">Projects</a><a href="#pricing">Pricing</a><a href="#contact">Contact</a></nav>
@@ -90,5 +97,6 @@
   </div></section>
 </main>
 <footer class="footer"><a href="/" class="brand"><img src="/portfolio/assets/branding/location-pin-badge.webp" width="42" height="42" alt=""><span>LOCAL PRESENCE<b>360</b></span></a><p>© <span id="year">2026</span> Local Presence 360.</p><nav aria-label="Footer navigation"><a href="/founder/">Founder</a><a href="/blog/">Insights</a><a href="https://www.linkedin.com/in/zachary-clint-swanepoel/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="#top">Back to top ↑</a></nav></footer>
+</div></div>
 <a class="back-top" href="#top" aria-label="Back to top">↑</a>
 </body></html>
