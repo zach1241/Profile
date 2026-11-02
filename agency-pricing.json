@@ -1,30 +1,57 @@
 {
+  "currency": "USD",
+  "pricingStatus": "Proposed launch pricing",
+  "pricingDate": "November 2026",
+  "pricingCondition": "Subject to final scope agreement",
+  "sharedTerms": [
+    {
+      "title": "All pricing is in US dollars",
+      "description": "Website builds use one-time project fees; SEO and advertising are monthly management retainers."
+    },
+    {
+      "title": "Ad budgets stay in your account",
+      "description": "Clients pay advertising platforms directly. We charge separately for management and optimization."
+    },
+    {
+      "title": "Scope is agreed before work begins",
+      "description": "Pages, campaigns, timelines, content responsibilities, revision rounds and any add-ons are confirmed in writing."
+    },
+    {
+      "title": "Only real deliverables are reported",
+      "description": "SEO outreach, earned links and published community shares are reported separately. Rankings, leads and placement approvals are never guaranteed."
+    },
+    {
+      "title": "Upwork can handle contracting",
+      "description": "Projects may be formalized and paid through an agreed Upwork contract; confirm the contract and milestones before work starts."
+    }
+  ],
+  "customProposal": "Request a tailored proposal for multiple locations, larger ad budgets, additional web pages or integrated growth services.",
   "categories": [
     {
       "id": "seo",
       "tab": "SEO",
-      "eyebrow": "Search visibility, built on consistent work",
-      "terms": "One website and one location per plan. Existing-page optimization excludes new page builds. Backlinks are non-guaranteed editorial goals; outreach does not promise placements. Group promotions are up-to targets and only in communities permitting them. Social activity is not a direct ranking factor. GBP work requires an eligible, accessible profile.",
+      "eyebrow": "Search visibility, original content and community promotion.",
+      "terms": "Each plan covers one website and one business location. On-page work improves existing pages; it does not include building new pages. Community group shares are up-to monthly targets, distributed over the month in relevant groups that allow promotion; group approval is outside our control. Backlinks are earned outreach targets, not guarantees.",
       "tiers": [
         {
           "name": "Local Essentials",
           "price": "$299",
           "cadence": "per month",
-          "description": "Build stronger local search foundations with focused, recurring work.",
+          "description": "Local search foundations for a growing small business.",
           "recommended": false
         },
         {
           "name": "SEO Growth",
           "price": "$699",
           "cadence": "per month",
-          "description": "More content, technical improvements, and carefully targeted outreach.",
+          "description": "Consistent content, technical improvements and outreach.",
           "recommended": true
         },
         {
           "name": "SEO Authority",
           "price": "$1,999",
           "cadence": "per month",
-          "description": "Expanded optimization and editorial outreach for established businesses.",
+          "description": "Deeper optimization for established businesses.",
           "recommended": false
         }
       ],
@@ -62,7 +89,7 @@
           ]
         ],
         [
-          "New original social media posts",
+          "New social media posts",
           [
             "2",
             "6",
@@ -70,15 +97,15 @@
           ]
         ],
         [
-          "Community group promotion shares",
+          "Community group promotion",
           [
-            "Up to 50",
-            "Up to 100",
-            "Up to 250"
+            "Up to 50 shares",
+            "Up to 100 shares",
+            "Up to 250 shares"
           ]
         ],
         [
-          "Local citations created or corrected",
+          "Local citations handled",
           [
             "2",
             "4",
@@ -86,7 +113,7 @@
           ]
         ],
         [
-          "Personalized backlink outreach contacts",
+          "Personalized outreach contacts",
           [
             "0",
             "5",
@@ -94,7 +121,7 @@
           ]
         ],
         [
-          "Editorial backlink placement target",
+          "Earned backlink target",
           [
             "None",
             "Aim for 1",
@@ -129,35 +156,35 @@
     },
     {
       "id": "ads",
-      "tab": "Marketing (Paid Ads)",
-      "eyebrow": "Paid media, managed with clarity",
-      "terms": "Management fees exclude advertising spend; clients pay Google or Meta directly. Platforms are Google Ads, Google Local Services Ads (LSA) and Meta Ads only. LSA eligibility and verification are required, and LSA counts as a channel rather than a normal campaign. Photography, professional video and new landing pages cost extra. Budgets over tier caps and complex setups need a custom quote.",
+      "tab": "Paid Advertising",
+      "eyebrow": "Google Ads, Meta Ads and eligible Local Services Ads accounts.",
+      "terms": "Clients pay ad spend directly to their ad providers. Management fees do not include ad budgets, photography, video production or new landing pages. Google Local Services Ads require eligibility and verification. For LSA, a managed account counts as one channel; campaign limits only apply to platforms supporting campaigns. Spend above a tier cap requires a custom quote.",
       "tiers": [
         {
           "name": "Ads Starter",
           "price": "$349",
           "cadence": "per month",
-          "description": "Dedicated management of one focused advertising channel.",
+          "description": "Focused management of one paid advertising channel.",
           "recommended": false
         },
         {
           "name": "Ads Growth",
           "price": "$799",
           "cadence": "per month",
-          "description": "Cross-channel management with weekly optimization and testing.",
+          "description": "Two channels with regular testing and optimization.",
           "recommended": true
         },
         {
           "name": "Ads Scale",
           "price": "$2,499",
           "cadence": "per month",
-          "description": "More channels, more campaigns, and a closer optimization rhythm.",
+          "description": "Multi-channel execution and closer monitoring.",
           "recommended": false
         }
       ],
       "features": [
         [
-          "Advertising platforms managed",
+          "Advertising platforms",
           [
             "1",
             "Up to 2",
@@ -165,7 +192,7 @@
           ]
         ],
         [
-          "Active campaigns",
+          "Campaigns actively managed",
           [
             "1",
             "Up to 4",
@@ -173,7 +200,7 @@
           ]
         ],
         [
-          "New ad copy / static variations monthly",
+          "Ad copy / static variations",
           [
             "2",
             "4",
@@ -189,7 +216,7 @@
           ]
         ],
         [
-          "Keyword / audience optimization",
+          "Keyword / audience updates",
           [
             "Included",
             "Included",
@@ -213,7 +240,7 @@
           ]
         ],
         [
-          "Performance reporting",
+          "Performance report",
           [
             "Monthly",
             "Monthly",
@@ -229,7 +256,7 @@
           ]
         ],
         [
-          "Monthly ad spend cap managed",
+          "Monthly ad spend cap",
           [
             "$2,000",
             "$6,000",
@@ -241,28 +268,28 @@
     {
       "id": "web",
       "tab": "Web Design",
-      "eyebrow": "Websites that are ready for real business",
-      "terms": "Prices are one-time project fees. Clients provide approved copy, branding and images. Domain, hosting, premium plugins, extensive copywriting, maintenance and processor fees are separate. Business Growth includes one standard hosted checkout or supported gateway-plugin setup, not a full e-commerce build. Complex payment flows and 21–49 page projects require custom scoping. Enterprise starts at $8,999 and is quoted after discovery.",
+      "eyebrow": "Responsive websites with clear deliverables and payment options.",
+      "terms": "Client provides approved copy, branding and imagery. Hosting, domains, paid plugins, ongoing maintenance and payment processor fees are separate. Growth includes one standard gateway setup (supported plugin or hosted checkout), not full e-commerce development. Advanced payment flows are custom-scoped. 21-49 pages are quoted separately.",
       "tiers": [
         {
           "name": "One-Page Starter",
           "price": "$499",
-          "cadence": "one-time",
-          "description": "One polished, responsive page for a focused service or offer.",
+          "cadence": "one-time project",
+          "description": "One responsive landing page with up to five sections.",
           "recommended": false
         },
         {
           "name": "Business Growth",
           "price": "$2,999",
-          "cadence": "one-time",
-          "description": "A complete business site with room to grow and payments support.",
+          "cadence": "one-time project",
+          "description": "A complete business website with up to 20 pages.",
           "recommended": true
         },
         {
           "name": "Enterprise",
           "price": "From $8,999",
           "cadence": "custom project",
-          "description": "Complex websites with discovery-led scope and integrations.",
+          "description": "50+ pages, structured discovery and expanded scope.",
           "recommended": false
         }
       ],
@@ -270,9 +297,9 @@
         [
           "Website pages",
           [
-            "1 (up to 5 sections)",
+            "1",
             "Up to 20",
-            "50+ (scoped)"
+            "50+; scoped"
           ]
         ],
         [
