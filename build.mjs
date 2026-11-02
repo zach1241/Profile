@@ -1,5 +1,6 @@
-import { cpSync, existsSync, mkdirSync, readdirSync, rmSync, statSync } from 'node:fs';
+import { cpSync, existsSync, mkdirSync, readdirSync, rmSync, statSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
+import { renderPricing } from './render-pricing.mjs';
 
 const output = 'dist';
 rmSync(output, { recursive: true, force: true });
@@ -8,13 +9,20 @@ const isPublic = name => /\.(html|css|js|png|jpe?g|webp|svg|gif|mp4|webm|pdf|xml
 for (const name of readdirSync('.')) {
   if (name === 'dist' || name === 'node_modules' || name === '.git' || name === '.vercel') continue;
   if (statSync(name).isDirectory()) {
-    if (name === 'projects' || name === 'blog' || name === 'assets' || name === 'portfolio') cpSync(name, join(output, name), { recursive: true });
+    if (name === 'projects' || name === 'blog' || name === 'assets' || name === 'portfolio' || name === 'founder') cpSync(name, join(output, name), { recursive: true });
   } else if (isPublic(name)) {
     cpSync(name, join(output, name));
   }
 }
+const template = readFileSync('index.html','utf8');
+const pricingData = JSON.parse(readFileSync('agency-pricing.json','utf8'));
+if (!template.includes('<!-- PRICING_SERVER_RENDER -->')) throw new Error('Pricing placeholder missing from homepage');
+const generated = template.replace('<!-- PRICING_SERVER_RENDER -->',renderPricing(pricingData));
+writeFileSync(join(output,'index.html'),generated);
+if (generated.includes('PRICING_SERVER_RENDER')) throw new Error('Pricing injection failed');
+
 const required = [
- 'index.html', 'site.css', 'projects/index.html', 'blog/index.html',
+ 'index.html', 'agency.css', 'agency.js', 'founder/index.html', 'site.css', 'projects/index.html', 'blog/index.html',
  'portfolio/index.html', 'portfolio/portfolio.css', 'portfolio/portfolio.js',
  'assets/blog/what-search-console-can-and-cannot-tell-you.webp',
  'assets/blog/algorithm-updates-vs-seo-fundamentals.webp',

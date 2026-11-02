@@ -1,0 +1,369 @@
+{
+  "categories": [
+    {
+      "id": "seo",
+      "tab": "SEO",
+      "eyebrow": "Search visibility, built on consistent work",
+      "terms": "One website and one location per plan. Existing-page optimization excludes new page builds. Backlinks are non-guaranteed editorial goals; outreach does not promise placements. Group promotions are up-to targets and only in communities permitting them. Social activity is not a direct ranking factor. GBP work requires an eligible, accessible profile.",
+      "tiers": [
+        {
+          "name": "Local Essentials",
+          "price": "$299",
+          "cadence": "per month",
+          "description": "Build stronger local search foundations with focused, recurring work.",
+          "recommended": false
+        },
+        {
+          "name": "SEO Growth",
+          "price": "$699",
+          "cadence": "per month",
+          "description": "More content, technical improvements, and carefully targeted outreach.",
+          "recommended": true
+        },
+        {
+          "name": "SEO Authority",
+          "price": "$1,999",
+          "cadence": "per month",
+          "description": "Expanded optimization and editorial outreach for established businesses.",
+          "recommended": false
+        }
+      ],
+      "features": [
+        [
+          "Tracked target keywords",
+          [
+            "10",
+            "25",
+            "50"
+          ]
+        ],
+        [
+          "Existing pages optimized",
+          [
+            "2",
+            "4",
+            "8"
+          ]
+        ],
+        [
+          "SEO blog articles",
+          [
+            "1",
+            "2",
+            "4"
+          ]
+        ],
+        [
+          "Google Business Profile posts",
+          [
+            "2",
+            "4",
+            "8"
+          ]
+        ],
+        [
+          "New original social media posts",
+          [
+            "2",
+            "6",
+            "12"
+          ]
+        ],
+        [
+          "Community group promotion shares",
+          [
+            "Up to 50",
+            "Up to 100",
+            "Up to 250"
+          ]
+        ],
+        [
+          "Local citations created or corrected",
+          [
+            "2",
+            "4",
+            "8"
+          ]
+        ],
+        [
+          "Personalized backlink outreach contacts",
+          [
+            "0",
+            "5",
+            "12"
+          ]
+        ],
+        [
+          "Editorial backlink placement target",
+          [
+            "None",
+            "Aim for 1",
+            "Aim for 2"
+          ]
+        ],
+        [
+          "Technical SEO checks",
+          [
+            "Monthly",
+            "Monthly",
+            "Monthly"
+          ]
+        ],
+        [
+          "Performance report",
+          [
+            "Monthly",
+            "Monthly",
+            "Monthly"
+          ]
+        ],
+        [
+          "Strategy call",
+          [
+            "Not included",
+            "Not included",
+            "1 per month"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "ads",
+      "tab": "Marketing (Paid Ads)",
+      "eyebrow": "Paid media, managed with clarity",
+      "terms": "Management fees exclude advertising spend; clients pay Google or Meta directly. Platforms are Google Ads, Google Local Services Ads (LSA) and Meta Ads only. LSA eligibility and verification are required, and LSA counts as a channel rather than a normal campaign. Photography, professional video and new landing pages cost extra. Budgets over tier caps and complex setups need a custom quote.",
+      "tiers": [
+        {
+          "name": "Ads Starter",
+          "price": "$349",
+          "cadence": "per month",
+          "description": "Dedicated management of one focused advertising channel.",
+          "recommended": false
+        },
+        {
+          "name": "Ads Growth",
+          "price": "$799",
+          "cadence": "per month",
+          "description": "Cross-channel management with weekly optimization and testing.",
+          "recommended": true
+        },
+        {
+          "name": "Ads Scale",
+          "price": "$2,499",
+          "cadence": "per month",
+          "description": "More channels, more campaigns, and a closer optimization rhythm.",
+          "recommended": false
+        }
+      ],
+      "features": [
+        [
+          "Advertising platforms managed",
+          [
+            "1",
+            "Up to 2",
+            "Up to 3"
+          ]
+        ],
+        [
+          "Active campaigns",
+          [
+            "1",
+            "Up to 4",
+            "Up to 8"
+          ]
+        ],
+        [
+          "New ad copy / static variations monthly",
+          [
+            "2",
+            "4",
+            "8"
+          ]
+        ],
+        [
+          "Optimization cadence",
+          [
+            "Twice monthly",
+            "Weekly",
+            "Twice weekly"
+          ]
+        ],
+        [
+          "Keyword / audience optimization",
+          [
+            "Included",
+            "Included",
+            "Included"
+          ]
+        ],
+        [
+          "Conversion tracking",
+          [
+            "Basic",
+            "Enhanced",
+            "Enhanced"
+          ]
+        ],
+        [
+          "A/B testing",
+          [
+            "Basic",
+            "Included",
+            "Included"
+          ]
+        ],
+        [
+          "Performance reporting",
+          [
+            "Monthly",
+            "Monthly",
+            "Monthly"
+          ]
+        ],
+        [
+          "Strategy call",
+          [
+            "Not included",
+            "Monthly",
+            "Monthly"
+          ]
+        ],
+        [
+          "Monthly ad spend cap managed",
+          [
+            "$2,000",
+            "$6,000",
+            "$12,000"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "web",
+      "tab": "Web Design",
+      "eyebrow": "Websites that are ready for real business",
+      "terms": "Prices are one-time project fees. Clients provide approved copy, branding and images. Domain, hosting, premium plugins, extensive copywriting, maintenance and processor fees are separate. Business Growth includes one standard hosted checkout or supported gateway-plugin setup, not a full e-commerce build. Complex payment flows and 21–49 page projects require custom scoping. Enterprise starts at $8,999 and is quoted after discovery.",
+      "tiers": [
+        {
+          "name": "One-Page Starter",
+          "price": "$499",
+          "cadence": "one-time",
+          "description": "One polished, responsive page for a focused service or offer.",
+          "recommended": false
+        },
+        {
+          "name": "Business Growth",
+          "price": "$2,999",
+          "cadence": "one-time",
+          "description": "A complete business site with room to grow and payments support.",
+          "recommended": true
+        },
+        {
+          "name": "Enterprise",
+          "price": "From $8,999",
+          "cadence": "custom project",
+          "description": "Complex websites with discovery-led scope and integrations.",
+          "recommended": false
+        }
+      ],
+      "features": [
+        [
+          "Website pages",
+          [
+            "1 (up to 5 sections)",
+            "Up to 20",
+            "50+ (scoped)"
+          ]
+        ],
+        [
+          "Mobile-responsive design",
+          [
+            "Included",
+            "Included",
+            "Included"
+          ]
+        ],
+        [
+          "Contact forms",
+          [
+            "1",
+            "Up to 3",
+            "Custom"
+          ]
+        ],
+        [
+          "On-page SEO foundations",
+          [
+            "Included",
+            "Included",
+            "Included"
+          ]
+        ],
+        [
+          "Reusable page layouts",
+          [
+            "1",
+            "Up to 5",
+            "Custom"
+          ]
+        ],
+        [
+          "Blog functionality",
+          [
+            "Not included",
+            "Included",
+            "Included"
+          ]
+        ],
+        [
+          "Analytics integration",
+          [
+            "Basic",
+            "Included",
+            "Included"
+          ]
+        ],
+        [
+          "Performance optimization",
+          [
+            "Basic",
+            "Included",
+            "Advanced"
+          ]
+        ],
+        [
+          "Payment gateway integration",
+          [
+            "Not included",
+            "1 standard integration",
+            "Advanced / custom"
+          ]
+        ],
+        [
+          "Custom integrations",
+          [
+            "Not included",
+            "Quoted separately",
+            "Scoped individually"
+          ]
+        ],
+        [
+          "Revision rounds",
+          [
+            "2",
+            "2",
+            "Agreed in scope"
+          ]
+        ],
+        [
+          "Launch support",
+          [
+            "Included",
+            "Included",
+            "Included"
+          ]
+        ]
+      ]
+    }
+  ]
+}
