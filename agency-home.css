@@ -103,3 +103,147 @@
   .pricing-section .plan-action{font-size:12px;padding:11px 13px 11px 18px}
   .pricing-section .shared-terms{padding:0 18px;border-radius:18px}
 }
+
+/* Rounded pricing refresh — November 2026 */
+.pricing-section .price-tabs {
+  background: #f4f4f2;
+  border-color: #e7e7e4;
+  box-shadow: 0 2px 9px rgba(17, 17, 17, .025);
+}
+.pricing-section .price-tab {
+  transition: background-color .22s ease, color .22s ease, box-shadow .22s ease;
+}
+.pricing-section .price-tab:hover:not([aria-selected="true"]) {
+  background: #e9e9e6;
+}
+.pricing-section .price-tab:focus-visible,
+.pricing-section .plan-action:focus-visible,
+.pricing-section .plan-inclusions summary:focus-visible,
+.pricing-section .shared-terms summary:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+.pricing-section .plan-grid {
+  gap: clamp(14px, 1.65vw, 26px);
+}
+.pricing-section .plan {
+  padding: clamp(24px, 2.2vw, 34px);
+  border: 1px solid #e3e3df;
+  border-radius: 28px;
+  overflow: hidden;
+  background: linear-gradient(160deg, #fff 0%, #fafaf8 100%);
+  box-shadow: 0 12px 38px rgba(17, 17, 17, .045), 0 1px 4px rgba(17, 17, 17, .025);
+  transition: border-color .24s ease, box-shadow .24s ease, transform .24s ease;
+}
+.pricing-section .plan--recommended {
+  border-color: #171717;
+  background: linear-gradient(150deg, #292929 0%, #111 72%, #0a0a0a 100%);
+  color: #fff;
+  box-shadow: 0 18px 48px rgba(17, 17, 17, .16);
+}
+.pricing-section .plan--recommended .plan-ribbon {
+  align-self: flex-start;
+  width: fit-content;
+  border-radius: 999px;
+  background: #fff;
+  color: #111;
+  padding: 7px 13px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .085em;
+  margin-bottom: 15px;
+}
+.pricing-section .plan-price {
+  font-variant-numeric: tabular-nums;
+}
+.pricing-section .plan li {
+  border-color: #e7e7e5;
+}
+.pricing-section .plan--recommended li {
+  border-color: rgba(255, 255, 255, .2);
+}
+.pricing-section .plan-inclusions summary,
+.pricing-section .shared-terms summary {
+  cursor: pointer;
+}
+.pricing-section .plan-action {
+  min-height: 49px;
+  border-radius: 999px;
+  padding-inline: 20px;
+}
+.pricing-section .plan:not(.plan--recommended) .plan-action {
+  background: #111;
+  border-color: #111;
+  color: #fff;
+}
+.pricing-section .plan:not(.plan--recommended) .plan-action:hover {
+  background: #343434;
+}
+.pricing-section .plan--recommended .plan-action {
+  background: #fff;
+  border-color: #fff;
+  color: #111;
+}
+.pricing-section .pricing-scope {
+  max-width: none;
+  padding: 18px 20px;
+  border: 1px solid #eaeae7;
+  border-radius: 16px;
+  background: #f7f7f5;
+}
+.pricing-section .shared-terms {
+  border: 1px solid #e7e7e5;
+  border-radius: 18px;
+  padding: 0 20px;
+  background: #fafaf9;
+  overflow: hidden;
+}
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .pricing-section .plan:hover {
+    transform: translateY(-5px);
+    border-color: #bcbcb7;
+    box-shadow: 0 20px 50px rgba(17, 17, 17, .09);
+  }
+  .pricing-section .plan--recommended:hover {
+    border-color: #111;
+    box-shadow: 0 24px 55px rgba(17, 17, 17, .22);
+  }
+}
+@media (max-width: 800px) {
+  .pricing-section .plan {
+    padding: 23px;
+    border-radius: 24px;
+  }
+}
+@media (max-width: 560px) {
+  .pricing-section .price-tabs {
+    border-radius: 24px;
+    padding: 5px;
+    gap: 2px;
+  }
+  .pricing-section .price-tab {
+    flex: 1 1 auto;
+    font-size: 12px;
+    padding: 12px 8px;
+    white-space: nowrap;
+  }
+  .pricing-section .plan-grid {
+    gap: 18px;
+  }
+  .pricing-section .plan {
+    padding: 26px;
+    border-radius: 24px;
+  }
+  .pricing-section .plan-action {
+    min-height: 52px;
+  }
+  .pricing-section .pricing-scope {
+    padding: 15px 17px;
+  }
+}
+@media (max-width: 370px) {
+  .pricing-section .price-tab {
+    font-size: 11px;
+    padding-inline: 5px;
+  }
+}
