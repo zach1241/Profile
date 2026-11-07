@@ -12,7 +12,7 @@ export function renderPricing(data) {
         <div class="plan-main"><p class="plan-kind">${esc(category.tab)}</p><h3>${esc(tier.name)}</h3><div class="plan-price">${esc(tier.price)}</div><p class="plan-cadence">${esc(tier.cadence)}</p><p class="plan-description">${esc(tier.description)}</p></div>
         <ul class="plan-highlights">${highlights}</ul>
         <details class="plan-inclusions"><summary>View all inclusions <span aria-hidden="true">+</span></summary><ul>${inclusions}</ul></details>
-        <a class="plan-action ${tier.recommended?'plan-action--primary':''}" href="#contact" data-inquiry-category="${esc(category.tab)}" data-inquiry-plan="${esc(tier.name)}">Request this plan <span aria-hidden="true">↗</span></a>
+        <a class="plan-action ${tier.recommended?'plan-action--primary':''}" href="#contact" data-inquiry-category="${esc(category.tab)}" data-inquiry-plan="${esc(tier.name)}"><span class="plan-action-label">Request this plan</span><span class="plan-action-icon" aria-hidden="true">↗</span></a>
       </article>`;
     }).join('');
     return `<div class="price-panel" id="panel-${category.id}" role="tabpanel" aria-labelledby="tab-${category.id}" tabindex="0" ${categoryIndex?'hidden':''}>
