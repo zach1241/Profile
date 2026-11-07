@@ -40,7 +40,7 @@
     });
   });
   const initial = new URLSearchParams(location.search).get('service');
-  selectCategory(ids.includes(initial) ? initial : 'seo',false,false);
+  selectCategory(ids.includes(initial) ? initial : 'web',false,false);
   document.querySelectorAll('[data-select-category]').forEach(link=>link.addEventListener('click',()=>selectCategory(link.dataset.selectCategory)));
   document.querySelectorAll('[data-inquiry-category]').forEach(link=>link.addEventListener('click',()=>{
     service.value=link.dataset.inquiryCategory;
