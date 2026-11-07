@@ -34,10 +34,10 @@
       "terms": "Client provides approved copy, branding and imagery. Hosting, domains, paid plugins, ongoing maintenance and payment processor fees are separate. Growth includes one standard gateway setup (supported plugin or hosted checkout), not full e-commerce development. Advanced payment flows are custom-scoped. 21-49 pages are quoted separately.",
       "tiers": [
         {
-          "name": "One-Page Starter",
+          "name": "Standard",
           "price": "$499",
           "cadence": "one-time project",
-          "description": "One responsive landing page with up to five sections.",
+          "description": "A responsive business website with up to 3 pages.",
           "recommended": false
         },
         {
@@ -59,7 +59,7 @@
         [
           "Website pages",
           [
-            "1",
+            "Up to 3",
             "Up to 20",
             "50+; scoped"
           ]
