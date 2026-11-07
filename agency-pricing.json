@@ -28,6 +28,133 @@
   "customProposal": "Request a tailored proposal for multiple locations, larger ad budgets, additional web pages or integrated growth services.",
   "categories": [
     {
+      "id": "web",
+      "tab": "Web Design",
+      "eyebrow": "Responsive websites with clear deliverables and payment options.",
+      "terms": "Client provides approved copy, branding and imagery. Hosting, domains, paid plugins, ongoing maintenance and payment processor fees are separate. Growth includes one standard gateway setup (supported plugin or hosted checkout), not full e-commerce development. Advanced payment flows are custom-scoped. 21-49 pages are quoted separately.",
+      "tiers": [
+        {
+          "name": "One-Page Starter",
+          "price": "$499",
+          "cadence": "one-time project",
+          "description": "One responsive landing page with up to five sections.",
+          "recommended": false
+        },
+        {
+          "name": "Business Growth",
+          "price": "$2,999",
+          "cadence": "one-time project",
+          "description": "A complete business website with up to 20 pages.",
+          "recommended": true
+        },
+        {
+          "name": "Enterprise",
+          "price": "From $8,999",
+          "cadence": "custom project",
+          "description": "50+ pages, structured discovery and expanded scope.",
+          "recommended": false
+        }
+      ],
+      "features": [
+        [
+          "Website pages",
+          [
+            "1",
+            "Up to 20",
+            "50+; scoped"
+          ]
+        ],
+        [
+          "Mobile-responsive design",
+          [
+            "Included",
+            "Included",
+            "Included"
+          ]
+        ],
+        [
+          "Contact forms",
+          [
+            "1",
+            "Up to 3",
+            "Custom"
+          ]
+        ],
+        [
+          "On-page SEO foundations",
+          [
+            "Included",
+            "Included",
+            "Included"
+          ]
+        ],
+        [
+          "Reusable page layouts",
+          [
+            "1",
+            "Up to 5",
+            "Custom"
+          ]
+        ],
+        [
+          "Blog functionality",
+          [
+            "Not included",
+            "Included",
+            "Included"
+          ]
+        ],
+        [
+          "Analytics integration",
+          [
+            "Basic",
+            "Included",
+            "Included"
+          ]
+        ],
+        [
+          "Performance optimization",
+          [
+            "Basic",
+            "Included",
+            "Advanced"
+          ]
+        ],
+        [
+          "Payment gateway integration",
+          [
+            "Not included",
+            "1 standard integration",
+            "Advanced / custom"
+          ]
+        ],
+        [
+          "Custom integrations",
+          [
+            "Not included",
+            "Quoted separately",
+            "Scoped individually"
+          ]
+        ],
+        [
+          "Revision rounds",
+          [
+            "2",
+            "2",
+            "Agreed in scope"
+          ]
+        ],
+        [
+          "Launch support",
+          [
+            "Included",
+            "Included",
+            "Included"
+          ]
+        ]
+      ]
+    },
+    {
       "id": "seo",
       "tab": "SEO",
       "eyebrow": "Search visibility, original content and community promotion.",
@@ -261,133 +388,6 @@
             "$2,000",
             "$6,000",
             "$12,000"
-          ]
-        ]
-      ]
-    },
-    {
-      "id": "web",
-      "tab": "Web Design",
-      "eyebrow": "Responsive websites with clear deliverables and payment options.",
-      "terms": "Client provides approved copy, branding and imagery. Hosting, domains, paid plugins, ongoing maintenance and payment processor fees are separate. Growth includes one standard gateway setup (supported plugin or hosted checkout), not full e-commerce development. Advanced payment flows are custom-scoped. 21-49 pages are quoted separately.",
-      "tiers": [
-        {
-          "name": "One-Page Starter",
-          "price": "$499",
-          "cadence": "one-time project",
-          "description": "One responsive landing page with up to five sections.",
-          "recommended": false
-        },
-        {
-          "name": "Business Growth",
-          "price": "$2,999",
-          "cadence": "one-time project",
-          "description": "A complete business website with up to 20 pages.",
-          "recommended": true
-        },
-        {
-          "name": "Enterprise",
-          "price": "From $8,999",
-          "cadence": "custom project",
-          "description": "50+ pages, structured discovery and expanded scope.",
-          "recommended": false
-        }
-      ],
-      "features": [
-        [
-          "Website pages",
-          [
-            "1",
-            "Up to 20",
-            "50+; scoped"
-          ]
-        ],
-        [
-          "Mobile-responsive design",
-          [
-            "Included",
-            "Included",
-            "Included"
-          ]
-        ],
-        [
-          "Contact forms",
-          [
-            "1",
-            "Up to 3",
-            "Custom"
-          ]
-        ],
-        [
-          "On-page SEO foundations",
-          [
-            "Included",
-            "Included",
-            "Included"
-          ]
-        ],
-        [
-          "Reusable page layouts",
-          [
-            "1",
-            "Up to 5",
-            "Custom"
-          ]
-        ],
-        [
-          "Blog functionality",
-          [
-            "Not included",
-            "Included",
-            "Included"
-          ]
-        ],
-        [
-          "Analytics integration",
-          [
-            "Basic",
-            "Included",
-            "Included"
-          ]
-        ],
-        [
-          "Performance optimization",
-          [
-            "Basic",
-            "Included",
-            "Advanced"
-          ]
-        ],
-        [
-          "Payment gateway integration",
-          [
-            "Not included",
-            "1 standard integration",
-            "Advanced / custom"
-          ]
-        ],
-        [
-          "Custom integrations",
-          [
-            "Not included",
-            "Quoted separately",
-            "Scoped individually"
-          ]
-        ],
-        [
-          "Revision rounds",
-          [
-            "2",
-            "2",
-            "Agreed in scope"
-          ]
-        ],
-        [
-          "Launch support",
-          [
-            "Included",
-            "Included",
-            "Included"
           ]
         ]
       ]
