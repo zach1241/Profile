@@ -253,3 +253,9 @@
 .pricing-section .plan-action span:first-child{flex:1 1 auto;min-width:0;width:auto;height:auto;border:0;border-radius:0;justify-content:flex-start;overflow-wrap:normal;white-space:normal}
 .pricing-section .plan-action span:last-child{flex:0 0 28px}
 @media(max-width:800px){.pricing-section .plan-action{font-size:11px;gap:8px}.pricing-section .plan-action span:last-child{flex-basis:25px}}
+
+/* Pricing CTA: separate flexible label from fixed arrow; prevent tiny text column. */
+.pricing-section .plan-action{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;min-width:0;text-decoration:none}
+.pricing-section .plan-action .plan-action-label,.pricing-section .plan-action .plan-action-label:first-child{display:block;flex:1 1 auto;width:auto;height:auto;min-width:0;border:0;border-radius:0;padding:0;margin:0;font:inherit;line-height:1.35;text-align:left;white-space:normal;overflow-wrap:normal;word-break:normal}
+.pricing-section .plan-action .plan-action-icon,.pricing-section .plan-action .plan-action-icon:last-child{display:flex;flex:0 0 28px;width:28px;height:28px;align-items:center;justify-content:center;border:1px solid currentColor;border-radius:50%;padding:0;margin:0;font-size:17px;line-height:1;white-space:nowrap}
+@media(max-width:800px){.pricing-section .plan-action .plan-action-icon,.pricing-section .plan-action .plan-action-icon:last-child{flex-basis:25px;width:25px;height:25px}}
