@@ -385,7 +385,8 @@
   });
 
   // Actual pointer-entry circular fills; only the final CTA is magnetic.
-  all('.pill, .plan-action, .form-submit').forEach(button => {
+  // Pricing request links use their own two-column layout; do not wrap their children.
+  all('.pill, .form-submit').forEach(button => {
     button.classList.add('motion-button');
     const label = document.createElement('span'); label.className = 'motion-button-label';
     while (button.firstChild) label.append(button.firstChild);
