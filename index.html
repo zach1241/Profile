@@ -35,6 +35,8 @@
   <script defer src="/agency.js"></script>
   <script defer src="/agency-motion.js"></script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Local Presence 360","url":"https://www.localpresence360.com/","description":"Web design, search engine optimization and paid advertising for small and growing businesses.","email":"zacharyswanepoel9@gmail.com","areaServed":"Worldwide","founder":{"@type":"Person","name":"Zachary Swanepoel","url":"https://www.localpresence360.com/founder/"},"hasOfferCatalog":{"@type":"OfferCatalog","name":"Digital services","itemListElement":[{"@type":"OfferCatalog","name":"SEO"},{"@type":"OfferCatalog","name":"Paid advertising"},{"@type":"OfferCatalog","name":"Web design"}]}}</script>
+  <link rel="stylesheet" href="/mega-menu.css">
+  <script defer src="/mega-menu.js"></script>
 </head>
 <body>
 <div class="motion-loader" aria-hidden="true"><svg viewBox="0 0 1000 1000" preserveAspectRatio="none"><path class="loader-curtain" d="M0 1000 Q500 1000 1000 1000 V0 H0 Z"></path></svg><div class="loader-word"><span>L</span><span>O</span><span>A</span><span>D</span><span>I</span><span>N</span><span>G</span></div></div>
@@ -43,7 +45,77 @@
 <div id="smooth-wrapper"><div id="smooth-content">
 <header class="site-nav" id="top">
   <a class="brand" href="/" aria-label="Local Presence 360 home"><img src="/portfolio/assets/branding/location-pin-badge.webp" width="50" height="50" alt=""><span>LOCAL PRESENCE<b>360</b></span></a>
-  <nav class="nav-links" id="nav-links" aria-label="Main navigation"><a class="active" href="#top">Home</a><a href="#about">About Us</a><a href="#services">Services</a><a href="#work">Projects</a><a href="#pricing">Pricing</a><a href="#contact">Contact</a></nav>
+  <nav class="nav-links lp360-nav" id="nav-links" aria-label="Main navigation">
+    <a href="/" class="lp360-simple">Home</a>
+    <details class="lp360-menu" data-mega="web">
+      <summary>Web Design <span aria-hidden="true">⌄</span></summary>
+      <div class="lp360-dropdown">
+        <div class="lp360-dropdown-body">
+          <div class="lp360-menu-column"><span class="lp360-eyebrow">Websites & Development</span>
+            <a href="/#services">Web Design Services <small>Responsive websites built for your audience</small></a>
+            <a href="/#pricing" data-select-category="web">Website Packages <small>Compare one-time design packages</small></a>
+            <a href="/projects/">Web Design Portfolio <small>Explore real projects and case studies</small></a>
+          </div>
+          <div class="lp360-menu-column"><span class="lp360-eyebrow">Proof & Process</span>
+            <a href="/projects/logic-lc/">Logic LC <small>Business website case study</small></a>
+            <a href="/projects/rc-premium-detailing/">RC Premium Detailing <small>WordPress and custom configurator</small></a>
+            <a href="/#contact">Request a Website Quote <small>Talk through your requirements</small></a>
+          </div>
+          <a class="lp360-menu-visual" href="/projects/" aria-label="Explore web design projects"><img src="/assets/home/logic-lc.webp" width="1000" height="750" loading="lazy" alt="Responsive Logic LC website project"><span>Explore Website Projects <b aria-hidden="true">↗</b></span></a>
+        </div>
+      </div>
+    </details>
+    <details class="lp360-menu" data-mega="seo">
+      <summary>SEO <span aria-hidden="true">⌄</span></summary>
+      <div class="lp360-dropdown"><div class="lp360-dropdown-body">
+        <div class="lp360-menu-column"><span class="lp360-eyebrow">Search Visibility</span>
+          <a href="/#services">SEO Services <small>Technical and on-page foundations</small></a>
+          <a href="/#pricing" data-select-category="seo">SEO Packages <small>Compare monthly SEO plans</small></a>
+          <a href="/blog/">SEO Insights <small>Read practical optimization articles</small></a>
+        </div>
+        <div class="lp360-menu-column"><span class="lp360-eyebrow">Research & Next Steps</span>
+          <a href="/projects/how-i-start-an-seo-audit/">SEO Audit Process <small>How technical reviews begin</small></a>
+          <a href="/blog/">Content & Search Guides <small>Browse published insights</small></a>
+          <a href="/#contact">Discuss SEO <small>Get advice for your website</small></a>
+        </div>
+        <a class="lp360-menu-visual" href="/#pricing" data-select-category="seo" aria-label="View SEO plans"><img src="/seo-audit-portfolio-showcase.png" width="1000" height="750" loading="lazy" alt="Technical SEO audit project illustration"><span>Explore SEO Plans <b aria-hidden="true">↗</b></span></a>
+      </div></div>
+    </details>
+    <details class="lp360-menu" data-mega="ads">
+      <summary>Paid Advertising <span aria-hidden="true">⌄</span></summary>
+      <div class="lp360-dropdown"><div class="lp360-dropdown-body">
+        <div class="lp360-menu-column"><span class="lp360-eyebrow">Campaign Management</span>
+          <a href="/#services">Paid Advertising Services <small>Google and Meta campaigns</small></a>
+          <a href="/#pricing" data-select-category="ads">Advertising Packages <small>Transparent monthly management options</small></a>
+          <a href="/#contact">Request an Ads Review <small>Discuss your goals and ad budget</small></a>
+        </div>
+        <div class="lp360-menu-column"><span class="lp360-eyebrow">Explore & Learn</span>
+          <a href="/blog/">Google Ads Articles <small>Campaign and landing-page strategy</small></a>
+          <a href="/#faq">Advertising FAQs <small>Budgets, scope and expectations</small></a>
+          <a href="/projects/">Selected Work <small>See websites and digital projects</small></a>
+        </div>
+        <a class="lp360-menu-visual" href="/#pricing" data-select-category="ads" aria-label="View paid advertising plans"><img src="/assets/blog/google-ads-after-the-click.webp" width="1000" height="750" loading="lazy" alt="Google Ads article illustration exploring what happens after an ad click"><span>Explore Ad Management <b aria-hidden="true">↗</b></span></a>
+      </div></div>
+    </details>
+    <details class="lp360-menu" data-mega="resources">
+      <summary>Resources <span aria-hidden="true">⌄</span></summary>
+      <div class="lp360-dropdown"><div class="lp360-dropdown-body">
+        <div class="lp360-menu-column"><span class="lp360-eyebrow">Learn & Discover</span>
+          <a href="/blog/">Marketing Blog <small>SEO, ads and website development</small></a>
+          <a href="/projects/">Case Studies & Portfolio <small>Selected work and practical examples</small></a>
+          <a href="/founder/">About the Founder <small>Experience and background</small></a>
+        </div>
+        <div class="lp360-menu-column"><span class="lp360-eyebrow">Get Started</span>
+          <a href="/#pricing">Compare Services <small>Find a package for your next project</small></a>
+          <a href="/#faq">Common Questions <small>How billing and projects work</small></a>
+          <a href="/#contact">Contact <small>Share your goals with us</small></a>
+        </div>
+        <a class="lp360-menu-visual" href="/blog/" aria-label="Browse marketing articles"><img src="/assets/home/digital-workspace.webp" width="1000" height="750" loading="lazy" alt="Illustrative digital workspace with a laptop and website interfaces"><span>Visit Our Insights <b aria-hidden="true">↗</b></span></a>
+      </div></div>
+    </details>
+    <a href="/#pricing" class="lp360-simple">Pricing</a>
+    <a href="/#contact" class="lp360-simple">Contact</a>
+  </nav>
   <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open navigation" aria-controls="nav-links" aria-expanded="false"><span></span><span></span></button>
 </header>
 <main id="main">
