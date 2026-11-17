@@ -12,3 +12,5 @@ figure{margin:0}h4{margin:0}em{font-style:normal}.career-hero{padding-block:75px
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal.is-pending,.reveal.is-visible{opacity:1;transform:none;transition:none}.agency-peek{transform:none!important}.screenshot-link:hover img{transform:none}.screenshot-link img{transition:none}}
 @media(max-width:760px){.agency-peek+.agency-peek{margin-top:26px}.agency-preview-stack{justify-self:auto;padding-top:0}}
 h1 em,h2 i{color:#d84300}
+.breadcrumbs,.panel-index{color:#62645e}.spotlight-panel li>span{color:#767970}
+.current-step .career-number{background:#bd3c00;border-color:#bd3c00}
