@@ -1,0 +1,529 @@
+{
+  "capturedDate": "2026-11-16",
+  "agencies": [
+    {
+      "id": "digital-revolution",
+      "name": "The Digital Revolution",
+      "url": "https://thedigitalrevolution.co.za/",
+      "domain": "thedigitalrevolution.co.za",
+      "screenshot": "digital-revolution-hero",
+      "verification": "Official agency website supplied by the portfolio owner; browser title and homepage branding verified.",
+      "period": "Early career · 2024–2025",
+      "role": "Web development, local SEO & content",
+      "currentRole": "Full-time · Outreach & technical assistance",
+      "currentSince": "November 2026–Present",
+      "capturedDate": "2026-11-16",
+      "verificationStatus": "verified",
+      "evidence": [
+        "https://thedigitalrevolution.co.za/"
+      ],
+      "verifiedOn": "2026-11-16"
+    },
+    {
+      "id": "peak-leads",
+      "name": "Peak Leads Agency",
+      "url": "https://peakleads.agency/",
+      "domain": "peakleads.agency",
+      "screenshot": "peak-leads-hero",
+      "verification": "Official agency website supplied by the portfolio owner; browser title and homepage branding verified.",
+      "period": "2026",
+      "role": "Development, search & paid media",
+      "currentRole": "Part-time · Meta advertising · ~2 hours weekly",
+      "currentSince": "November 2026–Present",
+      "capturedDate": "2026-11-16",
+      "verificationStatus": "verified",
+      "evidence": [
+        "https://peakleads.agency/"
+      ],
+      "verifiedOn": "2026-11-16"
+    }
+  ],
+  "clients": [
+    {
+      "name": "Plumbfit Plumbing",
+      "role": "Go Live client",
+      "contribution": "An early plumbing-business engagement in my introduction to agency delivery. I am documenting the precise scope before claiming specific launch or performance outcomes.",
+      "categories": [
+        "web"
+      ],
+      "caseStudy": null,
+      "id": "plumbfit",
+      "agency": "digital-revolution",
+      "tags": [
+        "Early agency delivery"
+      ],
+      "url": "https://www.plumbfitplumbers.co.za/",
+      "domain": "plumbfitplumbers.co.za",
+      "screenshot": "plumbfit-hero",
+      "verificationStatus": "verified",
+      "evidence": [
+        "https://www.plumbfitplumbers.co.za/",
+        "https://www.yobiz.co.za/plumbfit-plumbers/"
+      ],
+      "screenshotNote": null,
+      "note": "One of my first agency clients, under Go Live. The precise delivery scope is still being documented.",
+      "verification": "Indexed current homepage brands Plumbfit; fast reliable plumbing in Gqeberha, 29 Oak Rd Overbaakens, 069 428 2049. Plumbfit Plumbers at 29 Oak Road Springfield Port Elizabeth; matches domain and 069 428 2049.",
+      "verifiedOn": "2026-11-16",
+      "capturedDate": "2026-11-16"
+    },
+    {
+      "name": "Britz Plumbing",
+      "role": "Dominator client",
+      "contribution": "Early website development work for a plumbing business, building practical experience with client content and site delivery.",
+      "categories": [
+        "web"
+      ],
+      "caseStudy": null,
+      "id": "britz-plumbing",
+      "agency": "digital-revolution",
+      "tags": [
+        "Website development",
+        "Content"
+      ],
+      "url": "https://britzplumbing.co.za/",
+      "domain": "britzplumbing.co.za",
+      "screenshot": "britz-plumbing-hero",
+      "verificationStatus": "verified",
+      "evidence": [
+        "https://britzplumbing.co.za/",
+        "https://www.nichemarket.co.za/construction/britz-plumbing"
+      ],
+      "screenshotNote": null,
+      "note": "One of my first agency clients, under Dominator.",
+      "verification": "Direct homepage title 'Britz Plumbing - West Rand and North Rand Plumbers'; exact branding and Gauteng West/North/East Rand plumbing service copy. Britz Plumbing Roodepoort/Randburg profile links official domain; contact info@britzplumbing.co.za, 079 221 6485.",
+      "verifiedOn": "2026-11-16",
+      "capturedDate": "2026-11-16"
+    },
+    {
+      "name": "Crusaders Plumbing",
+      "role": "Web development / local SEO",
+      "contribution": "Website development, plumbing service pages, local-search structure, SEO content and marketing materials.",
+      "categories": [
+        "web",
+        "seo"
+      ],
+      "caseStudy": null,
+      "id": "crusaders-plumbing",
+      "agency": "digital-revolution",
+      "tags": [
+        "Website development",
+        "Local SEO",
+        "Service pages",
+        "Content"
+      ],
+      "url": "https://crusadersplumbing.co.za/",
+      "domain": "crusadersplumbing.co.za",
+      "screenshot": "crusaders-plumbing-hero",
+      "verificationStatus": "verified",
+      "evidence": [
+        "https://crusadersplumbing.co.za/",
+        "https://crusadersplumbing.co.za/about/"
+      ],
+      "screenshotNote": null,
+      "verification": "Exact branding; local plumber Roodepoort, West Rand and Johannesburg; 082 529 1455. Business about page gives 9 Magnolia Place, 960 Vale Rd, Weltevredenpark Roodepoort 1709; info@crusadersplumbing.co.za and matching phone.",
+      "verifiedOn": "2026-11-16",
+      "capturedDate": "2026-11-16"
+    },
+    {
+      "name": "911 Drain & Plumbing",
+      "role": "Service-page SEO / content",
+      "contribution": "Plumbing service and location content, blog production and optimisation covering drain cleaning and related services.",
+      "categories": [
+        "seo"
+      ],
+      "caseStudy": null,
+      "id": "911-drain-plumbing",
+      "agency": "digital-revolution",
+      "tags": [
+        "SEO",
+        "Location pages",
+        "Service content"
+      ],
+      "url": "https://911drainandplumbing.co.za/",
+      "domain": "911drainandplumbing.co.za",
+      "screenshot": "911-drain-plumbing-hero",
+      "verificationStatus": "verified",
+      "evidence": [
+        "https://911drainandplumbing.co.za/"
+      ],
+      "screenshotNote": null,
+      "verification": "Exact brand; Pretoria plumbing and drains. Contact 082 650 5258, info@911drainandplumbing.co.za, 169 Silver Woods Blvd, Silverwoods Country Estate Pretoria 0081.",
+      "verifiedOn": "2026-11-16",
+      "capturedDate": "2026-11-16"
+    },
+    {
+      "name": "911 Electricians Pretoria",
+      "role": "Marketing content",
+      "contribution": "Social media and digital marketing content supporting the electrical services offering.",
+      "categories": [
+        "content"
+      ],
+      "caseStudy": null,
+      "id": "911-electricians",
+      "agency": "digital-revolution",
+      "tags": [
+        "Social media",
+        "Marketing content"
+      ],
+      "url": "https://911electricianspretoria.co.za/",
+      "domain": "911electricianspretoria.co.za",
+      "screenshot": "911-electricians-hero",
+      "verificationStatus": "verified",
+      "evidence": [
+        "https://911electricianspretoria.co.za/"
+      ],
+      "screenshotNote": null,
+      "verification": "Direct HTTP 200; title '911 Electricians Pretoria | 24/7 Electrical Repairs, COCs & Inverters'. Exact brand throughout Pretoria service copy; 076 895 5655 and info@911electricianspretoria.co.za.",
+      "verifiedOn": "2026-11-16",
+      "capturedDate": "2026-11-16"
+    },
+    {
+      "name": "Pretoria Leak Detection",
+      "role": "Marketing content",
+      "contribution": "Social media and marketing materials for a specialist local-service business.",
+      "categories": [
+        "content"
+      ],
+      "caseStudy": null,
+      "id": "pretoria-leak-detection",
+      "agency": "digital-revolution",
+      "tags": [
+        "Social media",
+        "Marketing content"
+      ],
+      "url": "https://pretorialeakdetection.co.za/",
+      "domain": "pretorialeakdetection.co.za",
+      "screenshot": "pretoria-leak-detection-hero",
+      "verificationStatus": "verified",
+      "evidence": [
+        "https://pretorialeakdetection.co.za/",
+        "https://africabusinessfile.com/listing/leak-detection-pretoria/"
+      ],
+      "screenshotNote": null,
+      "verification": "Direct HTTP 200; JSON-LD names Pretoria Leak Detection, alternate name Leak Detection Pretoria. Hero 'Precision Water Leak Detection in Pretoria'; 063 607 1793, info@pretorialeakdetection.co.za, 734 Tetra Avenue Moreleta Park Pretoria Gauteng 0044. Directory domain, exact address and phone match primary homepage.",
+      "verifiedOn": "2026-11-16",
+      "capturedDate": "2026-11-16"
+    },
+    {
+      "name": "Truffcon Plumbing",
+      "role": "Content planning",
+      "contribution": "Social content development and planning across the agency's client-content workflow.",
+      "categories": [
+        "content"
+      ],
+      "caseStudy": null,
+      "id": "truffcon-plumbing",
+      "agency": "digital-revolution",
+      "tags": [
+        "Content planning",
+        "Social media"
+      ],
+      "url": "https://www.truffconplumbing.co.za/",
+      "domain": "truffconplumbing.co.za",
+      "screenshot": "truffcon-plumbing-hero",
+      "verificationStatus": "verified",
+      "evidence": [
+        "https://www.truffconplumbing.co.za/",
+        "https://www.jojo.co.za/installer/truffcon-plumbing/"
+      ],
+      "screenshotNote": null,
+      "verification": "Indexed current primary homepage has exact Truffcon Plumbing branding, Sandton/Johannesburg service area; 7 Sangster Road Blue Heaven Sandton; 082 725 9037; truffconplumbing@gmail.com. JoJo installer profile identifies Truffcon Plumbing (Pvt) Ltd, Andrew Chikobvu; matches phone 082 725 9037 and email, provides website link.",
+      "verifiedOn": "2026-11-16",
+      "capturedDate": "2026-11-16"
+    },
+    {
+      "name": "GOAT Plumbing Cape Town",
+      "role": "Content planning",
+      "contribution": "Social media planning and supporting client marketing content.",
+      "categories": [
+        "content"
+      ],
+      "caseStudy": null,
+      "id": "goat-plumbing",
+      "agency": "digital-revolution",
+      "tags": [
+        "Social media planning",
+        "Marketing content"
+      ],
+      "url": "https://goatplumbing.co.za/",
+      "domain": "goatplumbing.co.za",
+      "screenshot": "goat-plumbing-hero",
+      "verificationStatus": "verified",
+      "evidence": [
+        "https://goatplumbing.co.za/"
+      ],
+      "screenshotNote": null,
+      "verification": "Direct HTTP 200; GOAT Plumbing / GOAT Plumbing (Pty) Ltd brand. Homepage explicitly states Cape Town, Western Cape, Brackenfell and Durbanville service areas; 084 802 2766, info@goatplumbing.co.za.",
+      "verifiedOn": "2026-11-16",
+      "capturedDate": "2026-11-16"
+    },
+    {
+      "name": "Logic LC",
+      "role": "Website redevelopment",
+      "contribution": "WordPress and Elementor build, site structure, launch preparation, foundational SEO and ongoing technical implementation.",
+      "categories": [
+        "web",
+        "seo"
+      ],
+      "caseStudy": "/projects/logic-lc/",
+      "id": "logic-lc",
+      "agency": "peak-leads",
+      "tags": [
+        "WordPress",
+        "Elementor",
+        "SEO",
+        "Launch preparation"
+      ],
+      "url": "https://logiclc.com/",
+      "domain": "logiclc.com",
+      "screenshot": "logic-lc-hero",
+      "verificationStatus": "verified",
+      "evidence": [
+        "https://logiclc.com/"
+      ],
+      "screenshotNote": null,
+      "verification": "The official homepage identifies Logic LC and its commercial security, access control, managed IT and business phone services. Existing local projects/logic-lc/index.html independently links this exact domain.",
+      "verifiedOn": "2026-11-16",
+      "capturedDate": "2026-11-16"
+    },
+    {
+      "name": "FIT Roofing & Construction",
+      "role": "Websites / local SEO / LSA",
+      "contribution": "Website improvements, location-targeted content, technical SEO and Google Local Services Ads support.",
+      "categories": [
+        "web",
+        "seo",
+        "ads"
+      ],
+      "caseStudy": null,
+      "id": "fit-roofing",
+      "agency": "peak-leads",
+      "tags": [
+        "WordPress",
+        "Technical SEO",
+        "Content",
+        "LSA"
+      ],
+      "url": "https://fitroofingco.com/",
+      "domain": "fitroofingco.com",
+      "screenshot": "fit-roofing-hero",
+      "verificationStatus": "verified",
+      "evidence": [
+        "https://fitroofingco.com/"
+      ],
+      "screenshotNote": null,
+      "verification": "The official homepage names F.I.T. Roofing & Construction, founder Michael Cesar, Dallas-Fort Worth service and telephone (214) 714-0071.",
+      "verifiedOn": "2026-11-16",
+      "capturedDate": "2026-11-16"
+    },
+    {
+      "name": "Water Automation / aquaHALT",
+      "role": "Website / technical SEO",
+      "contribution": "Website updates, search-focused content, UX improvements and technical optimisation.",
+      "categories": [
+        "web",
+        "seo"
+      ],
+      "caseStudy": null,
+      "id": "water-automation",
+      "agency": "peak-leads",
+      "tags": [
+        "Website updates",
+        "Technical SEO",
+        "UX",
+        "Content"
+      ],
+      "url": "https://www.waterautomation.com/",
+      "domain": "waterautomation.com",
+      "screenshot": "water-automation-hero",
+      "verificationStatus": "verified",
+      "evidence": [
+        "https://www.waterautomation.com/",
+        "https://www.waterautomation.com/about-us/"
+      ],
+      "screenshotNote": null,
+      "verification": "The official homepage explicitly identifies aquaHALT by water AUTOMATION; the official about page describes aquaHALT technology and Gregory Capizzi as founder and CEO.",
+      "verifiedOn": "2026-11-16",
+      "capturedDate": "2026-11-16"
+    },
+    {
+      "name": "In The Light Roofing",
+      "role": "Google Ads / LSA / analytics",
+      "contribution": "Google Search campaigns, Local Services Ads, conversion tracking with GA4 and GTM, landing-page improvement and reporting.",
+      "categories": [
+        "seo",
+        "ads"
+      ],
+      "caseStudy": null,
+      "id": "in-the-light-roofing",
+      "agency": "peak-leads",
+      "tags": [
+        "Google Ads",
+        "LSA",
+        "GA4",
+        "GTM"
+      ],
+      "url": "https://inthelightroofing.com/",
+      "domain": "inthelightroofing.com",
+      "screenshot": "in-the-light-roofing-hero",
+      "verificationStatus": "verified",
+      "evidence": [
+        "https://inthelightroofing.com/"
+      ],
+      "screenshotNote": null,
+      "verification": "The official homepage identifies In The Light Roofing as the Allentown and Lehigh Valley roofing business, telephone (484) 553-0213 and PA contractor registration PA134395.",
+      "verifiedOn": "2026-11-16",
+      "capturedDate": "2026-11-16"
+    },
+    {
+      "name": "All Roofing and Remodeling → True Line Roofing & Exteriors",
+      "role": "Brand transition / SEO continuity",
+      "contribution": "Supported the transition from ARR to True Line Roofing & Exteriors. Search continuity became a challenge during the change, highlighting the importance of migration planning, URL mapping and post-launch monitoring.",
+      "categories": [
+        "web",
+        "seo"
+      ],
+      "caseStudy": null,
+      "id": "true-line-roofing",
+      "agency": "peak-leads",
+      "tags": [
+        "Brand transition",
+        "SEO continuity",
+        "URL mapping"
+      ],
+      "url": "https://truelineroofing.com/",
+      "domain": "truelineroofing.com",
+      "screenshot": "true-line-roofing-hero",
+      "verificationStatus": "verified",
+      "evidence": [
+        "https://truelineroofing.com/",
+        "https://www.bbb.org/us/tx/spring/profile/roofing-contractors/true-line-roofing-and-exteriors-0915-90041279",
+        "https://network.procore.com/p/all-roofing-and-remodeling-co-inc-spring"
+      ],
+      "screenshotNote": null,
+      "note": "One brand-transition project. Search continuity and lead generation were challenging during the rebrand; this is not presented as a proven successful migration.",
+      "verification": "The official True Line homepage identifies founder Adrien Parker, Spring and Houston service, and (832) 698-2101. The same business's BBB profile retains All Roofing and Remodeling references; its claimed Procore profile is titled True Line Roofing and Exteriors and states legal name All Roofing and Remodeling Co., Inc. Treat as one rebrand engagement, not separate clients.",
+      "verifiedOn": "2026-11-16",
+      "capturedDate": "2026-11-16"
+    },
+    {
+      "name": "ProCom Headsets",
+      "role": "Website redesign / client review",
+      "contribution": "Revamped the website's interface, layout and product presentation. The redesign is awaiting client approval; it is showcased as work in review, not as a live launch.",
+      "categories": [
+        "web"
+      ],
+      "caseStudy": "/projects/procom-redesign/",
+      "id": "procom-headsets",
+      "agency": "peak-leads",
+      "tags": [
+        "WordPress",
+        "UI design",
+        "Product presentation"
+      ],
+      "url": "https://procomheadsets.com/",
+      "domain": "procomheadsets.com",
+      "screenshot": "procom-headsets-hero",
+      "verificationStatus": "verified",
+      "evidence": [
+        "https://procomheadsets.com/",
+        "https://procomheadsets.com/about-us/"
+      ],
+      "screenshotNote": null,
+      "status": "Website Redesign — Awaiting Approval",
+      "note": "As of November 2026. The original redesign shown here is work in review and has not been presented as a live launch.",
+      "originalScreenshot": "procom-redesign-original",
+      "walkthrough": "https://www.loom.com/share/f8d778fdf50c47ceb55d23ea2891ecbe",
+      "verification": "Official pages identify ProCom Headsets, sports and industrial communication products and Westcom company history. This verifies the current public business domain only. The original portfolio redesign remains awaiting client approval as of November 2026 and must not be presented as this public site's live launch.",
+      "verifiedOn": "2026-11-16",
+      "capturedDate": "2026-11-16"
+    },
+    {
+      "name": "RC Premium Detailing",
+      "role": "WooCommerce / custom plugin",
+      "contribution": "Elementor and WooCommerce work, ACF Pro integration, and development of a bespoke detailing and vehicle-selection configurator.",
+      "categories": [
+        "web",
+        "systems"
+      ],
+      "caseStudy": "/projects/rc-premium-detailing/",
+      "id": "rc-premium-detailing",
+      "agency": "peak-leads",
+      "tags": [
+        "Elementor",
+        "WooCommerce",
+        "ACF Pro",
+        "Custom plugin"
+      ],
+      "url": "https://www.rcdetailing.co.za/",
+      "domain": "rcdetailing.co.za",
+      "screenshot": "rc-premium-detailing-hero",
+      "verificationStatus": "verified",
+      "evidence": [
+        "https://www.rcdetailing.co.za/",
+        "https://www.rcdetailing.co.za/detailing-packages/"
+      ],
+      "screenshotNote": null,
+      "verification": "Existing local projects/rc-premium-detailing/index.html links this exact domain. Search-indexed official homepage identifies RC Premium Detailing, Reinhard Coetzer and Cape Town service; official detailing-packages page corroborates branded package offerings. The web reader timed out on a direct homepage fetch, so screenshot worker should confirm browser loading. Do not use the unrelated Fresno RC business.",
+      "verifiedOn": "2026-11-16",
+      "capturedDate": "2026-11-16"
+    },
+    {
+      "name": "Viking Capital Group / G6 Group",
+      "role": "Technical performance",
+      "contribution": "WordPress performance and hosting troubleshooting, optimising page delivery and resolving implementation issues.",
+      "categories": [
+        "web",
+        "systems"
+      ],
+      "caseStudy": null,
+      "id": "viking-g6",
+      "agency": "peak-leads",
+      "tags": [
+        "WordPress",
+        "Performance",
+        "Hosting"
+      ],
+      "url": null,
+      "domain": null,
+      "screenshot": null,
+      "verificationStatus": "unconfirmed",
+      "evidence": [
+        "https://www.bbb.org/us/tx/lake-jackson/profile/general-contractor/viking-capital-group-inc-0915-90074155",
+        "https://app.sublynk.com/profiles/viking-capital-group-inc"
+      ],
+      "screenshotNote": "The business website could not be confidently identified. The contribution is documented here while the website attribution is checked.",
+      "note": "The precise business attribution between Viking Capital Group and G6 Group is being verified. No website is linked until that attribution is confirmed.",
+      "verification": "A Texas roofing company called Viking Capital Group Inc. is publicly associated with vikingcapitalgroupinc.com, but no public evidence located links that business to G6 Group or confirms it is the combined portfolio engagement. Multiple unrelated Viking and G6 businesses exist. Keep precise attribution unresolved and the engagement unlinked.",
+      "verifiedOn": "2026-11-16"
+    },
+    {
+      "name": "Recover Pro",
+      "role": "Meta Ads / conversion events",
+      "contribution": "UGC campaign setup and management, advertising creative testing, pixel events, funnel diagnostics and campaign delivery investigation.",
+      "categories": [
+        "ads"
+      ],
+      "caseStudy": null,
+      "id": "recover-pro",
+      "agency": "peak-leads",
+      "tags": [
+        "Meta Ads",
+        "UGC",
+        "Pixel events",
+        "Campaign diagnostics"
+      ],
+      "url": null,
+      "domain": null,
+      "screenshot": null,
+      "verificationStatus": "unconfirmed",
+      "evidence": [
+        "https://recoverpro.com/",
+        "https://recover-pro.shop/"
+      ],
+      "screenshotNote": "The business website could not be confidently identified. The contribution is documented here while the website attribution is checked.",
+      "verification": "Public name collision: recoverpro.com is a New Jersey clinical rehabilitation business; recover-pro.shop is a South African percussion recovery product. The portfolio's UGC, Meta Ads and pixel-event description alone does not disambiguate the client. No external link or screenshot should be attributed without account-specific evidence.",
+      "verifiedOn": "2026-11-16"
+    }
+  ]
+}

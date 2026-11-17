@@ -1,6 +1,7 @@
 import { cpSync, existsSync, mkdirSync, readdirSync, rmSync, statSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { renderPricing } from './render-pricing.mjs';
+import { renderExperience } from './scripts/render-experience.mjs';
 
 const output = 'dist';
 rmSync(output, { recursive: true, force: true });
@@ -53,6 +54,8 @@ const required = [
  'blog/aura-check-daily-game-development/index.html',
  'Zachary-Clint-Swanepoel-CV-2026.pdf', 'zach profile.jpg',
 ];
+renderExperience(output);
+required.push('experience/editorial.css', 'experience/projects.json');
 for (const file of required) if (!existsSync(join(output,file))) throw new Error('Missing required public file: '+file);
 const permittedProjects = new Set(["turning-a-vision-into-reality","procom-redesign","how-i-start-an-seo-audit","lamile-resourcing-services","logic-lc","rc-premium-detailing","in-trade-crm"]);
 const projectDirectories = readdirSync(join(output, 'projects')).filter(name => statSync(join(output, 'projects', name)).isDirectory());
