@@ -2,6 +2,7 @@ import { execFileSync } from 'node:child_process';
 import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
 import { dirname, extname, join, relative, resolve, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { renderPricing } from '../render-pricing.mjs';
 
 // Run after `node build.mjs`. No dependencies or network requests are needed.
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
@@ -135,7 +136,16 @@ for (const path of originalPublicFiles) {
   const source = join(root, path);
   const built = join(dist, path);
   if (!existsSync(built)) fail(`Existing public file was omitted from the build: ${path}.`);
-  else if (existsSync(source) && !readFileSync(source).equals(readFileSync(built))) fail(`Build changed existing public content: ${path}.`);
+  else if (existsSync(source)) {
+    let expected = readFileSync(source);
+    // The homepage intentionally renders pricing at build time; compare the
+    // delivered HTML with that expected output instead of the source placeholder.
+    if (path === 'index.html' && expected.toString('utf8').includes('<!-- PRICING_SERVER_RENDER -->')) {
+      const pricing = JSON.parse(readFileSync(join(root, 'agency-pricing.json'), 'utf8'));
+      expected = Buffer.from(expected.toString('utf8').replace('<!-- PRICING_SERVER_RENDER -->', renderPricing(pricing)));
+    }
+    if (!expected.equals(readFileSync(built))) fail(`Build changed existing public content: ${path}.`);
+  }
 }
 
 const portfolioSource = join(root, 'portfolio');
