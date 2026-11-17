@@ -61,3 +61,10 @@ h1 em,h2 i{color:#d84300}
 .client-package-context strong{font-weight:700;color:#272b24}
 @media(max-width:1000px){.package-tier-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.package-tier:last-child{grid-column:1/-1}.package-tier:last-child .package-allowances{max-width:500px}}
 @media(max-width:760px){.package-explainer{padding-block:65px}.package-tier-grid{grid-template-columns:1fr}.package-tier:last-child{grid-column:auto}.package-tier{padding:24px}.package-tier h3{font-size:48px;margin-top:28px}.package-rate{font-size:23px}.package-allowances strong{font-size:43px}.package-disclaimer{font-size:12px}.client-package-context{padding:15px 16px}}
+
+
+/* Concise client contribution points */
+.contribution-points{list-style:none;display:grid;gap:10px;margin:12px 0 0;padding:0;max-width:570px}
+.contribution-points li{position:relative;padding-left:20px;font-size:15px;line-height:1.65;color:#454b3c}
+.contribution-points li::before{content:"";position:absolute;left:0;top:.68em;width:7px;height:7px;border-radius:50%;background:#c34514}
+@media(max-width:760px){.contribution-points{gap:9px}.contribution-points li{font-size:14px;line-height:1.65;padding-left:18px}.contribution-points li::before{width:6px;height:6px}}
