@@ -15,3 +15,23 @@ h1 em,h2 i{color:#d84300}
 .breadcrumbs,.panel-index{color:#62645e}.spotlight-panel li>span{color:#767970}
 .current-step .career-number{background:#bd3c00;border-color:#bd3c00}
 .ex-brand strong{color:#bd3c00}
+
+
+/* Experience index: centred, single-column introduction. Agency screenshots remain
+   in the two timeline chapters rather than being duplicated beside the hero. */
+.career-hero{text-align:center;padding-top:clamp(60px,7vw,110px)}
+.career-hero-layout{display:block;width:min(100%,1080px);margin-inline:auto}
+.career-hero-layout>div{width:100%}
+.career-hero h1{font-size:clamp(60px,8.2vw,132px);max-width:100%;margin-inline:auto}
+.career-hero .ex-lead{max-width:720px;margin:32px auto 0}
+.career-hero .hero-actions{justify-content:center}
+.career-hero .ex-kicker{justify-content:center}
+.career-hero .career-disciplines{justify-content:center;gap:22px 55px;text-align:center;margin-top:65px}
+@media(max-width:760px){
+  .career-hero{padding-top:56px}
+  .career-hero-layout{width:100%}
+  .career-hero h1{font-size:clamp(47px,11.5vw,80px)}
+  .career-hero .ex-lead{font-size:16px;margin-top:24px}
+  .career-hero .hero-actions{justify-content:center}
+  .career-hero .career-disciplines{justify-items:center;gap:16px 12px;margin-top:38px}
+}
