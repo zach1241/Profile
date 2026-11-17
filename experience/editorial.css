@@ -35,3 +35,29 @@ h1 em,h2 i{color:#d84300}
   .career-hero .hero-actions{justify-content:center}
   .career-hero .career-disciplines{justify-items:center;gap:16px 12px;margin-top:38px}
 }
+
+
+/* Historical Marketing for Plumbers package explainer */
+.package-explainer{background:#e9e8e2;padding-block:100px 95px}
+.package-explainer .section-top{margin-bottom:36px}
+.package-tier-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.package-tier{min-width:0;padding:26px 26px 30px;background:#f9f8f5;border:1px solid #caccc3;display:flex;flex-direction:column}
+.package-tier-top{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;font-size:10px;font-weight:700;letter-spacing:.08em;color:#5a5e53}
+.package-client{color:#ae4009;border:1px solid #ccb4a4;padding:5px 9px;border-radius:30px}
+.package-tier h3{font:600 clamp(37px,4vw,59px)/1 var(--heading);letter-spacing:-.04em;text-transform:uppercase;margin:33px 0 7px}
+.package-tagline{font-size:15px;color:#5e6059}
+.package-rate{margin:20px 0 24px;font-size:25px;font-weight:700;line-height:1.2}
+.package-rate span{font-size:11px;font-weight:500;color:#64665f}
+.package-allowances{border-top:1px solid #d6d7d0;border-bottom:1px solid #d6d7d0;display:grid;grid-template-columns:1fr 1fr;gap:16px;padding-block:20px}
+.package-allowances>div{display:flex;flex-direction:column;gap:6px}
+.package-allowances strong{font:600 47px/1 var(--heading);letter-spacing:-.04em}
+.package-allowances span{font-size:12px;line-height:1.4;color:#51534c}
+.package-service{font-size:13px;color:#555851;line-height:1.65;margin-top:20px}
+.package-disclaimer{margin-top:26px;max-width:960px;font-size:13px;line-height:1.75;color:#555951}
+.package-disclaimer strong{color:var(--ink)}
+.client-package-context{background:#f0f0eb;border-left:3px solid #c54712;padding:18px 20px;margin-top:21px}
+.client-package-context>span{display:block;font-size:11px;font-weight:700;letter-spacing:.09em;margin-bottom:10px}
+.client-package-context p{font-size:13px;line-height:1.75;color:#4c5049}
+.client-package-context strong{font-weight:700;color:#272b24}
+@media(max-width:1000px){.package-tier-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.package-tier:last-child{grid-column:1/-1}.package-tier:last-child .package-allowances{max-width:500px}}
+@media(max-width:760px){.package-explainer{padding-block:65px}.package-tier-grid{grid-template-columns:1fr}.package-tier:last-child{grid-column:auto}.package-tier{padding:24px}.package-tier h3{font-size:48px;margin-top:28px}.package-rate{font-size:23px}.package-allowances strong{font-size:43px}.package-disclaimer{font-size:12px}.client-package-context{padding:15px 16px}}
